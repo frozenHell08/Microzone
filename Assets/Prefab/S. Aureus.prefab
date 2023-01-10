@@ -45,9 +45,10 @@ GameObject:
   - component: {fileID: 5706813249318245474}
   - component: {fileID: 8022346681808545784}
   - component: {fileID: 8022346681808545791}
+  - component: {fileID: 54715717552161023}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,8 +129,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.010000002
-  m_Center: {x: 0.00000005727634, y: -0.0000000018626451, z: -0.000000007450581}
+  m_Radius: 0.015
+  m_Center: {x: 0.000000058082883, y: -2.6652426e-16, z: 0.00000000857441}
 --- !u!54 &8022346681808545791
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,3 +147,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
+--- !u!111 &54715717552161023
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584865347069177486}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: dcd948684e72dbb4a8e486108bbc538e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: dcd948684e72dbb4a8e486108bbc538e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
