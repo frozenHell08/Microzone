@@ -608,7 +608,7 @@ AnimatorStateMachine:
     m_Position: {x: 760, y: 1040, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4559828140935250522}
-    m_Position: {x: 795, y: 1105, z: 0}
+    m_Position: {x: 810, y: 1100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1913372186417372891}
     m_Position: {x: 830, y: 1170, z: 0}
@@ -687,8 +687,8 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_EntryPosition: {x: -50, y: 250, z: 0}
+  m_ExitPosition: {x: 910, y: 1440, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3540921162701254809}
 --- !u!1102 &-1174657797987964931
@@ -1033,7 +1033,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Female_Milaon_attack_left
-  m_Speed: 1
+  m_Speed: -500
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

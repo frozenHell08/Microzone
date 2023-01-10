@@ -19,6 +19,11 @@ public class femaleControl : MonoBehaviour
     const string Female_walk_up = "Female_walk_up";
     const string Female_walk_down = "Female_walk_down";
 
+    const string Milaon_down = "Female_Milaon_attack_down";
+    const string Milaon_up = "Female_Milaon_attack_up";
+    const string Milaon_left = "Female_Milaon_attack_left";
+    const string Milaon_right = "Female_Milaon_attack_right";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +36,8 @@ public class femaleControl : MonoBehaviour
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetMouseButton(0)) {
-            Ray ray = 
-        }
     }
+
     void FixedUpdate()
     {
         if (inputHorizontal != 0 || inputVertical != 0)
@@ -70,6 +72,27 @@ public class femaleControl : MonoBehaviour
             ChangeAnimationState("Female_Idle");
         }
 
+        if (Input.GetMouseButton(0)) {
+            ChangeAnimationState(Milaon_left);
+
+            // -----------------------------
+            Vector3 clickPosition = -Vector3.one;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast (ray, out hit)) {
+                clickPosition = hit.point;
+            }
+
+            Debug.Log(clickPosition);
+            // -----------------------------
+        }
+
+        // -----------------------
+        
+        // -----------------------
+
     }
     void ChangeAnimationState(string newState)
     {
@@ -78,5 +101,33 @@ public class femaleControl : MonoBehaviour
         animator.Play(newState);
 
         currentState = newState;
+    }
+
+    // void OnCollisionEnter(Collision col) {
+        
+    //     if (Input.GetMouseButton(0)) {
+    //         if (col.gameObject.name == "Sphere") {
+    //             Destroy(col.gameObject);
+    //         }
+    //     } else {
+    //         Debug.Log("ouchie");
+    //     }
+
+    //     // if (col.gameObject.name == "Sphere") {
+    //     //     Debug.Log("BOOP in chara!");
+    //     //     Destroy(col.gameObject);
+    //     // }
+    // }
+
+    void OnTriggerEnter (Collider collide) {
+        if (collide.gameObject.tag == "Enemy") {
+            Debug.Log("ENEMY !");
+        }
+    }
+
+    void OnCollisionEnter (Collision col) {
+        if (col.gameObject.tag == "Enemy") {
+            Debug.Log("Enemy COLIIIIIIISION");
+        }
     }
 }
