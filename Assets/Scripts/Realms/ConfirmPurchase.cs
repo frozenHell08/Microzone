@@ -135,20 +135,19 @@ public class ConfirmPurchase : MonoBehaviour
                 rController.realmDB.Write(() => {
                     profile.ImmuneSystem.BacteriaResist += 1;
                 });
+                ChangeNextButton(ISbact, lBact);
             } else if ((firstchar == "p") && (lPara < 10)) {
                 rController.realmDB.Write(() => {
                     profile.ImmuneSystem.ParasiteResist += 1;
                 });
+                ChangeNextButton(ISpara, lPara);
             } else if ((firstchar == "v") && (lVir < 10)) {
                 rController.realmDB.Write(() => {
                     profile.ImmuneSystem.VirusResist += 1;
                 });
+                ChangeNextButton(ISvir, lVir);
             }
 
-            ChangeNextButton(ISbact, lBact);
-            ChangeNextButton(ISpara, lPara);
-            ChangeNextButton(ISvir, lVir);
-            
             ISSummary(profile);
         } else {
             warningIS.SetActive(true);

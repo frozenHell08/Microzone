@@ -2700,7 +2700,7 @@ MonoBehaviour:
   panel: {fileID: 49269755}
   cells: 500
   milaon: 5
-  map: {fileID: 102900000, guid: 7caf29de990d8d349abaf404ccd56cdf, type: 3}
+  map: 00_Level_Selection
 --- !u!4 &800237833
 Transform:
   m_ObjectHideFlags: 0

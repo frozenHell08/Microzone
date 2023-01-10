@@ -18,7 +18,7 @@ public class LevelLogic : MonoBehaviour
     [SerializeField] private int milaon;
 
     [Header("Scene")]
-    [SerializeField] private Object map;
+    [SerializeField] private string map;
     
     private ProfileModel profiledata;
     private int killedEnemies = 0;
@@ -86,7 +86,7 @@ public class LevelLogic : MonoBehaviour
             profiledata.liquidMeds.Milaon_S += milaon;
         });
 
-        SceneManager.LoadScene(map.name);
+        SceneManager.LoadScene(map);
 
         // ----------------------------------
     }
