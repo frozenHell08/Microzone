@@ -17,7 +17,6 @@ public class LoadMap : MonoBehaviour
         string character = GeneralData.player_LoggedIn;
 
         profiledata = rController.FindProfile(character);
-        Debug.Log(Screen.currentResolution);
         ifOpen(profiledata, Map);
     }
 

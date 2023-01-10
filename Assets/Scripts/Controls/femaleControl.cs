@@ -5,7 +5,7 @@ using UnityEngine;
 public class femaleControl : MonoBehaviour
 {
     Rigidbody rb;
-
+    private LevelLogic _levelLogic;
     // Player
     [SerializeField] private int speedLimiter;
     float inputHorizontal;
@@ -29,6 +29,7 @@ public class femaleControl : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         animator = gameObject.GetComponent<Animator>();
+        _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
     }
 
     // Update is called once per frame
@@ -85,7 +86,7 @@ public class femaleControl : MonoBehaviour
                 clickPosition = hit.point;
             }
 
-            Debug.Log(clickPosition);
+            // Debug.Log(clickPosition);
             // -----------------------------
         }
 
@@ -103,31 +104,11 @@ public class femaleControl : MonoBehaviour
         currentState = newState;
     }
 
-    // void OnCollisionEnter(Collision col) {
-        
-    //     if (Input.GetMouseButton(0)) {
-    //         if (col.gameObject.name == "Sphere") {
-    //             Destroy(col.gameObject);
-    //         }
-    //     } else {
-    //         Debug.Log("ouchie");
-    //     }
-
-    //     // if (col.gameObject.name == "Sphere") {
-    //     //     Debug.Log("BOOP in chara!");
-    //     //     Destroy(col.gameObject);
-    //     // }
-    // }
-
-    void OnTriggerEnter (Collider collide) {
-        if (collide.gameObject.tag == "Enemy") {
-            Debug.Log("ENEMY !");
-        }
-    }
-
     void OnCollisionEnter (Collision col) {
         if (col.gameObject.tag == "Enemy") {
-            Debug.Log("Enemy COLIIIIIIISION");
+            Destroy(col.gameObject);
+
+            _levelLogic.AddKill();
         }
     }
 }
