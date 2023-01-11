@@ -129,6 +129,9 @@ namespace ProfileCreation {
         [MapTo("genes")]
         public long GeneCount { get; set; } = 0;
 
+        public int CurrentHealth { get; set; } = 100;
+        public int MaxHealth { get; set; } = 100;
+
         [MapTo("healingItems")]
         public Heals HealItems{ get; set; }
 
