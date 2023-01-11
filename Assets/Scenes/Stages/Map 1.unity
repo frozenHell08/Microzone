@@ -6540,6 +6540,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7454614680797208971, guid: 7211cdb7b05e29743ad9ce0b77260ce0, type: 3}
+      propertyPath: Walking
+      value: 
+      objectReference: {fileID: 11400000, guid: b972b0293f10749479b867a563162d35, type: 2}
+    - target: {fileID: 7454614680797208971, guid: 7211cdb7b05e29743ad9ce0b77260ce0, type: 3}
       propertyPath: chAnimation
       value: 
       objectReference: {fileID: 11400000, guid: b972b0293f10749479b867a563162d35, type: 2}

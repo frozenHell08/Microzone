@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 8935786561525907247}
   - component: {fileID: 3100596399569891687}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Level Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

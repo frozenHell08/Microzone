@@ -28,8 +28,6 @@ public class charaControl : MonoBehaviour {
         rb = gameObject.GetComponent<Rigidbody>();
         animator = gameObject.GetComponent<Animator>();
         _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
-
-    
     }
 
     void Update() {
