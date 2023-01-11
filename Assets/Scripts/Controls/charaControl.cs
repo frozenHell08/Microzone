@@ -12,6 +12,10 @@ public class charaControl : MonoBehaviour {
     [SerializeField] private CharacterAnimSO Walking;
     [SerializeField] private CharacterAnimSO Milaon;
 
+    [Header("Character")]
+    [SerializeField] private GameObject Female;
+    [SerializeField] private GameObject Male;
+
     private LevelLogic _levelLogic;
     private Rigidbody rb;
     private Animator animator;
@@ -24,6 +28,8 @@ public class charaControl : MonoBehaviour {
         rb = gameObject.GetComponent<Rigidbody>();
         animator = gameObject.GetComponent<Animator>();
         _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
+
+    
     }
 
     void Update() {
@@ -41,13 +47,13 @@ public class charaControl : MonoBehaviour {
             rb.velocity = new Vector3(inputHorizontal, 0, inputVertical);
 
             if (inputHorizontal > 0) {
-                ChangeAnimationState(chAnimation.Right);
+                ChangeAnimationState(Walking.Right);
             } else if (inputHorizontal < 0) {
-                ChangeAnimationState(chAnimation.Left);
+                ChangeAnimationState(Walking.Left);
             } else if (inputVertical > 0) {
-                ChangeAnimationState(chAnimation.Up);
+                ChangeAnimationState(Walking.Up);
             } else if (inputVertical < 0) {
-                ChangeAnimationState(chAnimation.Down);
+                ChangeAnimationState(Walking.Down);
             }
         } else {
             rb.velocity = new Vector3(0f, 0f);

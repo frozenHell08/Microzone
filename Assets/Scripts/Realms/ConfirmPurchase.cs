@@ -129,7 +129,7 @@ public class ConfirmPurchase : MonoBehaviour
                 profile.GeneCount -= price;
             });
 
-            genes.text = string.Format("{0:n0}", profiledata.GeneCount); 
+            genes.text = string.Format("{0:n0}", profile.GeneCount); 
 
             if ((firstchar == "b") && (lBact < 10)) {
                 rController.realmDB.Write(() => {

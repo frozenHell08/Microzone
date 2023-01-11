@@ -17,6 +17,7 @@ public class DataControl : MonoBehaviour
     [SerializeField] private GameObject ISpara;
     [SerializeField] private GameObject ISvir;
     [SerializeField] private Color upgradeOpen;
+    [SerializeField] private Color disabled;
     [SerializeField] private ScreensList _screens;
     private ProfileModel profiledata;
     
@@ -37,7 +38,11 @@ public class DataControl : MonoBehaviour
                 genes.text = string.Format("{0:n0}", profiledata.GeneCount);
                 break;
         }
+        
+    }
 
+    void OnDisable() {
+        ResetBoard(ISbact, ISpara, ISvir);
     }
 
     public void LoadResistances(ProfileModel profile) {
@@ -77,6 +82,28 @@ public class DataControl : MonoBehaviour
                     btn.interactable = true;
                 }
             }
+        }
+    }
+
+    private void ResetBoard(GameObject _panel1, _panel2, _panel3) {
+        ColorBlock target;
+        Button btn, btn2, btn3;
+
+        for (int i = 0; i < 10; i++ ) {
+            btn = _panel1.transform.GetChild(i).gameObject.GetComponent<Button>();
+            btn2 = _panel2.transform.GetChild(i).gameObject.GetComponent<Button>();
+            btn3 = _panel3.transform.GetChild(i).gameObject.GetComponent<Button>();
+
+            target = btn.colors;
+
+            target.normalColor = disabled;
+            btn.colors = target;
+            btn2.colors = target;
+            btn3.colors = target;
+
+            btn.interactable = false;
+            btn2.interactable = false;
+            btn3.interactable = false;
         }
     }
 

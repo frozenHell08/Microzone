@@ -51,6 +51,7 @@ public class DataControlEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("ISvir"));
         EditorGUILayout.LabelField("Open Upgrade Color", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("upgradeOpen"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("disabled"));
     }
 
     void DisplayMapInfo() {

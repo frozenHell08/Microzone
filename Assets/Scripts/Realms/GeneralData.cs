@@ -19,7 +19,7 @@ public class GeneralData : MonoBehaviour
 
     void OnEnable() {
         profiledata = rController.FindProfile(player_LoggedIn);
-       
+
         if (profiledata.firstLogin) {
             play.interactable = false;
             mgame.interactable = false;

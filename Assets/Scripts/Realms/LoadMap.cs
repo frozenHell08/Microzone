@@ -15,7 +15,7 @@ public class LoadMap : MonoBehaviour
 
     void OnEnable() {
         string character = GeneralData.player_LoggedIn;
-
+        Debug.Log("loadmap" + GeneralData.player_LoggedIn);
         profiledata = rController.FindProfile(character);
         ifOpen(profiledata, Map);
     }
