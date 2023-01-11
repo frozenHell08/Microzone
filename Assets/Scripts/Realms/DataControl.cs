@@ -85,7 +85,7 @@ public class DataControl : MonoBehaviour
         }
     }
 
-    private void ResetBoard(GameObject _panel1, _panel2, _panel3) {
+    private void ResetBoard(GameObject _panel1, GameObject _panel2, GameObject _panel3) {
         ColorBlock target;
         Button btn, btn2, btn3;
 
