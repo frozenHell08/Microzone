@@ -42,7 +42,9 @@ public class DataControl : MonoBehaviour
     }
 
     void OnDisable() {
-        ResetBoard(ISbact, ISpara, ISvir);
+        if (_screens == ScreensList.ImmuneSystem) {
+            ResetBoard(ISbact, ISpara, ISvir);
+        }
     }
 
     public void LoadResistances(ProfileModel profile) {
