@@ -35,8 +35,8 @@ public class ConfirmPurchase : MonoBehaviour
     private ProfileModel profiledata;
 
     void OnEnable() {
-        profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
-        // profiledata = rController.FindProfile("JOSHUA_M");
+        // profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
+        profiledata = rController.FindProfile("JOSHUA_M");
     }
 
     public void Purchase() {
@@ -55,10 +55,13 @@ public class ConfirmPurchase : MonoBehaviour
 
         if (amount.text == "") {
             return;
+        } else if (int.Parse(amount.text) < 0) {
+            Debug.Log("negative amount");
+            return;
         } else {
             amt = int.Parse(amount.text);
         }
-
+        
         long _cells = profile.CellCount;
         int iprice = int.Parse(itemPrice.text);
         int result = (int) _cells - (iprice * amt);
