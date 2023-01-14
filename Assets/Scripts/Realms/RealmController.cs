@@ -74,7 +74,7 @@ public class RealmController : MonoBehaviour
                     realmDB.Write(() => {
                         res_model = realmDB.Add(data);
                     });
-                } catch (RealmDuplicatePrimaryKeyValueException e) {} //CS0168 #pragma warning disable
+                } catch (RealmDuplicatePrimaryKeyValueException) { } //CS0168 #pragma warning disable
            
             }
         }

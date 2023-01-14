@@ -8852,7 +8852,7 @@ GameObject:
   - component: {fileID: 419593997}
   - component: {fileID: 419593996}
   m_Layer: 0
-  m_Name: RealmControl
+  m_Name: Realm Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29000,7 +29000,7 @@ GameObject:
   - component: {fileID: 1393594911}
   - component: {fileID: 1393594910}
   m_Layer: 0
-  m_Name: ScreenController
+  m_Name: Screen Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39689,6 +39689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rController: {fileID: 419593996}
+  warning: {fileID: 11400000, guid: 91762b0b85fe7ff47afd3ad7d7644a80, type: 2}
   newGame: {fileID: 1237348128}
   loadGame: {fileID: 124399894}
 --- !u!1 &1882543209

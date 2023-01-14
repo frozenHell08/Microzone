@@ -1,11 +1,11 @@
-using System.Collections;
+// using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Realms;
+// using UnityEngine;
+// using Realms;
 
 public class ISData
 {
-    private RealmController rC;
+    // private RealmController rC;
 
     public List<ResistancesModel> InitializeData() {
         List<ResistancesModel> resList = new List<ResistancesModel>();

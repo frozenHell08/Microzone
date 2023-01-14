@@ -7,6 +7,7 @@ using ProfileCreation;
 public class WelcomeInit : MonoBehaviour
 {
     public RealmController rController;
+    public WarningSO warning;
     private List<ProfileModel> loaded_profiles;
     public Button newGame, loadGame;
 
@@ -22,5 +23,7 @@ public class WelcomeInit : MonoBehaviour
             loadGame.interactable = true;
             newGame.interactable = true;
         }
+
+        
     }
 }
