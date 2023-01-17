@@ -41,7 +41,7 @@ public class RealmController : MonoBehaviour
             ));
         });
         
-        GeneralData.player_LoggedIn = id;
+        // GeneralData.player_LoggedIn = id;
     }
 
     public ProfileModel FindProfile(string charID) {

@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class SaveSlot : ScriptableObject
 {
     public int slotNumber;
-    public string Name;
-    public string Gender;
-    public Image Sprite; 
+    public string ID;
+    public string Name = "No Data";
+    public string Gender = "No Data";
+    public Sprite Sprite; 
     public long Cells;
     public long Genes;
     public int Level;
+    public bool forDeletion = false;
 }

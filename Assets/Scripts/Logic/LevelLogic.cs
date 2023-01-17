@@ -24,7 +24,7 @@ public class LevelLogic : MonoBehaviour
     private int killedEnemies = 0;
     
     void OnEnable() {
-        profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
+        // profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
         // profiledata = rController.FindProfile("JOSHUA_M");
     }
 

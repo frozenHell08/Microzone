@@ -22,7 +22,7 @@ public class DataControl : MonoBehaviour
     private ProfileModel profiledata;
     
     void OnEnable() {
-        profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
+        // profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
         // profiledata = rController.FindProfile("JOSHUA_M");
         switch (_screens) {
             case ScreensList.Shop :

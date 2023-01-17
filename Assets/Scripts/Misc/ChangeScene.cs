@@ -7,7 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public void GoingBack(string destination) {
         if (destination == "Menu") {
-            ScreenController.isReturning = true;
+            // ScreenController.isReturning = true;
         }
 
         SceneManager.LoadScene(destination);
