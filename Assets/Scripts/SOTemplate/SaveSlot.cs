@@ -13,4 +13,5 @@ public class SaveSlot : ScriptableObject
     public long Genes;
     public int Level;
     public bool forDeletion = false;
+    public bool firstLogin = false;
 }

@@ -9,6 +9,7 @@ public class ScreenController : MonoBehaviour
 {
     [Header("Controls")]
     [SerializeField] private RealmController rController;
+    [SerializeField] private CurrentCharacter character;
     [SerializeField] private Static isReturning;
     [SerializeField] private GameObject welcomeScreen;
     [SerializeField] private GameObject homeScreen;
@@ -111,6 +112,7 @@ public class ScreenController : MonoBehaviour
         homeScreen.SetActive(false);
         welcomeScreen.SetActive(true);
         isReturning.boolValue = false;
+        character.Reset();
     }
 
     public void NewCharacter() {

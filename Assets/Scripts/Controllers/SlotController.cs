@@ -38,8 +38,6 @@ public class SlotController : MonoBehaviour
         character.genes = save.Genes;
         character.level = save.Level;
 
-        // --------------------------
-
         gameObject.SetActive(false);
         homeScreen.SetActive(true);
     }

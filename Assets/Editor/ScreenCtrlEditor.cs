@@ -38,6 +38,7 @@ public class ScreenCtrlEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("rController"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("character"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("isReturning"));
 
         showScreens = EditorGUILayout.BeginFoldoutHeaderGroup(showScreens, "Intro Screens");
