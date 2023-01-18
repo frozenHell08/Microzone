@@ -10,6 +10,8 @@ public class CurrentCharacter : ScriptableObject
     public long cells;
     public long genes;
     public int level;
+    public CurrentHealing healCount;
+    public CurrentSolution solutionsCount;
 
     public void Reset() {
         characterID = "";
@@ -18,6 +20,9 @@ public class CurrentCharacter : ScriptableObject
         cells = 0;
         genes = 0;
         level = 0;
+
+        healCount.Reset();
+        solutionsCount.Reset();
     }
 }
 

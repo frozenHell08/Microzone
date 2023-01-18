@@ -10,9 +10,10 @@ using ProfileCreation;
 public class RealmController : MonoBehaviour
 {
     public Realm realmDB;
+    [SerializeField] private CurrentCharacter character;
     private ProfileModel prof_model;
     private ResistancesModel res_model;
-    public static RealmConfiguration config;
+    private RealmConfiguration config;
 
     void OnEnable() {
         string exeRootFolder = Directory.GetCurrentDirectory();
@@ -40,8 +41,6 @@ public class RealmController : MonoBehaviour
                 gender
             ));
         });
-        
-        // GeneralData.player_LoggedIn = id;
     }
 
     public ProfileModel FindProfile(string charID) {
@@ -78,5 +77,17 @@ public class RealmController : MonoBehaviour
            
             }
         }
+    }
+
+    public void SyncToRealm() {
+        prof_model = FindProfile(character.characterID);
+
+        realmDB.Write(() => {
+            prof_model.CellCount = character.cells;
+            prof_model.GeneCount = character.genes;
+            prof_model.firstLogin = character.firstLogin;
+            prof_model.HealItems.Bandaid = character.healCount.Bandaid;
+            prof_model.liquidMeds.Milaon_S = character.solutionsCount.milaon;
+        });
     }
 }

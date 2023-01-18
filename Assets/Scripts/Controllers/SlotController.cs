@@ -26,7 +26,6 @@ public class SlotController : MonoBehaviour
     private ProfileModel profile;
 
     void OnEnable() {
-        loaded_profiles = rController.Saves();
         Refresh();
     }
 
@@ -70,6 +69,7 @@ public class SlotController : MonoBehaviour
     }
 
     private void Refresh() {
+        loaded_profiles = rController.Saves();
         InitializeSaveFiles();
         DisplayFiles();
     }

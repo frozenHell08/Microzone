@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class SaveSlot : ScriptableObject
 {
     public int slotNumber;
-    public string ID;
+    public string ID = "";
     public string Name = "No Data";
     public string Gender = "No Data";
     public Sprite Sprite; 
