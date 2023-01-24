@@ -100,7 +100,7 @@ namespace EasyUI.Tabs {
          for (int i = 1; i < tabBtnsNum; i++)
             tabBtns [ i ].uiImage.color = colorDark ;
 
-         parentContent.GetComponent <Image> ().color = color ;
+         // parentContent.GetComponent <Image> ().color = color ;
       }
 
       private Color DarkenColor (Color color, float amount) {

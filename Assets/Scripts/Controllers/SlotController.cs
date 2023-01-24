@@ -32,6 +32,7 @@ public class SlotController : MonoBehaviour
     public void LoadCharacter(SaveSlot save) {
         character.characterID = save.ID;
         character.characterName = save.Name;
+        character.gender = save.Gender;
         character.sprite = save.Sprite;
         character.cells = save.Cells;
         character.genes = save.Genes;

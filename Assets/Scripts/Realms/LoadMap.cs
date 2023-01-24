@@ -14,10 +14,10 @@ public class LoadMap : MonoBehaviour
     private ProfileModel profiledata;
 
     void OnEnable() {
-        string character = GeneralData.player_LoggedIn;
-        Debug.Log("loadmap" + GeneralData.player_LoggedIn);
-        profiledata = rController.FindProfile(character);
-        ifOpen(profiledata, Map);
+        // string character = GeneralData.player_LoggedIn;
+        // Debug.Log("loadmap" + GeneralData.player_LoggedIn);
+        // profiledata = rController.FindProfile(character);
+        // ifOpen(profiledata, Map);
     }
 
     private void ifOpen(ProfileModel profile, GameObject _map) {

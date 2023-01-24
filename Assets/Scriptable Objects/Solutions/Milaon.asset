@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ae487719d92194da70b830786f0cbd, type: 3}
-  m_Name: Healing
+  m_Script: {fileID: 11500000, guid: c8b9fdb777e059443a446ef7a10e4d3b, type: 3}
+  m_Name: Milaon
   m_EditorClassIdentifier: 
-  Bandaid: 5
-  Injector: 0
-  Medicine: 0
+  solutionID: itm_milaon
+  solutionName: Milaon
+  solutionSprite: {fileID: 0}
+  description: adsf
+  price: 500

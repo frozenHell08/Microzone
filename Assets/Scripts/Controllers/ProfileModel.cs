@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Realms;
+using Realms.Schema;
+using Realms.Weaving;
 
 namespace ProfileCreation {
     public class Heals : EmbeddedObject {
@@ -146,7 +148,6 @@ namespace ProfileCreation {
 
         [MapTo("stages")]
         public StageList Stages { get; set; }
-    
         public ProfileModel() {}
 
         public ProfileModel(string id, string name, string gender) {

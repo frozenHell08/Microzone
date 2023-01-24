@@ -7,7 +7,7 @@ public class HomescreenControllerEditor : Editor
     SerializedProperty genes;
     SerializedProperty bandaid;
     SerializedProperty milaon_s;
-    bool showGiftValues = false;
+    bool showStatInvFields, showGiftValues = false;
 
     void OnEnable() {
         cells = serializedObject.FindProperty("cells");
@@ -21,11 +21,16 @@ public class HomescreenControllerEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("rController"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("character"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("ch"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("cHeal"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("cSol"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("characterPanel"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("giftPanel"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("gendata_cells"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("gendata_genes"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("itmPanels"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("healItems"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("solnItems"));
 
         showGiftValues = EditorGUILayout.BeginFoldoutHeaderGroup(showGiftValues, "Gift Values");
 
@@ -35,6 +40,19 @@ public class HomescreenControllerEditor : Editor
             EditorGUILayout.PropertyField(bandaid);
             EditorGUILayout.PropertyField(milaon_s);
         }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+
+        showStatInvFields = EditorGUILayout.BeginFoldoutHeaderGroup(showStatInvFields, "Status Fields");
+
+        if (showStatInvFields) {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("iName"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("iSprite"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("iStatus"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("iRes"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("iHeals"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("iSolutions"));
+        }
+
         EditorGUILayout.EndFoldoutHeaderGroup();
 
         serializedObject.ApplyModifiedProperties();

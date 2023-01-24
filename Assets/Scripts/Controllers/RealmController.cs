@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using Realms;
 using Realms.Exceptions;
 using TMPro;
 using ProfileCreation;
+using System;
 
 public class RealmController : MonoBehaviour
 {
@@ -81,6 +83,7 @@ public class RealmController : MonoBehaviour
 
     public void SyncToRealm() {
         prof_model = FindProfile(character.characterID);
+        // prof_model = FindProfile("JOSHUA_M");
 
         realmDB.Write(() => {
             prof_model.CellCount = character.cells;
@@ -89,5 +92,25 @@ public class RealmController : MonoBehaviour
             prof_model.HealItems.Bandaid = character.healCount.Bandaid;
             prof_model.liquidMeds.Milaon_S = character.solutionsCount.milaon;
         });
+    }
+
+    public void SyncFromRealm() {
+        prof_model = FindProfile(character.characterID);
+        // prof_model = FindProfile("JOSHUA_M");
+        var slProperty = prof_model.Stages.GetType().GetProperties();
+        int openStages = 0;
+
+        foreach (var prop in slProperty) {
+            var isOpen = prop.GetValue(prof_model.Stages);
+            if (prop.Name.StartsWith("stage", StringComparison.OrdinalIgnoreCase) && (bool) isOpen){
+               openStages++;
+            }
+        }
+
+        character.totalStages = openStages;
+
+        character.res_bacteria = prof_model.ImmuneSystem.BacteriaResist ;
+        character.res_parasite = prof_model.ImmuneSystem.ParasiteResist ;
+        character.res_virus = prof_model.ImmuneSystem.VirusResist ; 
     }
 }
