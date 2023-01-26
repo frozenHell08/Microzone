@@ -57,8 +57,6 @@ public class HomescreenController : MonoBehaviour
         ch_name.text = $"Welcome, {ch.characterName}.";
 
         rController.SyncFromRealm();
-        // --------------------------------
-
     }
 
     public void StatusInventory() {
@@ -99,7 +97,7 @@ public class HomescreenController : MonoBehaviour
                 } else if (itm.name.Contains("soln")) {
                     Solution getSoln = solnItems.Find(j => j.solutionID.Equals(txt.transform.parent.name, oic));
                     FieldInfo field = Array.Find<FieldInfo>(cSol.GetType().GetFields(),
-                        f => f.Name.Equals(getSoln.solutionName));
+                        f => f.Name.Equals(getSoln.solutionName, oic));
 
                     if (txt.name.Equals("name")) txt.text = getSoln.solutionName;
                     if (txt.name.Equals("amt")) txt.text = field.GetValue(cSol).ToString();
@@ -107,7 +105,7 @@ public class HomescreenController : MonoBehaviour
             }
 
             foreach (Image img in itm.GetComponentsInChildren<Image>(true)) {
-                if (img.name == "img") {
+                if (img.name.Equals("img")) {
                     img.preserveAspect = true;
 
                     HealItem hh = healItems.Find(i => i.ItemID == img.transform.parent.name);

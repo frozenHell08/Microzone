@@ -25,11 +25,9 @@ public class CurrentCharacter : ScriptableObject
         cells = 0;
         genes = 0;
         level = 0;
+        totalStages = 1;
 
         healCount.Reset();
         solutionsCount.Reset();
     }
 }
-
-// first login, move to saveslot
-// heals, resist, solutions, stages?

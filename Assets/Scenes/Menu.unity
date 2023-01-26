@@ -9475,6 +9475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
+  healing: {fileID: 11400000, guid: 85a034ea7290ee040a8cc84dfbd13aa0, type: 2}
+  soln: {fileID: 11400000, guid: 056d49c439213f4458ac8617623bcff0, type: 2}
 --- !u!4 &419593997
 Transform:
   m_ObjectHideFlags: 0

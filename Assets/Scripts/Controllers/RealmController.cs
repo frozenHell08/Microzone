@@ -1,4 +1,5 @@
 using System.IO;
+using System.Reflection;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ public class RealmController : MonoBehaviour
 {
     public Realm realmDB;
     [SerializeField] private CurrentCharacter character;
+    [SerializeField] private CurrentHealing healing;
+    [SerializeField] private CurrentSolution soln;
     private ProfileModel prof_model;
     private ResistancesModel res_model;
     private RealmConfiguration config;
@@ -75,8 +78,7 @@ public class RealmController : MonoBehaviour
                     realmDB.Write(() => {
                         res_model = realmDB.Add(data);
                     });
-                } catch (RealmDuplicatePrimaryKeyValueException) { } //CS0168 #pragma warning disable
-           
+                } catch (RealmDuplicatePrimaryKeyValueException) { }
             }
         }
     }
@@ -97,6 +99,9 @@ public class RealmController : MonoBehaviour
     public void SyncFromRealm() {
         prof_model = FindProfile(character.characterID);
         // prof_model = FindProfile("JOSHUA_M");
+
+        // -------------------- RESISTANCE --------------------
+
         var slProperty = prof_model.Stages.GetType().GetProperties();
         int openStages = 0;
 
@@ -112,5 +117,21 @@ public class RealmController : MonoBehaviour
         character.res_bacteria = prof_model.ImmuneSystem.BacteriaResist ;
         character.res_parasite = prof_model.ImmuneSystem.ParasiteResist ;
         character.res_virus = prof_model.ImmuneSystem.VirusResist ; 
+
+        // -------------------- ITEMS --------------------
+
+        foreach (FieldInfo f in healing.GetType().GetFields()) {
+            PropertyInfo prop = Array.Find<PropertyInfo>(prof_model.HealItems.GetType().GetProperties(), 
+                    p => p.Name.Equals(f.Name));
+
+            f.SetValue(healing, prop.GetValue(prof_model.HealItems));
+        }
+        
+        foreach (FieldInfo f in soln.GetType().GetFields()) {
+            PropertyInfo prop = Array.Find<PropertyInfo>(prof_model.liquidMeds.GetType().GetProperties(), 
+                    p => p.Name.StartsWith(f.Name, StringComparison.OrdinalIgnoreCase)); 
+
+            f.SetValue(soln, prop.GetValue(prof_model.liquidMeds));
+        }
     }
 }

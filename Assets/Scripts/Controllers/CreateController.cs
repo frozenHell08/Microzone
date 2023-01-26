@@ -45,6 +45,8 @@ public class CreateController : MonoBehaviour
         float clrm = genders[0].colors.normalColor.a;
         float clrf = genders[1].colors.normalColor.a;
 
+        character.Reset();
+
         if (inputName == null || inputName == "") warning.message = "No username entered.\n";
         
         if (clrm != clrf) {
