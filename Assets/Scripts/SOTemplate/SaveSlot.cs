@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "newSaveSlot", menuName = "Data/Save Slot")]
 public class SaveSlot : ScriptableObject
 {
     public int slotNumber;

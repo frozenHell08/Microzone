@@ -15,5 +15,6 @@ MonoBehaviour:
   ItemID: itm_medicine
   ItemName: Medicine
   ItemSprite: {fileID: -392535435, guid: 825da5c0a9b64c3459af82891a789afc, type: 3}
-  definition: medi
-  price: 200
+  effect: 5000
+  price: 3245
+  defi: "Restores health for \b5,000 points."

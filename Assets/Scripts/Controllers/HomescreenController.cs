@@ -43,7 +43,7 @@ public class HomescreenController : MonoBehaviour
             ch.healCount.Bandaid += bandaid;
             ch.solutionsCount.milaon += milaon_s;
 
-            rController.SyncToRealm();
+            rController.SyncGiftToRealm();
         }
 
         Refresh();

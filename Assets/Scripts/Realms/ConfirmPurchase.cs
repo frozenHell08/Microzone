@@ -31,7 +31,7 @@ public class ConfirmPurchase : MonoBehaviour
     [SerializeField] private SolnList _soln;
     [SerializeField] private Tab _tab;
 
-    public static ResistancesModel selectedItem;
+    // public static ResistancesModel selectedItem;
     private ProfileModel profiledata;
 
     void OnEnable() {
@@ -116,45 +116,45 @@ public class ConfirmPurchase : MonoBehaviour
     }
 
     private void checkUpgrade(ProfileModel profile) {
-        int lBact = profile.ImmuneSystem.BacteriaResist;
-        int lPara = profile.ImmuneSystem.ParasiteResist;
-        int lVir = profile.ImmuneSystem.VirusResist;
+        // int lBact = profile.ImmuneSystem.BacteriaResist;
+        // int lPara = profile.ImmuneSystem.ParasiteResist;
+        // int lVir = profile.ImmuneSystem.VirusResist;
 
-        long _genes = profile.GeneCount;
-        int price = int.Parse(upgradePrice.text);
+        // long _genes = profile.GeneCount;
+        // int price = int.Parse(upgradePrice.text);
         
-        int change = (int) _genes - price;
+        // int change = (int) _genes - price;
 
-        if (change >= 0) {
-            string firstchar = selectedItem._id.Substring(0, 1);
+        // if (change >= 0) {
+        //     string firstchar = selectedItem._id.Substring(0, 1);
             
-            rController.realmDB.Write(() => {
-                profile.GeneCount -= price;
-            });
+        //     rController.realmDB.Write(() => {
+        //         profile.GeneCount -= price;
+        //     });
 
-            genes.text = string.Format("{0:n0}", profile.GeneCount); 
+        //     genes.text = string.Format("{0:n0}", profile.GeneCount); 
 
-            if ((firstchar == "b") && (lBact < 10)) {
-                rController.realmDB.Write(() => {
-                    profile.ImmuneSystem.BacteriaResist += 1;
-                });
-                ChangeNextButton(ISbact, lBact);
-            } else if ((firstchar == "p") && (lPara < 10)) {
-                rController.realmDB.Write(() => {
-                    profile.ImmuneSystem.ParasiteResist += 1;
-                });
-                ChangeNextButton(ISpara, lPara);
-            } else if ((firstchar == "v") && (lVir < 10)) {
-                rController.realmDB.Write(() => {
-                    profile.ImmuneSystem.VirusResist += 1;
-                });
-                ChangeNextButton(ISvir, lVir);
-            }
+        //     if ((firstchar == "b") && (lBact < 10)) {
+        //         rController.realmDB.Write(() => {
+        //             profile.ImmuneSystem.BacteriaResist += 1;
+        //         });
+        //         ChangeNextButton(ISbact, lBact);
+        //     } else if ((firstchar == "p") && (lPara < 10)) {
+        //         rController.realmDB.Write(() => {
+        //             profile.ImmuneSystem.ParasiteResist += 1;
+        //         });
+        //         ChangeNextButton(ISpara, lPara);
+        //     } else if ((firstchar == "v") && (lVir < 10)) {
+        //         rController.realmDB.Write(() => {
+        //             profile.ImmuneSystem.VirusResist += 1;
+        //         });
+        //         ChangeNextButton(ISvir, lVir);
+        //     }
 
-            ISSummary(profile);
-        } else {
-            warningIS.SetActive(true);
-        }
+        //     ISSummary(profile);
+        // } else {
+        //     warningIS.SetActive(true);
+        // }
     }
 
     private void ChangeNextButton (GameObject _panel, int reslvl) {

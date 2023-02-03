@@ -7622,13 +7622,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 321549006}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: ba467be1430f3644eb194ee3986d189c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7779,13 +7779,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 326318669}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: d51a60484e25c674a9846da52b57f321, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10101,13 +10101,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 451979412}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: e08955d27d46bcc44b758c1556fb553d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10339,13 +10339,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462945799}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: b91664dc7c58c3f46822a8de6866386d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11059,6 +11059,7 @@ GameObject:
   - component: {fileID: 516821140}
   - component: {fileID: 516821139}
   - component: {fileID: 516821141}
+  - component: {fileID: 516821142}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -11150,6 +11151,18 @@ MonoBehaviour:
   upgradeOpen: {r: 0, g: 0, b: 0, a: 0}
   disabled: {r: 0, g: 0, b: 0, a: 0}
   _screens: 0
+--- !u!114 &516821142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516821137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5a0203f33a1b8418d1c711ad7e076e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &523438535
 GameObject:
   m_ObjectHideFlags: 0
@@ -12734,13 +12747,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 598315519}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 369a3b424193d3149a812fd75765c2a1, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14715,13 +14728,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 696293191}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 4b552b1c5c79e854bb3fde0213d6c541, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15426,13 +15439,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 738709894}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: c3a12258ed8c0a54daec3a14bd8d3805, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15775,13 +15788,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 779112533}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 8e7d8ffa98f2f0344943569ad6b595da, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19025,13 +19038,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 920359704}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: d8778047da2de8d449aca72831a03b39, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19182,13 +19195,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 920636690}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: b9fabf4929623e44facb75c135914227, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23509,13 +23522,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1090683821}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 62a0ab4a879e90a4d8611f2ee18d215b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -24132,13 +24145,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1128547787}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 91ce0682cad1896448e4b2eeaf0747e0, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -24656,13 +24669,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1133090746}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 9a5be4d34c5ea974aa753a356c9032b7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27386,13 +27399,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1248717357}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: a852ce71a9d7c3b47a2cfebfba0b5d96, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27754,13 +27767,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1266113441}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 09bc6ef8079639041bbca5c15e3bf126, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28037,9 +28050,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade cancelled. Not enough genes.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d9db2641d0135bf41a6812c2779fb540, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e5b17d64d8ae8d04e8a182675629feb2, type: 2}
   m_sharedMaterial: {fileID: 8078494516396515972, guid: d9db2641d0135bf41a6812c2779fb540, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -28064,8 +28077,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28103,7 +28116,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1278692348
@@ -28743,13 +28756,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1293819338}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: e79138a211b71314e8498cd8bdf8cb5c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28900,13 +28913,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1312887024}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: b52e6106fac300c4390d20658daa3d54, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29192,13 +29205,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1323640287}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 9bb3bead9e3ba52458f705dd090a5a9a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -43996,13 +44009,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042745113}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: f2d365f899022b44e8d40b23421df23f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44115,13 +44128,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2046097162}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 1f3c65721be979240bc744d9040a94f0, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44589,13 +44602,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2057803159}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 7b4b0e29da5d8e94d94c51da34dbc068, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -46362,9 +46375,9 @@ RectTransform:
   m_Father: {fileID: 6194634625941407821}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 8.4098, y: -262.8564}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000005722046, y: -20}
   m_SizeDelta: {x: 393.53, y: 57.3508}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &104834831697601016
@@ -47201,7 +47214,7 @@ GameObject:
   - component: {fileID: 8486707505241501045}
   - component: {fileID: 2713804010194462837}
   m_Layer: 5
-  m_Name: PrevPrice
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47600,7 +47613,7 @@ GameObject:
   - component: {fileID: 8539359716361583168}
   - component: {fileID: 7030255396183117237}
   m_Layer: 5
-  m_Name: Price
+  m_Name: Price panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47762,7 +47775,7 @@ GameObject:
   - component: {fileID: 1049801261218537825}
   - component: {fileID: 186253061821761584}
   - component: {fileID: 4787450961044379796}
-  - component: {fileID: 4787450961044379797}
+  - component: {fileID: 4787450961044379798}
   m_Layer: 5
   m_Name: UI Immune System
   m_TagString: Untagged
@@ -49962,7 +49975,6 @@ GameObject:
   - component: {fileID: 5959138081083107896}
   - component: {fileID: 5698476071948730223}
   - component: {fileID: 7096653591398990480}
-  - component: {fileID: 7544950891543337125}
   m_Layer: 5
   m_Name: Enhance Button
   m_TagString: Untagged
@@ -50367,10 +50379,10 @@ RectTransform:
   m_Father: {fileID: 6194634625941407821}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000026941, y: -342.80057}
-  m_SizeDelta: {x: 376.709, y: 82.7651}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 376.709, y: 82.76511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4305170418987839117
 GameObject:
@@ -50515,7 +50527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: Ok
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -50657,10 +50669,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 195063197}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
+        m_MethodName: BackToIS
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -50992,7 +51004,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4787450961044379797
+--- !u!114 &4787450961044379798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51001,19 +51013,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2195590821806040377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe14261672afea47a5fb5ef44b9c425, type: 3}
+  m_Script: {fileID: 11500000, guid: 30e37966ac0039f4fbc0cfa052d750fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rController: {fileID: 419593996}
-  cells: {fileID: 0}
+  ch: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
+  warn: {fileID: 11400000, guid: 5ba1c09135723e44991f432db83f8278, type: 2}
+  _stat: {fileID: 11400000, guid: 4897bc78990044747aa1a36213389f8b, type: 2}
   genes: {fileID: 7942606238767836163}
   summary: {fileID: 5762724402906730251}
-  ISbact: {fileID: 3589773808036601738}
-  ISpara: {fileID: 234191500}
-  ISvir: {fileID: 2111876678}
+  panelDisplay: {fileID: 8251068898774694866}
+  panelBact: {fileID: 3589773808036601738}
+  panelPara: {fileID: 234191500}
+  panelVir: {fileID: 2111876678}
+  panelWarn: {fileID: 195063197}
   upgradeOpen: {r: 0.754717, g: 0.74403703, b: 0.74403703, a: 1}
-  disabled: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-  _screens: 1
+  disabled: {r: 0.754717, g: 0.74403703, b: 0.74403703, a: 0.50980395}
 --- !u!1 &4886289219995295712
 GameObject:
   m_ObjectHideFlags: 0
@@ -51164,13 +51179,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4983737953317665682}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 19f87d86187855f43b5abd752502a864, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -52283,8 +52298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00048828125, y: 110.2381}
-  m_SizeDelta: {x: 0.00097656, y: -220.4802}
+  m_AnchoredPosition: {x: 0.00048828125, y: -0.0009765625}
+  m_SizeDelta: {x: 0.001, y: -0.0019836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6245725469370507459
 CanvasRenderer:
@@ -52465,13 +52480,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6550445303784818929}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 940195466791521468f894781767b0f8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -52618,13 +52633,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6707580625341256373}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 27a05bee7de60f4428d060ba28198793, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -53496,9 +53511,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7544950891543337125}
-        m_TargetAssemblyTypeName: ConfirmPurchase, Assembly-CSharp
-        m_MethodName: Purchase
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
+        m_MethodName: ConfirmUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54216,13 +54231,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7490653168564581280}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 723ff2cf482d65f4fbc0c79a7a4ed451, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -54249,35 +54264,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.00004673, y: 96}
   m_SizeDelta: {x: 327.50244, y: 69.117}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7544950891543337125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3373868161864060003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7dd92e5a9fd9d443aeb49de5f03ae84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rController: {fileID: 419593996}
-  nextColor: {r: 0.754717, g: 0.74403703, b: 0.74403703, a: 1}
-  summary: {fileID: 5762724402906730251}
-  ISbact: {fileID: 3589773808036601738}
-  ISpara: {fileID: 234191500}
-  ISvir: {fileID: 2111876678}
-  warningIS: {fileID: 195063197}
-  warningShop: {fileID: 0}
-  cells: {fileID: 0}
-  genes: {fileID: 7942606238767836163}
-  upgradePrice: {fileID: 2713804010194462837}
-  itemPrice: {fileID: 0}
-  amount: {fileID: 0}
-  _purchasing: 1
-  _item: 0
-  _soln: 0
-  _tab: 0
 --- !u!224 &7566101498831125505
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54657,13 +54643,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7894228775478632632}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: b08c574a65eb8a643b80878b6c499351, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -54877,7 +54863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8117648, g: 0.75294125, b: 0.4156863, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -55200,13 +55186,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8520834489899997120}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 9ac460b28d524784592b3c2b63150b8d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -55299,13 +55285,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8524997440550008677}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: de9d682e0655299459272e00d179cf41, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -55330,7 +55316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -146.57788, y: -160}
+  m_AnchoredPosition: {x: -146.57788, y: 60}
   m_SizeDelta: {x: 200.3023, y: 46.585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8621852169082928459
@@ -55429,13 +55415,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8621852169082928460}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 57bf9cf757a62f74786e754df177ac83, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -55578,7 +55564,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5973833174396133472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -55588,7 +55574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -2}
+  m_AnchoredPosition: {x: -2.0372681e-10, y: 120}
   m_SizeDelta: {x: 197.11499, y: 182.552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9063525010824221606
@@ -55665,13 +55651,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9063525010824221607}
-        m_TargetAssemblyTypeName: ISysControl, Assembly-CSharp
+      - m_Target: {fileID: 4787450961044379798}
+        m_TargetAssemblyTypeName: ImmuneSystem, Assembly-CSharp
         m_MethodName: DisplayDetails
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 2e84537cdc10cc34d9f00e0ceb7028d4, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Resistances, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "Current Healing", menuName = "Current Objects/Current Healing")]
 public class CurrentHealing : ScriptableObject
 {
     public int Bandaid;

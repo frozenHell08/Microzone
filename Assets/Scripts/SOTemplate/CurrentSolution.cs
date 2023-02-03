@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "Current Solution", menuName = "Current Objects/Current Solution")]
 public class CurrentSolution : ScriptableObject
 {
     public int milaon;

@@ -105,15 +105,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: syrup_0
+      name: s_milaon
       rect:
         serializedVersion: 2
         x: 144
-        y: 673
+        y: 675
         width: 116
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,15 +126,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_1
+      name: s_mildha
       rect:
         serializedVersion: 2
-        x: 498
-        y: 673
+        x: 500
+        y: 671
         width: 115
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_2
+      name: s_miltri
       rect:
         serializedVersion: 2
         x: 851
@@ -155,7 +155,7 @@ TextureImporter:
         width: 116
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,15 +168,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_3
+      name: s_cinaon
       rect:
         serializedVersion: 2
         x: 144
-        y: 355
+        y: 359
         width: 116
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,15 +189,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_4
+      name: s_cinadha
       rect:
         serializedVersion: 2
         x: 498
-        y: 355
+        y: 357
         width: 115
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_5
+      name: s_cinatri
       rect:
         serializedVersion: 2
         x: 851
@@ -218,7 +218,7 @@ TextureImporter:
         width: 116
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,15 +231,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_6
+      name: s_viraon
       rect:
         serializedVersion: 2
         x: 144
-        y: 38
+        y: 36
         width: 116
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_7
+      name: s_virdha
       rect:
         serializedVersion: 2
         x: 498
@@ -260,7 +260,7 @@ TextureImporter:
         width: 115
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: syrup_8
+      name: s_virtri
       rect:
         serializedVersion: 2
         x: 851
@@ -281,7 +281,7 @@ TextureImporter:
         width: 116
         height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,15 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      syrup_7: -1219217184
-      syrup_4: 566065055
-      syrup_5: -283868305
-      syrup_1: 2102502121
-      syrup_0: 333666178
-      syrup_6: -1809369099
-      syrup_3: -47134821
-      syrup_2: -693039529
-      syrup_8: 1907668981
+      s_virtri: 1907668981
+      s_cinatri: -283868305
+      s_mildha: 2102502121
+      s_cinaon: -47134821
+      s_virdha: -1219217184
+      s_viraon: -1809369099
+      s_cinadha: 566065055
+      s_milaon: 333666178
+      s_miltri: -693039529
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

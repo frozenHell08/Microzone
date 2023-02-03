@@ -17,7 +17,6 @@ public class RealmController : MonoBehaviour
     [SerializeField] private CurrentHealing healing;
     [SerializeField] private CurrentSolution soln;
     private ProfileModel prof_model;
-    private ResistancesModel res_model;
     private RealmConfiguration config;
 
     void OnEnable() {
@@ -27,8 +26,6 @@ public class RealmController : MonoBehaviour
         config = new RealmConfiguration(realmPath);
         realmDB = Realm.GetInstance(config);
         Debug.Log("config made. realmcontroller");
-
-        ResistanceData();
     }
 
     void OnDisable() {
@@ -63,27 +60,7 @@ public class RealmController : MonoBehaviour
         return loaded_profiles;
     }
 
-    public void ResistanceData() {
-        ISData isd = new ISData();
-        List<ResistancesModel> resData = isd.InitializeData();
-        int c = 0;
-
-        foreach (var counting in realmDB.All<ResistancesModel>()) {
-            c++;
-        }
-
-        if (c < 30) {
-            foreach (var data in resData) {
-                try {
-                    realmDB.Write(() => {
-                        res_model = realmDB.Add(data);
-                    });
-                } catch (RealmDuplicatePrimaryKeyValueException) { }
-            }
-        }
-    }
-
-    public void SyncToRealm() {
+    public void SyncGiftToRealm() {
         prof_model = FindProfile(character.characterID);
         // prof_model = FindProfile("JOSHUA_M");
 
@@ -100,7 +77,7 @@ public class RealmController : MonoBehaviour
         prof_model = FindProfile(character.characterID);
         // prof_model = FindProfile("JOSHUA_M");
 
-        // -------------------- RESISTANCE --------------------
+        // -------------------- STAGES --------------------
 
         var slProperty = prof_model.Stages.GetType().GetProperties();
         int openStages = 0;
@@ -113,6 +90,8 @@ public class RealmController : MonoBehaviour
         }
 
         character.totalStages = openStages;
+
+        // -------------------- RESISTANCE --------------------
 
         character.res_bacteria = prof_model.ImmuneSystem.BacteriaResist ;
         character.res_parasite = prof_model.ImmuneSystem.ParasiteResist ;
@@ -133,5 +112,22 @@ public class RealmController : MonoBehaviour
 
             f.SetValue(soln, prop.GetValue(prof_model.liquidMeds));
         }
+    }
+
+    public void SyncResToRealm() {
+        prof_model = FindProfile(character.characterID);
+        // prof_model = FindProfile("JOSHUA_M");
+
+        realmDB.Write(() => {
+            prof_model.GeneCount = character.genes;
+
+            prof_model.ImmuneSystem.BacteriaResist = character.res_bacteria ;
+            prof_model.ImmuneSystem.ParasiteResist = character.res_parasite ;
+            prof_model.ImmuneSystem.VirusResist = character.res_virus ; 
+        });
+    }
+    
+    public void SyncItemToRealm() {
+        
     }
 }

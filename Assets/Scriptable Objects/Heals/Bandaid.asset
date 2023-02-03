@@ -15,5 +15,6 @@ MonoBehaviour:
   ItemID: itm_bandaid
   ItemName: Bandaid
   ItemSprite: {fileID: -1593693496, guid: 825da5c0a9b64c3459af82891a789afc, type: 3}
-  definition: Heals for 20.
-  price: 50
+  effect: 0
+  price: 90
+  defi: Restores health for /<b>0</b>/ points.
