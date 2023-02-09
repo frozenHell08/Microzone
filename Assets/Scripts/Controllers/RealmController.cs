@@ -62,7 +62,6 @@ public class RealmController : MonoBehaviour
 
     public void SyncGiftToRealm() {
         prof_model = FindProfile(character.characterID);
-        // prof_model = FindProfile("JOSHUA_M");
 
         realmDB.Write(() => {
             prof_model.CellCount = character.cells;
@@ -75,7 +74,6 @@ public class RealmController : MonoBehaviour
 
     public void SyncFromRealm() {
         prof_model = FindProfile(character.characterID);
-        // prof_model = FindProfile("JOSHUA_M");
 
         // -------------------- STAGES --------------------
 
@@ -116,7 +114,6 @@ public class RealmController : MonoBehaviour
 
     public void SyncResToRealm() {
         prof_model = FindProfile(character.characterID);
-        // prof_model = FindProfile("JOSHUA_M");
 
         realmDB.Write(() => {
             prof_model.GeneCount = character.genes;
@@ -127,7 +124,36 @@ public class RealmController : MonoBehaviour
         });
     }
     
-    public void SyncItemToRealm() {
-        
+    public void SyncHealToRealm() {
+        prof_model = FindProfile(character.characterID);
+
+        realmDB.Write(() => {
+            prof_model.CellCount = character.cells;
+
+            prof_model.HealItems.Bandaid = healing.Bandaid;
+            prof_model.HealItems.Injector = healing.Injector;
+            prof_model.HealItems.Medicine = healing.Medicine;
+        });
+    }
+
+    public void SyncSolnToRealm(string sol) {
+        StringComparison oic = StringComparison.OrdinalIgnoreCase;
+        prof_model = FindProfile(character.characterID);
+
+        PropertyInfo prop = Array.Find<PropertyInfo>(prof_model.liquidMeds.GetType().GetProperties(), 
+                    p => p.Name.Contains(sol, oic));
+
+        FieldInfo field = Array.Find<FieldInfo>(soln.GetType().GetFields(),
+                        f => f.Name.Equals(sol, oic));
+
+        Debug.Log($"before : {prop.Name}, {prop.GetValue(prof_model.liquidMeds)}");
+        // Debug.Log($"{field.Name}, {field.GetValue(soln)}");
+
+        realmDB.Write(() => {
+            prof_model.CellCount = character.cells;
+            prop.SetValue(prof_model.liquidMeds, field.GetValue(soln));
+        });
+
+        Debug.Log($"after : {prop.Name}, {prop.GetValue(prof_model.liquidMeds)}");
     }
 }

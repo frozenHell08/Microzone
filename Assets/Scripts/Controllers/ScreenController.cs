@@ -65,18 +65,22 @@ public class ScreenController : MonoBehaviour
     
     public void OpenShop() {
         shop.SetActive(true);
+        homeScreen.SetActive(false);
     }
     
     public void CloseShop() {
         shop.SetActive(false);
+        homeScreen.SetActive(true);
     }
     
     public void OpenISys() {
         immuneSystem.SetActive(true);
+        homeScreen.SetActive(false);
     }
     
     public void CloseISys() {
         immuneSystem.SetActive(false);
+        homeScreen.SetActive(true);
     }
     
     public void OpenMinigame() {

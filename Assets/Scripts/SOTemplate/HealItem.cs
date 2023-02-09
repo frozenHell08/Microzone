@@ -15,7 +15,7 @@ public class HealItem : ScriptableObject
     public string defi;
 
     void OnValidate() {
-        defi = $"Restores health for \b{effect:n0} points.";
+        defi = $"Restores health for {effect:n0} points.";
     }
 }
 

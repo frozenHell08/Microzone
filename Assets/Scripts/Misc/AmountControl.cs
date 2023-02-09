@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using MadeEnums;
 
 public class AmountControl : MonoBehaviour
 {
@@ -10,13 +8,7 @@ public class AmountControl : MonoBehaviour
     [SerializeField] private TMP_InputField amount;
 
     public void ChangeAmount() {
-        int amtTxt;
-
-        if (amount.text == "") {
-            amtTxt = 0;
-        } else {
-            amtTxt = int.Parse(amount.text);
-        }
+        int amtTxt = int.Parse(amount.text);
       
         switch(buttonFunction) {
             case AmountButton.Increase :
@@ -24,7 +16,7 @@ public class AmountControl : MonoBehaviour
                 amount.text = amtTxt.ToString();
                 break;
             case AmountButton.Decrease :
-                if (amtTxt > 0) {
+                if (amtTxt > 1) {
                     amtTxt--;
                     amount.text = amtTxt.ToString();
                 }
@@ -32,5 +24,3 @@ public class AmountControl : MonoBehaviour
         }
     }
 }
-
-public enum AmountButton { Increase, Decrease }
