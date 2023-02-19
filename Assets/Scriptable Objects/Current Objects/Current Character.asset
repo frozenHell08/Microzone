@@ -20,7 +20,7 @@ MonoBehaviour:
   cells: 20000
   genes: 10
   level: 0
-  totalStages: 1
+  totalStages: 5
   res_bacteria: 0
   res_parasite: 0
   res_virus: 0
