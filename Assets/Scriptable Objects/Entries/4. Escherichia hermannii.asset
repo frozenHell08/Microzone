@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 4. Escherichia hermannii
+  m_EditorClassIdentifier: 
+  Kingdom: Bacteria
+  Phylum: Pseudomonadota
+  Class: Gammaproteobacteria
+  Order: Enterobacterales
+  Family: Enterobacteriaceae
+  Genus: Escherichia
+  Species: Escherichia hermannii
+  Characteristics: 'Escherichia  hermannii strains are gram-negative, oxidase-negative,
+    fermentative, motile rods. In addition to yellow pigment and positive KCN and
+    cellobiose tests, the biochemical reactions characteristic of 32 strains of E. '
+  Symptoms:
+  - Painful red eye, Burning in the eye
+  - Prulent discharge, eyelid edema
+  trivia_1: 
+  trivia_2: 
+  trivia_3: 
+  directContact: 0
+  dropletSpread: 0
+  airborneTransmission: 1
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

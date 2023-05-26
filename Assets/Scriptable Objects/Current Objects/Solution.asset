@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876b68e119ad06b408f7a1038d83e16e, type: 3}
   m_Name: Solution
   m_EditorClassIdentifier: 
-  milaon: 40
+  milaon: 20
   cinaon: 0
   viraon: 0
   mildha: 0
@@ -20,4 +20,4 @@ MonoBehaviour:
   virdha: 0
   miltri: 0
   cinatri: 0
-  virtri: 0
+  virtri: 20

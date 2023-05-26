@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 6. Aeromonas hydrophila
+  m_EditorClassIdentifier: 
+  Kingdom: Bacteria
+  Phylum: Pseudomonadota
+  Class: Gammaproteobacteria
+  Order: Aeromonadales
+  Family: Aeromonadaceae
+  Genus: Aeromonas
+  Species: Aeromonas hydropila
+  Characteristics: "A. hydrophila are Gram-negative, rod-shaped facultative anaerobes, 
+    ranging in size from 0.3-1.0 \xB5m wide by 1.0-3.5 \xB5m long.  They are motile
+    by a single polar flagellum. The bacteria can produce heat-labile enterotoxins,
+    which can be associated with haemolysin and cytotoxin production. "
+  Symptoms:
+  - Symptoms of gastrointestinal infection range from watery diarrhea to dysenteric
+    or bloody diarrhea.
+  - Non-gastrointestinal complications that may arise subsequent to A. hydrophila
+    infection include hemolytic syndrome and kidney disease, cellulitis, wound and
+    soft-tissue infection, meningitis,
+  trivia_1: 'Aeromonas are commonly found in ground water; drinking water at treatment
+    plants, distribution
+
+    systems, and reservoirs; and in clean and polluted
+    lakes and rivers.'
+  trivia_2: The bacteria are found in about 1% - 27 % of drinking water Aeromonas
+    hydrophila can be found in fresh produce, meat, and dairy products.
+  trivia_3: 
+  directContact: 1
+  dropletSpread: 1
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

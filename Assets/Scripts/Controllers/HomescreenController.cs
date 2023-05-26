@@ -67,6 +67,8 @@ public class HomescreenController : MonoBehaviour
 
         string y1 = $"<b>Gender</b> : \t{ch.gender}\n" +
                     $"<b>Level</b> : \t{ch.level}\n" +
+                    $"<b>Exp</b> : \t{ch.experience}\n" +
+                    $"<b>Health</b> : \t{ch.currentHealth} / {ch.maxHealth}\n" +
                     $"<b>Cells</b> : \t{ch.cells:n0}\n" +
                     $"<b>Genes</b> : \t{ch.genes:n0}\n" +
                     $"<b>Stages</b> : \t{ch.totalStages}\n";

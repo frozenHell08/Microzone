@@ -33,10 +33,6 @@ public class ScreenController : MonoBehaviour
         }
     }
 
-    void OnEnable() {
-        
-    }
-
     void Update() {
         if (welcomeScreen.activeSelf) {
             loaded_profiles = rController.Saves();
@@ -85,10 +81,12 @@ public class ScreenController : MonoBehaviour
     
     public void OpenMinigame() {
         minigame.SetActive(true);
+        homeScreen.SetActive(false);
     }
     
     public void CloseMinigame() {
         minigame.SetActive(false);
+        homeScreen.SetActive(true);
     }
 
     public void OpenCompendium() {

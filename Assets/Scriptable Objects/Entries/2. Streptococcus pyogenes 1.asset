@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 2. Streptococcus pyogenes 1
+  m_EditorClassIdentifier: 
+  Kingdom: Bacteria
+  Phylum: Firmicutes
+  Class: Bacilli
+  Order: Lactobacillales
+  Family: Streptococcaceae
+  Genus: Streptococcus
+  Species: 'Streptococcus pyogenes '
+  Characteristics: The Streptococcus pyogenes isolates had high resistance rates
+    against macrolides and tetracycline. They mainly expressed the ermB gene type
+    and cMLSB phenotype. Their common emm types are emm1.0 and emm12.0, which have
+    different frequencies of speA and speC.
+  Symptoms:
+  - a sore, red throat with thick pus-like fluid around the tonsils
+  - enlarged and tender lymph nodes in and around the neck
+  trivia_1: "If your child has congestion, coughing, a runny nose, watery eyes and/or
+    diarrhea, she most likely doesn\u2019t have strep. Chances are it\u2019s just
+    a cold or some allergies \u2013 and postnasal snot drip is the most common cause
+    of sore throats in my office."
+  trivia_2: "Sometimes, strep comes with a rash. We then call it \u201CScarlet Fever\u201D
+    and it is no more dangerous than just plain strep throat. Someone just gave it
+    a cool name and then we get to feel like we are living in that computer game
+    \u201COregon Trail.\u201D"
+  trivia_3: When a child has a sore throat, in general, there is a 37 percent chance
+    that it is strep (Group A Strep, aka, Streptococcus pyogenes)
+  directContact: 1
+  dropletSpread: 0
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

@@ -125,6 +125,9 @@ namespace ProfileCreation {
         [MapTo("level")]
         public int Level { get; set; } = 0;
 
+        [MapTo("exp")]
+        public int Experience { get; set; } = 0;
+
         [MapTo("cells")]
         public long CellCount { get; set; } = 0;
 
@@ -161,8 +164,13 @@ namespace ProfileCreation {
             CharGender = gender;
             firstLogin = this.firstLogin;
             Level = this.Level;
+            Experience = this.Experience;
             CellCount = this.CellCount;
             GeneCount = this.GeneCount;
+
+            CurrentHealth = this.CurrentHealth;
+            MaxHealth = this.MaxHealth;
+
             HealItems = h;
             ImmuneSystem = r;
             liquidMeds = soln;

@@ -75,6 +75,12 @@ public class RealmController : MonoBehaviour
     public void SyncFromRealm() {
         prof_model = FindProfile(character.characterID);
 
+        // -------------------- STATS --------------------
+
+        character.currentHealth = prof_model.CurrentHealth;
+        character.maxHealth = prof_model.MaxHealth;
+        character.experience = prof_model.Experience;
+
         // -------------------- STAGES --------------------
 
         var slProperty = prof_model.Stages.GetType().GetProperties();
@@ -146,14 +152,24 @@ public class RealmController : MonoBehaviour
         FieldInfo field = Array.Find<FieldInfo>(soln.GetType().GetFields(),
                         f => f.Name.Equals(sol, oic));
 
-        Debug.Log($"before : {prop.Name}, {prop.GetValue(prof_model.liquidMeds)}");
-        // Debug.Log($"{field.Name}, {field.GetValue(soln)}");
-
         realmDB.Write(() => {
             prof_model.CellCount = character.cells;
             prop.SetValue(prof_model.liquidMeds, field.GetValue(soln));
         });
+    }
 
-        Debug.Log($"after : {prop.Name}, {prop.GetValue(prof_model.liquidMeds)}");
+    public void OpenNextLevel(string nextstage) {
+        prof_model = FindProfile(character.characterID);
+
+        PropertyInfo nextstagename = Array.Find<PropertyInfo>(prof_model.Stages.GetType().GetProperties(),
+                    p => p.Name.Equals(nextstage));
+
+        if (!(bool) nextstagename.GetValue(prof_model.Stages)) {
+            realmDB.Write(() => {
+                nextstagename.SetValue(prof_model.Stages, true);
+            });
+
+            character.totalStages += 1;
+        }
     }
 }

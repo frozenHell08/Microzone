@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 1. Staphylococcus aureus 1
+  m_EditorClassIdentifier: 
+  Kingdom: Bacteria
+  Phylum: Firmicutes
+  Class: Bacilli
+  Order: Bacillales
+  Family: 'Staphylococcaceae '
+  Genus: Staphylococcus
+  Species: Staphylococcus aureus
+  Characteristics: Staphylococcus is a very significant organism because of its ability
+    to cause a number of diseases and infections in human and animals. It causes
+    localized supportive lesions and abscesses on skin, or deep-seated infections
+    like osteomyelitis, endocarditis, or more serious skin infections like furunculosis.
+    Because of their ability to develop resistance to many antibiotics, Staphylococcus
+    aureus and Staphylococcus epidermidis form a major group of nosocomial pathogens
+    infecting surgical wounds and causing infections associated with indwelling medical
+    devices.
+  Symptoms:
+  - 'Abscesses and boils: These painful sores form under your skin, causing redness
+    and pain.'
+  - 'Cellulitis: This type of infection causes swollen, red, painful skin and tissue
+    just under your skin.'
+  trivia_1: "The name Staphylococcus originates from Greek terms (staphyle and kokkos)
+    which literally translate as\r\na bunch of grapes. Over 30 types of Staphylococci
+    bacteria cause infections in humans (typically skin\r\ninfections which are limited
+    to a small area of an individual\u2019s skin, such as \u2013 boils, folliculitis,
+    cellulitis, and\r\nimpetigo), however, the most common type of Staph infection
+    is caused by S. aureus."
+  trivia_2: There were an estimated 5 million people in the United States colonized
+    by methicillin-resistant Staphylococcus aureus strains.
+  trivia_3: According to a report published in the Journal of the American Medical
+    Association, methicillin-resistant Staphylococcus aureus was responsible for
+    over 19,000 deaths and 95,000 life-threatening infections in 2005.
+  directContact: 1
+  dropletSpread: 0
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

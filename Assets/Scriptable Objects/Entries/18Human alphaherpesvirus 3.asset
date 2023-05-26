@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 18Human alphaherpesvirus 3
+  m_EditorClassIdentifier: 
+  Kingdom: Virus
+  Phylum: Peploviricota
+  Class: Herviviricetes
+  Order: Herpesvirales
+  Family: Herpesviridae
+  Genus: 'Varicellovirus varicella-zoster virus '
+  Species: Human alphaherpesvirus 3
+  Characteristics: Is a member of genus Varicellovirus in subfamuly Alphaherpesvirus
+    of the family Herpesviridae.
+  Symptoms:
+  - May cause human papillomaviruses, different strains of which can result in warts,
+    vaginal warts, cervical cancer, and anal cancer, as well as the common cold,
+    conjunctivitis, and bronchitis.
+  trivia_1: ' Also called zoster'
+  trivia_2: The human herpesvirus 3 (VZV, often known as the varicella-zoster virus)
+    is extremely contagious and widespread. VZV is an alphaherpesvirus, same as the
+    HSVs. The mucosa of the upper respiratory tract is the normal site of VZV infection.
+  trivia_3: It produces chicken pox (also known as varicella), which is clinically
+    distinguished by a broad vesicular eruption of the skin and mucous membranes,
+    after primary infection, commonly in children.
+  directContact: 1
+  dropletSpread: 1
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

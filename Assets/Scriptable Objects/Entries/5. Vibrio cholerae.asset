@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 5. Vibrio cholerae
+  m_EditorClassIdentifier: 
+  Kingdom: Bacteria
+  Phylum: Proteobacteria
+  Class: 'Gammaproteobacteria '
+  Order: 'Vibrionales '
+  Family: 'Vibrionaceae '
+  Genus: 'Vibrio '
+  Species: Vibrio cholerae
+  Characteristics: "Vibrio cholerae is a gram negative, non-spore forming, curved
+    rod that is oxidase positive. It is very motile and has a single polar flagellumFootnote1.
+    The bacterium is 1- 3 \xB5m by 0.5-0.8 \xB5m, is a facultative anaerobe and is
+    part of the Vibronaceae family. Serogroups O1 (classical and El Tor biotypes)
+    and O139 are primarily responsible for cholera. "
+  Symptoms:
+  - "profuse watery diarrhea, sometimes described as \u201Crice-water stools\u201D"
+  - restlessness or irritability.
+  trivia_1: Cholera is contracted by consuming food or water contaminated with the
+    bacteria Vibrio cholerae. The bacteria is usually found in water contaminated
+    with feces.
+  trivia_2: Oral rehydration solution (ORS) can successfully treat up to 80% of cholera
+    patients.
+  trivia_3: People who live in areas with shortages of safe drinking water or inadequate
+    sanitation are vulnerable to cholera.
+  directContact: 0
+  dropletSpread: 1
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

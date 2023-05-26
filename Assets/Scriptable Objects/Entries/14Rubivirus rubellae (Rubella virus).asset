@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 14Rubivirus rubellae (Rubella virus)
+  m_EditorClassIdentifier: 
+  Kingdom: Virus
+  Phylum: Kitrinoviricota
+  Class: Alsuviricetes
+  Order: Hepelivirales
+  Family: Matonaviridae
+  Genus: 'Rubivirus  '
+  Species: Rubivirus rubellae (Rubella virus)
+  Characteristics: The rubella virus is a RNA virus and belongs to the genus Rubivirus
+    and the family Togaviridae.
+  Symptoms:
+  - The majority of adults who have rubella often experience a minor sickness, including
+    a sore throat, low-grade fever, and a rash that begins on the face and spreads
+    to the rest of the body.
+  - Prior to the rash developing, some individuals may also have a headache, pink
+    eye, and general discomfort.
+  trivia_1: A virus is to blame for the contagious illness rubella. A low-grade fever,
+    a sore throat, and a rash that starts on the face and spreads to the rest of
+    the body are some of the symptoms that the majority of rubella patients experience.
+  trivia_2: 'The rubella virus causes the mild febrile rash sickness known as rubella.
+    Droplets are used to spread it from person to person (the virus is present in
+    throat secretions). '
+  trivia_3: Although not entirely, it primarily affects children, and when pregnant
+    women contract it, it can result in fetal malformation. Humans are the only source
+    of infection.
+  directContact: 1
+  dropletSpread: 1
+  airborneTransmission: 1
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

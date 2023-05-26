@@ -150,11 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf8589a427f4a4498ee1dd8bb99b824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedLimiter: 3
-  charaGender: {fileID: 0}
-  movement: {fileID: -103978426995465239, guid: 0fb775cd533c2aa4485a784e33dbf085, type: 3}
-  attack: {fileID: 6410353980348187487, guid: 0fb775cd533c2aa4485a784e33dbf085, type: 3}
-  pointerPos: {fileID: 4946668347116615644, guid: 0fb775cd533c2aa4485a784e33dbf085, type: 3}
+  gender: 0
+  speedLimiter: 4
+  Walking: {fileID: 0}
+  Milaon: {fileID: 0}
+  Female: {fileID: 0}
+  Male: {fileID: 0}
 --- !u!1 &3493271262787981050
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3493271262787981047
 Transform:
   m_ObjectHideFlags: 0
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a02fd1d6a6de594a884231aab08c2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedLimiter: 3
+  speedLimiter: 4
 --- !u!54 &3493271262787981044
 Rigidbody:
   m_ObjectHideFlags: 0

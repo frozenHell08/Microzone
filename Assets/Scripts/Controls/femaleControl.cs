@@ -107,7 +107,7 @@ public class femaleControl : MonoBehaviour
     void OnCollisionEnter (Collision col) {
         if (col.gameObject.tag == "Enemy") {
             Destroy(col.gameObject);
-
+            Debug.Log("collision ");
             _levelLogic.AddKill();
         }
     }

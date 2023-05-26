@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class QuizManager : MonoBehaviour
 {
     [SerializeField] private RealmController rController; //xxx
+    [SerializeField] private CurrentCharacter ch;
     private ProfileModel profiledata; //xxx
     // Minigame mg;
     public List<QuestionAndAnswers> QnA;
@@ -30,23 +31,30 @@ public class QuizManager : MonoBehaviour
     int totalQuestions = 0;
     private int score;
     private double scoreEquiv = 0;
+    private List<QuestionAndAnswers> tempStorage;
+
 
     private void OnEnable()
     {
+        tempStorage = new List<QuestionAndAnswers>(QnA);
         totalQuestions = QnA.Count;
         GOPanel.SetActive(false);
         generateQuestion();
+
+        profiledata = rController.FindProfile(ch.characterID);
+
+        // totalQuestions = QnA.Count;
+        // GOPanel.SetActive(false);
+        // generateQuestion();
     }
 
-    /*void OnEnable()
-    {
-        profiledata = rController.FindProfile(GeneralData.player_LoggedIn);
-    }*/
-
     public void retry() {
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        QnA.Clear();
+        QnA.AddRange(tempStorage);
+        tempStorage.Clear();
+        score = 0;
+        OnEnable();
+        Quizpanel.SetActive(true);
     }
 
     public void GameOver()
@@ -55,54 +63,15 @@ public class QuizManager : MonoBehaviour
         GOPanel.SetActive(true);
         ScoreTxt.text = score + "/" + totalQuestions;
 
+        GeneRewardTxt.text = score.ToString();
 
-        scoreEquiv = score * .10;
+        if (score > 0) {
+            ch.genes += score;
 
-        // if (scoreEquiv == 0)
-        // {
-        //     GeneRewardTxt.text = "0"; // reward (0)
-
-        //     rController.realmDB.Write(() => {
-        //         profiledata.firstLogin = false;
-        //         profiledata.GeneCount += 0 ; //reward gene <<<<
-        //     });
-        // }
-        // else if(scoreEquiv <= 3 && scoreEquiv != 0)
-        // {
-        //     GeneRewardTxt.text = "1"; // reward (1-3)
-
-        //     rController.realmDB.Write(() => {
-        //         profiledata.firstLogin = false;
-        //         profiledata.GeneCount += 1; //reward gene <<<<
-        //     });
-        // }
-        // else if (scoreEquiv >= 4 && scoreEquiv <= 9)
-        // {
-        //     GeneRewardTxt.text = "2"; // reward (4-9)
-
-        //     rController.realmDB.Write(() => {
-        //         profiledata.firstLogin = false;
-        //         profiledata.GeneCount += 2; //reward gene <<<< mali yata haha
-        //     });
-        // }
-        // else if (scoreEquiv >= 10 && scoreEquiv <= 14)
-        // {
-        //     GeneRewardTxt.text = "3";// reward (9-14)
-
-        //     rController.realmDB.Write(() => {
-        //         profiledata.firstLogin = false;
-        //         profiledata.GeneCount += 3; //reward gene <<<<
-        //     });
-        // }
-        // else if (scoreEquiv == 15)
-        // {
-        //     GeneRewardTxt.text = "5";// reward (15)
-
-        //     rController.realmDB.Write(() => {
-        //         profiledata.firstLogin = false;
-        //         profiledata.GeneCount += 5; //reward gene <<<<
-        //     });
-        // }
+            rController.realmDB.Write(() => {
+                profiledata.GeneCount += score;
+            });
+        }
     }
 
     public void correct()
@@ -139,7 +108,6 @@ public class QuizManager : MonoBehaviour
         if (QnA.Count > 0)
         {
             currentQuestion = Random.Range(0, QnA.Count);
-
             // QuestionImage.sprite = QnA[currentQuestion].Question; // for image
             QuestionTxt.text = QnA[currentQuestion].Question;
             SetAnswer();
@@ -149,7 +117,5 @@ public class QuizManager : MonoBehaviour
             Debug.Log("Out of question");
             GameOver();
         }
-        
-
     }
 }
