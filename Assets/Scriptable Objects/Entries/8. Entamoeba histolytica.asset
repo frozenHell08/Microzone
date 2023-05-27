@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: 'Entamoebidae '
   Genus: Entamoeba
   Species: 'Entamoeba histolytica '
+  entryImage: {fileID: 21300000, guid: 581e008e37bc94845bb0d36a39f5f01e, type: 3}
   Characteristics: Entamoeba histolytica is a pseudopod-forming nonflagellate protozoan
     parasite. E. histolytica is a member of the phylum Sarcomastigophora and subphylum
     Sarcodina, class Lobosa, order Amoebida, and family Entamoebidae.
@@ -35,7 +36,7 @@ MonoBehaviour:
     Entamoeba histolytica is a protozoan parasite that can invade the intestinal
     mucosa and may spread to other organs like liver, etc.
 
-    
+
 
 '
   directContact: 1

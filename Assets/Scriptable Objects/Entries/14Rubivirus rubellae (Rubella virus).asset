@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Matonaviridae
   Genus: 'Rubivirus  '
   Species: Rubivirus rubellae (Rubella virus)
+  entryImage: {fileID: 21300000, guid: f95509becd07e8645adbe9b4c6aa0a38, type: 3}
   Characteristics: The rubella virus is a RNA virus and belongs to the genus Rubivirus
     and the family Togaviridae.
   Symptoms:

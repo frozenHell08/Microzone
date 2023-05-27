@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
-  m_Name: 3. Neisseria gonorrhoeae
+  m_Name: 4. Neisseria gonorrhoeae
   m_EditorClassIdentifier: 
   Kingdom: Bacteria
   Phylum: Proteobacteria
@@ -19,26 +19,22 @@ MonoBehaviour:
   Family: 'Neisseriaceae '
   Genus: 'Neisseria '
   Species: 'Neisseria gonorrhoeae '
+  entryImage: {fileID: 21300000, guid: 18208d0815e37e44eaae493ea22e23e5, type: 3}
   Characteristics: Neisseria gonorrhoeae belongs to the genus Neisseria within the
     family Neisseriaceae . It is a Gram-negative, non-spore forming, non-motile,
     encapsulated, and non acid-fast bacteria, which appear in kidney bean shape under
     the microscope .
   Symptoms:
-  - 'If you have penis
-
+  - 'If you have a penis
 
     A. greater frequency or urgency of urination
-
-    
 
     B.
     a pus-like discharge or drip from your penis (this discharge could be yellow,
     white, beige, or greenish)'
   - 'If you have Vagina
 
-
     A. watery, creamy, or greenish vaginal discharge
-
 
     B.
     pain or burning while urinating'

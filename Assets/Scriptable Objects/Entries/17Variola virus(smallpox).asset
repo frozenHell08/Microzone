@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Poxviridae
   Genus: 'Orthopoxvirus  '
   Species: Variola virus(smallpox)
+  entryImage: {fileID: 21300000, guid: 0c0a785786c6099459fd559b62861c40, type: 3}
   Characteristics: The variola virus, a huge double-stranded DNA pathogen with a
     brick-like form, is serologically reactive with other members of the poxvirus
     family, such as ectromelia, cowpox, monkeypox, vaccinia, and camelpox.

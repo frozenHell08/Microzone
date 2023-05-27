@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Flaviviridae
   Genus: Flavivirus
   Species: Dengue virus
+  entryImage: {fileID: 21300000, guid: dde9e9363861711479fb6a743f61f48d, type: 3}
   Characteristics: 'Leukopenia, nausea, vomiting, rash, aches, and pains, as well
     as the following warning indications, are all clinical findings: stomach discomfort
     or tenderness, persistent vomiting, clinical fluid accumulation, mucosal bleeding,

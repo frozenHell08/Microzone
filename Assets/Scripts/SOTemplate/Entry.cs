@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 #if UNITY_EDITOR
@@ -9,9 +10,9 @@ using UnityEditor;
 public class Entry : ScriptableObject
 {
     public string Kingdom, Phylum, Class, Order, Family, Genus, Species;
+    public Sprite entryImage;
     [TextArea(3, 8)]
     public string Characteristics;
-    // public ModesOfTrans modes;
     [TextArea(3, 5)]
     public List<string> Symptoms;
     [TextArea(3, 8)]
@@ -33,6 +34,7 @@ public class EntryEditor : Editor {
 
     public override void OnInspectorGUI() {
         serializedObject.Update();
+        Property("entryImage");
 
         Entry entry = (Entry) target;
 

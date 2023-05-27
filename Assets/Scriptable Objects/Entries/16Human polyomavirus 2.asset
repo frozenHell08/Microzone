@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Polyomaviridae
   Genus: Betapolyomavirus
   Species: Human polyomavirus 2
+  entryImage: {fileID: 21300000, guid: ae108c1274ff87a44bed2466f0a8dc60, type: 3}
   Characteristics: 'The three most well-known polyomaviruses are BK virus, JC virus,
     and SV40 virus. Polyomaviruses are DNA viruses. '
   Symptoms:

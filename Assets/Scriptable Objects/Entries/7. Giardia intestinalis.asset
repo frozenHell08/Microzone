@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Hexamitidae
   Genus: Giardia
   Species: Giardia lamblia
+  entryImage: {fileID: 21300000, guid: f20f15d93b9f8f74084649f40d4bd543, type: 3}
   Characteristics: G. lamblia is pear shaped and has one or two transverse, claw-shaped
     median bodies; G. agilis is long and slender (100) and has a teardrop-shaped
     median body; and the G. muris trophozoite is shorter and rounder and has a small,

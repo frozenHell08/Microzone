@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Schistosomatidae
   Genus: Schistosoma
   Species: Schistosoma mansoni
+  entryImage: {fileID: 21300000, guid: 686dcd10b27fd4f4bb604bef85de34f3, type: 3}
   Characteristics: Bilharzia, another name for schistosomiasis, is a condition brought
     on by parasitic worms.
   Symptoms:

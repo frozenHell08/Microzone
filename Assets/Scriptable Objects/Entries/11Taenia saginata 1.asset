@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Taeniidae
   Genus: Taenia
   Species: Taenia saginata
+  entryImage: {fileID: 21300000, guid: 760fe6e9d3c4140458254c522841a7f1, type: 3}
   Characteristics: The tapeworm Taenia saginata belongs to the family Taeniidae,
     class Cestoidea, and order Cyclophyllidea.
   Symptoms:

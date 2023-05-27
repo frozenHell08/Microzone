@@ -19,6 +19,7 @@ MonoBehaviour:
   Family: Arenaviridae
   Genus: Mammarenavirus
   Species: Lassa mammarenavirus (Lassa virus)
+  entryImage: {fileID: 21300000, guid: 9cd22fe5319bf2248be6fc24c45694f6, type: 3}
   Characteristics: Lassa fever signs and symptoms normally appear one to three weeks
     after the patient has come into contact with the virus. Approximately 80% of
     Lassa fever virus infections have minor symptoms and go undetected.
