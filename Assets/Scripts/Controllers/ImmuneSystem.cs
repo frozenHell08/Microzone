@@ -84,7 +84,7 @@ public class ImmuneSystem : MonoBehaviour
 
         int _price = int.Parse(txtprice.text);
 
-        if ((ch.genes - _price) <= 0) {
+        if ((ch.genes - _price) < 0) {
             warn.message = "You do not have enough genes.";
             MsgtoPanel();
             return;

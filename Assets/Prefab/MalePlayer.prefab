@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6703847901560867334}
   m_Layer: 0
   m_Name: maledownatck
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 2517597187699647266}
   - component: {fileID: 2517597187699647272}
   - component: {fileID: 2517597187699647273}
+  - component: {fileID: 5772855171690975582}
   m_Layer: 0
   m_Name: MalePlayer
   m_TagString: Untagged
@@ -142,8 +143,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6635071425805963671}
   - {fileID: 6778174464826037847}
+  - {fileID: 6635071425805963671}
   - {fileID: 5778578700609149534}
   - {fileID: 5969082657748351827}
   - {fileID: 2857969182775676097}
@@ -227,7 +228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 2073900381, guid: 8e6469cd98d5bf943b4b84f38ea0727c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -235,7 +236,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2517597187699647272
@@ -250,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7359f59301d079e4aad1feaced415ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedLimiter: 10
 --- !u!114 &2517597187699647273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +265,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+--- !u!114 &5772855171690975582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517597187699647267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de31a6563d7fc24aaf193acfdbb53e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rController: {fileID: 0}
+  ch: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &2787276296895933929
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +324,7 @@ GameObject:
   - component: {fileID: 224144187015538226}
   m_Layer: 0
   m_Name: malerightatck
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,7 +369,7 @@ GameObject:
   - component: {fileID: 6896270034827823065}
   m_Layer: 0
   m_Name: maleleftatck
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +414,7 @@ GameObject:
   - component: {fileID: 4423856031512709224}
   m_Layer: 0
   m_Name: maleupatck
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,7 +477,7 @@ Transform:
   m_Children:
   - {fileID: 5148262757777056291}
   m_Father: {fileID: 2517597187699647278}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5827531599114178719
 GameObject:
@@ -474,7 +491,7 @@ GameObject:
   - component: {fileID: 6705730231560174923}
   m_Layer: 0
   m_Name: malehitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2517597187699647278}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &6705730231560174923
 CapsuleCollider:
@@ -504,7 +521,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.8139214
+  m_Height: 0.9999999
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.06594899, y: 0, z: 0}

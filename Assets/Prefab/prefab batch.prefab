@@ -266,9 +266,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4874371285189602102}
     - target: {fileID: 8088322999091388996, guid: db11f73f897c345408da696f789e417a, type: 3}
+      propertyPath: failedPanel
+      value: 
+      objectReference: {fileID: 4274405321126205505}
+    - target: {fileID: 8088322999091388996, guid: db11f73f897c345408da696f789e417a, type: 3}
       propertyPath: rController
       value: 
       objectReference: {fileID: 7763469488682283908}
+    - target: {fileID: 8088322999091388996, guid: db11f73f897c345408da696f789e417a, type: 3}
+      propertyPath: completePanel
+      value: 
+      objectReference: {fileID: 5636694833795641193}
     - target: {fileID: 8088322999091388997, guid: db11f73f897c345408da696f789e417a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -346,6 +354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4399223905422444290}
     m_Modifications:
+    - target: {fileID: 1604341732007586434, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3623993265521978485, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: isReturning
       value: 
@@ -470,6 +482,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLogic, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6739501854798494682, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739501854798494682, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6379636768126763742}
+    - target: {fileID: 6739501854798494682, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739501854798494682, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLogic, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7146061033529597354, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_Name
       value: Level Finish
@@ -512,6 +540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4274405321126205505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1604341732007586434, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+  m_PrefabInstance: {fileID: 3247790979626955459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4874371285189602102 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7977922692440840693, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}

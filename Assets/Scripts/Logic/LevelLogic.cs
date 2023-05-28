@@ -14,9 +14,11 @@ public class LevelLogic : MonoBehaviour
     [SerializeField] private CurrentCharacter ch;
     [SerializeField] [Range(1, 18)] private int _lvl;
     [SerializeField] private int TotalEnemies;
-    [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject completePanel;
+    [SerializeField] private GameObject failedPanel;
     [SerializeField] private TMP_Text enemyTxtObj;
-    [SerializeField] private String enemyName;
+    [SerializeField] private Entry enemySource;
+    [SerializeField] private Enemy enemyStats;
     [SerializeField] private GameObject charStats;
     
     [Header("Rewards")]
@@ -38,7 +40,7 @@ public class LevelLogic : MonoBehaviour
         profiledata = rController.FindProfile(ch.characterID);
         // profiledata = rController.FindProfile("JOSHUA_M");
         LoadStageData();
-        setFinishMessage(panel);
+        setFinishMessage(completePanel);
     }
 
     public void AddKill() {
@@ -46,7 +48,7 @@ public class LevelLogic : MonoBehaviour
             killedEnemies++;
 
             if (killedEnemies == TotalEnemies) {
-                panel.SetActive(true);
+                completePanel.SetActive(true);
             }
         }
     }
@@ -149,13 +151,25 @@ public class LevelLogic : MonoBehaviour
     }
 
     private void LoadStageData() {
-        enemyTxtObj.text = enemyName;
+        enemyTxtObj.text = enemySource.Species;
 
         foreach (TMP_Text txt in charStats.GetComponentsInChildren<TMP_Text>(true)) {
             if (txt.name.Contains("name")) txt.text = ch.characterName;
-            if (txt.name.Contains("level")) txt.text = ch.level.ToString();
-            if (txt.name.Contains("exp")) txt.text = ch.experience.ToString();
-            if (txt.name.Contains("hp")) txt.text = $"{ch.currentHealth}/{ch.maxHealth}";
+            if (txt.name.Contains("level")) txt.text = $"Lv. {ch.level.ToString()}";
+            if (txt.name.Contains("exp")) txt.text = $"Exp\t{ch.experience.ToString()}";
+            if (txt.name.Contains("hp")) txt.text = $"HP\t{ch.currentHealth}/{ch.maxHealth}";
         }
+    }
+
+    public void FailedLevel() {
+        failedPanel.SetActive(true);
+    }
+
+    public void ReturnToMap() {
+        SceneManager.LoadScene(map);
+    }
+
+    public Enemy GetEnemySource() {
+        return enemyStats;
     }
 }

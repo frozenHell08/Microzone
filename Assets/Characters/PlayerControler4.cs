@@ -8,7 +8,6 @@ public class PlayerControler4 : MonoBehaviour
     private Animator myAnim;
 
     private float speed = 0f;
-    // [SerializeField] private int speed;
 
     private float attackTime = 1;
     private float attackCounter = 1f;

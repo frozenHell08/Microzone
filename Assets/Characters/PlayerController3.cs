@@ -47,11 +47,5 @@ public class PlayerController3 : MonoBehaviour
             myAnim.SetBool("IsAttacking", true);
             isAttacking = true;
         }
-        // if (Input.GetKeyDown(KeyCode.Mouse0))
-        // {
-        //     attackCounter = attackTime;
-        //     myAnim.SetBool("IsAttacking", true);
-        //     isAttacking = true;
-        // }
     }
 }
