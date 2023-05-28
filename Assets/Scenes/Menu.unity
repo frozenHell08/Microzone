@@ -830,7 +830,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5506565610605069304, guid: 4a787a2fe5d648f40b6f0605fb31407f, type: 2}
   m_audioClip: {fileID: 8300000, guid: dda6f0599408e024787491e5de90c02b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -15200,7 +15200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 20,000
+  m_text: 25,200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ec60456b39b0dc747a6eac9a41fe7fd7, type: 2}
   m_sharedMaterial: {fileID: -12343819769576575, guid: ec60456b39b0dc747a6eac9a41fe7fd7, type: 2}
