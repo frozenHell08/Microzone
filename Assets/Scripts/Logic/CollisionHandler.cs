@@ -27,7 +27,6 @@ public class CollisionHandler : MonoBehaviour
         _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
         enemy = _levelLogic.GetEnemySource();
         enemyAttack = enemy.enemyAttack;
-        // enemyAttack = _levelLogic.enemySource.enemyAttack;
 
         switch (category) {
             case Category.Bacteria :
@@ -44,7 +43,6 @@ public class CollisionHandler : MonoBehaviour
 
     void Update() {
         if (ch.currentHealth <= 0) {
-            Debug.Log("DEAD");
             _levelLogic.FailedLevel();
         }
     }
@@ -84,18 +82,13 @@ public class CollisionHandler : MonoBehaviour
 
     private void EnemyPlayerHit() {
         int defense = defenseCalc(charaRes, ch.level);
-
-        Debug.Log($"chara res : {charaRes}");
-        Debug.Log($"level : {ch.level}");
-        Debug.Log($"defense : {defense}");
-
         int calculatedAttack = enemyAttack - defense;
-
-        Debug.Log($"calc attack : {calculatedAttack}");
 
         if ((enemyAttack - defense) < 0) calculatedAttack = 0;
 
         ch.currentHealth -= calculatedAttack;
+        rController.UpdateHealthInRealm();
+
         healthText.text = $"HP\t{ch.currentHealth}/{ch.maxHealth}";
     }
 

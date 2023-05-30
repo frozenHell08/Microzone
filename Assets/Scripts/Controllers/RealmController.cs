@@ -172,4 +172,23 @@ public class RealmController : MonoBehaviour
             character.totalStages += 1;
         }
     }
+
+    public void UpdateHealthInRealm() {
+        prof_model = FindProfile(character.characterID);
+
+        realmDB.Write(() => {
+            prof_model.CurrentHealth = character.currentHealth;
+        });
+    }
+
+    public void UpdateItemInRealm(string name, int value) {
+        prof_model = FindProfile(character.characterID);
+
+        PropertyInfo prop = Array.Find<PropertyInfo>(prof_model.HealItems.GetType().GetProperties(),
+                p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+        realmDB.Write(() => {
+            prop.SetValue(prof_model.HealItems, value);
+        });
+    }
 }

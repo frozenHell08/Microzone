@@ -116,7 +116,27 @@ public class HomescreenController : MonoBehaviour
                     img.sprite = (itm.name.Contains("heal")) ? hh.ItemSprite : ss.solutionSprite;
                 }
             }
+
+            foreach (Button btn in itm.GetComponentsInChildren<Button>(true)) {
+                Debug.Log(btn.name);
+
+                TMP_Text amount = btn.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(txt => txt.name.Equals("amt"));
+
+                int itemamt = int.Parse(amount.text);
+
+                if (itemamt == 0) {
+                    btn.interactable = false;
+                } else {
+                    btn.interactable = true;
+                }
+
+                // Debug.Log($"amount : {amount.text}");
+            }
         });
+
+        // -------------------- HEAL ITEMS --------------------
+
+
     }
 
     public void AcceptGift() {

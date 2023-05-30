@@ -162,6 +162,9 @@ public class LevelLogic : MonoBehaviour
     }
 
     public void FailedLevel() {
+        ch.currentHealth = 1;
+        rController.UpdateHealthInRealm();
+
         failedPanel.SetActive(true);
     }
 
