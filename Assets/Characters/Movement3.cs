@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Male Movement */
 public class Movement3 : MonoBehaviour
 {
     Rigidbody rb;
@@ -32,6 +33,8 @@ public class Movement3 : MonoBehaviour
 
     void Update()
     {
+        if (_levelLogic.GetStageStatus()) return;
+        
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
     }

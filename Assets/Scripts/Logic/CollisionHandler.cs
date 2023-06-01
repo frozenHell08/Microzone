@@ -96,12 +96,11 @@ public class CollisionHandler : MonoBehaviour
 
         // Enemy e = collision.gameObject.GetComponent<Enemy>();
 
-        Debug.Log(collision.gameObject);
         // Debug.Log(e);
 
         Destroy(collision.gameObject);
         Debug.Log("boop");
-        _levelLogic.AddKill();
+        // _levelLogic.AddKill();
     }
 }
 

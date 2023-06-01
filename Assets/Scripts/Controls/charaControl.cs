@@ -72,7 +72,7 @@ public class charaControl : MonoBehaviour {
         if (col.gameObject.tag == "Enemy") {
             Destroy(col.gameObject);
 
-            _levelLogic.AddKill();
+            // _levelLogic.AddKill();
         }
     }
 }
