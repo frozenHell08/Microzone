@@ -50,11 +50,6 @@ public class LevelLogic : MonoBehaviour
     void Update() {
         if (isDoneStage) return;
 
-<<<<<<< Updated upstream
-            if (killedEnemies == TotalEnemies) {
-                completePanel.SetActive(true);
-            }
-=======
         int enemyCount = CountEnemies();
         enemyCounter.text = enemyCount.ToString();
 
@@ -64,7 +59,6 @@ public class LevelLogic : MonoBehaviour
 
         if (enemyCount > TotalEnemies) {
             StartCoroutine(ShowFailMessageWithDelay());
->>>>>>> Stashed changes
         }
     }
 
@@ -180,8 +174,6 @@ public class LevelLogic : MonoBehaviour
             if (txt.name.Contains("hp")) txt.text = $"HP\t{ch.currentHealth}/{ch.maxHealth}";
         }
     }
-<<<<<<< Updated upstream
-=======
 
     public void FailedLevel() {
         ch.currentHealth = 1;
@@ -206,7 +198,6 @@ public class LevelLogic : MonoBehaviour
     public bool GetStageStatus() {
         return isDoneStage;
     }
->>>>>>> Stashed changes
 }
 
 #if UNITY_EDITOR
