@@ -24,6 +24,11 @@ public class Healing : MonoBehaviour
     private string splitName;
 
     public void ConfirmHeal() {
+        if (ch.currentHealth == ch.maxHealth) {
+            CancelHeal();
+            return;
+        }
+
         hsctrl = GameObject.Find("HomeScreen").GetComponent<HomescreenController>();
 
         FieldInfo healField = Array.Find<FieldInfo>(ch.healCount.GetType().GetFields(), 
@@ -41,9 +46,6 @@ public class Healing : MonoBehaviour
         rController.UpdateItemInRealm(splitName, itemCount - 1);
         hsctrl.StatusInventory();
         CancelHeal();
-
-        
-        // homescreencontroller refresh thing. 
     }
 
     public void ShowConfirmation() {

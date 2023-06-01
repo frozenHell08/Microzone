@@ -49,7 +49,7 @@ public class PlayerControler4 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (_levelLogic.GetStageStatus()) return;
-
+            
             attackCounter = attackTime;
             myAnim.SetBool("IsAttacking", true);
             IsAttacking = true;

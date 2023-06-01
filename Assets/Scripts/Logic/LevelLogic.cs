@@ -13,7 +13,6 @@ using UnityEditor;
 
 public class LevelLogic : MonoBehaviour
 {
-    #region 
     [SerializeField] private RealmController rController;
     [SerializeField] private CurrentCharacter ch;
     [SerializeField] [Range(1, 18)] private int _lvl;
@@ -72,7 +71,7 @@ public class LevelLogic : MonoBehaviour
         isDoneStage = true;
         yield return new WaitForSeconds(messageDelay);
         failedPanel.SetActive(true);
-    }    
+    } 
 
     public void LevelFinish() {
         string x = "stage" + _lvl;
