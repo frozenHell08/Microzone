@@ -101,7 +101,7 @@ public class CollisionHandler : MonoBehaviour
 
         Destroy(collision.gameObject);
         Debug.Log("boop");
-        _levelLogic.AddKill();
+        // _levelLogic.AddKill();
     }
 }
 

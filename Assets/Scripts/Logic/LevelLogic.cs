@@ -7,9 +7,12 @@ using ProfileCreation;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class LevelLogic : MonoBehaviour
 {
-    [Header("Controls")]
     [SerializeField] private RealmController rController;
     [SerializeField] private CurrentCharacter ch;
     [SerializeField] [Range(1, 18)] private int _lvl;
@@ -20,38 +23,54 @@ public class LevelLogic : MonoBehaviour
     [SerializeField] private Entry enemySource;
     [SerializeField] private Enemy enemyStats;
     [SerializeField] private GameObject charStats;
+    [SerializeField] private TMP_Text enemyCounter;
     
-    [Header("Rewards")]
     [SerializeField] private int cells;
     [SerializeField] private int experience;
     [SerializeField] private int milaon;
     [SerializeField] private int cinaon;
     [SerializeField] private int viraon;
 
-    [Header("Scene")]
     [SerializeField] private string map;
     
     private ProfileModel profiledata;
-    private int killedEnemies = 0;
+    private bool isDoneStage = false;
+    private float messageDelay = 1f;
 
     Func<int, int, int> expCalculation = (experience, increment) => experience / increment;
     
     void OnEnable() {
         profiledata = rController.FindProfile(ch.characterID);
-        // profiledata = rController.FindProfile("JOSHUA_M");
         LoadStageData();
         setFinishMessage(completePanel);
     }
 
-    public void AddKill() {
-        if (killedEnemies < TotalEnemies) {
-            killedEnemies++;
+    void Update() {
+        if (isDoneStage) return;
 
-            if (killedEnemies == TotalEnemies) {
-                completePanel.SetActive(true);
-            }
+        int enemyCount = CountEnemies();
+        enemyCounter.text = enemyCount.ToString();
+
+        if (enemyCount == 0) { //no more enemies in map
+            StartCoroutine(ShowCompleteMessageWithDelay());
+        }
+
+        if (enemyCount > TotalEnemies) {
+            StartCoroutine(ShowFailMessageWithDelay());
         }
     }
+
+    private IEnumerator ShowCompleteMessageWithDelay() {
+        isDoneStage = true;
+        yield return new WaitForSeconds(messageDelay);
+        completePanel.SetActive(true);
+    }
+
+    private IEnumerator ShowFailMessageWithDelay() {
+        isDoneStage = true;
+        yield return new WaitForSeconds(messageDelay);
+        failedPanel.SetActive(true);
+    } 
 
     public void LevelFinish() {
         string x = "stage" + _lvl;
@@ -108,11 +127,7 @@ public class LevelLogic : MonoBehaviour
         ch.solutionsCount.cinaon += cinaon;
         ch.solutionsCount.viraon += viraon;
 
-        Debug.Log($"exp : {ch.experience}");
-        Debug.Log($"level : {ch.level}");
-
         int result = expCalculation(ch.experience, 100);
-        Debug.Log($"result : {result}");
 
         if (ch.level < result) {
             rController.realmDB.Write(() => {
@@ -120,9 +135,6 @@ public class LevelLogic : MonoBehaviour
             });
 
             ch.level += 1;
-            Debug.Log("level up");
-        } else {
-            Debug.Log("no level up");
         }
 
         SceneManager.LoadScene(map);
@@ -175,4 +187,68 @@ public class LevelLogic : MonoBehaviour
     public Enemy GetEnemySource() {
         return enemyStats;
     }
+
+    private int CountEnemies() {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        return enemies.Length;
+    }
+
+    public bool GetStageStatus() {
+        return isDoneStage;
+    }
 }
+
+#if UNITY_EDITOR
+[ CustomEditor ( typeof(LevelLogic) ) ]
+public class LevelLogicEditor : Editor {
+
+    bool showRewards = false;
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        Header("Source", false);
+        Property("rController");
+        Property("ch");
+        Property("enemySource");
+        Property("enemyStats");
+        Property("map");
+
+        Header("Variables", true);
+        Property("_lvl");
+        Property("TotalEnemies");
+        Property("enemyTxtObj");
+        Property("charStats");
+        Property("enemyCounter");
+
+        Header("Message Panels", true);
+        Property("completePanel");
+        Property("failedPanel");
+
+        EditorGUILayout.Space();
+        showRewards = EditorGUILayout.BeginFoldoutHeaderGroup(showRewards, "Stage Rewards");
+
+        if (showRewards) {
+            Property("cells"); Property("experience"); Property("milaon");
+            Property("cinaon"); Property("viraon");     
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();        
+
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    private SerializedProperty GetSeriaProperty(string name) {
+        return serializedObject.FindProperty(name);
+    }
+
+    private void Property(string name) {
+        EditorGUILayout.PropertyField(serializedObject.FindProperty(name));
+    }
+
+    private void Header(string label, bool space) {
+        if (space) EditorGUILayout.Separator();
+        EditorGUILayout.LabelField(label, EditorStyles.boldLabel);
+    }
+}
+#endif

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Female Control */
 public class PlayerControler4 : MonoBehaviour
 {
     public Rigidbody rb;
@@ -13,10 +14,13 @@ public class PlayerControler4 : MonoBehaviour
     private float attackCounter = 1f;
     private bool IsAttacking;
 
+    private LevelLogic _levelLogic;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         myAnim = GetComponent<Animator>();
+        _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
     }
 
     void Update()
@@ -42,8 +46,10 @@ public class PlayerControler4 : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            if (_levelLogic.GetStageStatus()) return;
+            
             attackCounter = attackTime;
             myAnim.SetBool("IsAttacking", true);
             IsAttacking = true;
