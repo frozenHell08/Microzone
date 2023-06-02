@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 17Variola virus(smallpox)
+  m_EditorClassIdentifier: 
+  Kingdom: Virus
+  Phylum: Nucleocytoviricota
+  Class: Pokkesviricetes
+  Order: Chitovirales
+  Family: Poxviridae
+  Genus: 'Orthopoxvirus  '
+  Species: Variola virus(smallpox)
+  entryImage: {fileID: 21300000, guid: 0c0a785786c6099459fd559b62861c40, type: 3}
+  Characteristics: The variola virus, a huge double-stranded DNA pathogen with a
+    brick-like form, is serologically reactive with other members of the poxvirus
+    family, such as ectromelia, cowpox, monkeypox, vaccinia, and camelpox.
+  Symptoms:
+  - "Fever,\r Muscle aches, Headache, Severe fatigue, Severe back pain,\nand Vomiting
+    sometimes."
+  - Smallpox patients experienced fever and a recognizable, developing skin rash.
+  trivia_1: 'The variola virus, which causes smallpox, was a serious infectious illness
+    before it was eradicated. In other words, it traveled from one person to another
+    because it was contagious. '
+  trivia_2: 'The last smallpox outbreak in the United States happened in 1949, thanks
+    to the effectiveness of vaccination. '
+  trivia_3: 'Smallpox outbreaks have occasionally occurred since the variola virus
+    (smallpox virus) first appeared thousands of years ago and started infecting
+    and killing people in human populations. '
+  directContact: 1
+  dropletSpread: 1
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 16Human polyomavirus 2
+  m_EditorClassIdentifier: 
+  Kingdom: Virus
+  Phylum: Cossaviricota
+  Class: Papovaviricetes
+  Order: Sepolyvirales
+  Family: Polyomaviridae
+  Genus: Betapolyomavirus
+  Species: Human polyomavirus 2
+  entryImage: {fileID: 21300000, guid: ae108c1274ff87a44bed2466f0a8dc60, type: 3}
+  Characteristics: 'The three most well-known polyomaviruses are BK virus, JC virus,
+    and SV40 virus. Polyomaviruses are DNA viruses. '
+  Symptoms:
+  - ' In healthy people, the BK virus causes a mild, self-limiting upper respiratory
+    infection (mostly in childhood). '
+  trivia_1: Small, unenveloped DNA viruses known as polyomaviruses are common in
+    nature. After primary infection, the viruses remain dormant in immunocompetent
+    hosts. With few exceptions, infections brought on by these viruses develop when
+    the immune system is weakened, particularly when T cell insufficiency is present.
+  trivia_2: Since JCV and BKV are viruses that are often found in people, the data
+    suggest that eating or drinking contaminated food or water may be a possible
+    entry point for these viruses or polyomavirus DNA into the general population.
+  trivia_3: Serological evidence of previous BK infection is present in about 80%
+    of the adult population.
+  directContact: 1
+  dropletSpread: 1
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

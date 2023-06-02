@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e615f79cc783ab4cad6a43e894de055, type: 3}
+  m_Name: Bandaid
+  m_EditorClassIdentifier: 
+  ItemID: itm_bandaid
+  ItemName: Bandaid
+  ItemSprite: {fileID: -1593693496, guid: 825da5c0a9b64c3459af82891a789afc, type: 3}
+  effect: 20
+  price: 90
+  defi: "Restores health for \b20 points."

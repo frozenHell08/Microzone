@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 11Taenia saginata 1
+  m_EditorClassIdentifier: 
+  Kingdom: Animal
+  Phylum: Platyhelminthes
+  Class: Cestoda
+  Order: Cyclophyllidea
+  Family: Taeniidae
+  Genus: Taenia
+  Species: Taenia saginata
+  entryImage: {fileID: 21300000, guid: 760fe6e9d3c4140458254c522841a7f1, type: 3}
+  Characteristics: The tapeworm Taenia saginata belongs to the family Taeniidae,
+    class Cestoidea, and order Cyclophyllidea.
+  Symptoms:
+  - Mild epigastric discomfort, nausea, flatulence, diarrhea, or hunger pangs are
+    typical signs of taeniasis.
+  trivia_1: The tapeworm species Taenia saginata (beef tapeworm), Taenia solium (pork
+    tapeworm), and Taenia asiatica are responsible for the parasitic infection known
+    as taeniasis in humans (Asian tapeworm). These tapeworms can spread to humans
+    through the consumption of raw or undercooked pork (T. saginata) or beef (T.
+    solium and T. asiatica).
+  trivia_2: T. Saginata tapeworm is larger than the other two tapeworms (up to 10
+    meters (m) in length) (usually 3 m). In addition to stomach trouble and abdominal
+    pain, tapeworms can also result in appetite loss, weight loss, and other digestive
+    issues. The active passage of proglottids (tapeworm segments) via the anus and
+    in the feces is the most obvious symptom of taeniasis.
+  trivia_3: These tapeworms can spread to humans through the consumption of raw or
+    undercooked pork (T. saginata) or beef (T. solium and T. asiatica).
+  directContact: 1
+  dropletSpread: 0
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 

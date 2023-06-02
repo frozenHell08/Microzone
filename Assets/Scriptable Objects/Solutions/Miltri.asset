@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b9fdb777e059443a446ef7a10e4d3b, type: 3}
+  m_Name: Miltri
+  m_EditorClassIdentifier: 
+  _category: 0
+  solutionID: itm_miltri
+  solutionName: Miltri
+  solutionSprite: {fileID: -693039529, guid: f027cd02eb149f74daa053b367bc9af4, type: 3}
+  price: 0
+  attackPoints: 0
+  description: Damage against Bacteria +0.

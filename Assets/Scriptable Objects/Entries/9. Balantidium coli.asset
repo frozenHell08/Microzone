@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb1fe9d61ffc984da2c96cf370f0ceb, type: 3}
+  m_Name: 9. Balantidium coli
+  m_EditorClassIdentifier: 
+  Kingdom: Chromista
+  Phylum: Ciliophora
+  Class: Litostomatea
+  Order: Vestibuliferida
+  Family: Balantidiidae
+  Genus: Balantidium
+  Species: Balantidium coli
+  entryImage: {fileID: 21300000, guid: 9a2565768ac35714bb1fb0160f64ceed, type: 3}
+  Characteristics: Balantidium coli is an intestinal protozoan parasite. It is the
+    protozoan parasite of humans. It is a species of ciliate protozoan. Ciliates
+    have 2 nuclei, a macronuclei and a micronuclei. The macronucleus is a long, kidney-shaped
+    structure while the micronucleus is spherical. The micronucleus is usually next
+    to the macronucleus. Balantidium coli is the only known ciliated parasite that
+    is infectious to humans. Balantidium coli has two contractile vacuoles. Balantidium
+    coli has two developmental stages called the trophozoite stage (reproductive
+    stage) and the cyst stage (infectious stage).
+  Symptoms:
+  - abdominal pain
+  - vomiting
+  trivia_1: "Balantidium coli is the largest protozoan and the only ciliated parasite
+    that infects \r\nhumans. "
+  trivia_2: Balantidium cyst are found in the feces of infected individuals.
+  trivia_3: 
+  directContact: 1
+  dropletSpread: 0
+  airborneTransmission: 0
+  vehicles: 0
+  vectors: 0
+  listOfVectors:
+  - 
