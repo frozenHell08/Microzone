@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: S. pyogenes
+  m_Name: 8. E. histolytica
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: cf79ba3d497427341bee885be8327af7, type: 2}
-  enemyName: S. pyogenes
-  category: 0
-  enemyAttack: 0
-  enemyHp: 0
+  enemySource: {fileID: 11400000, guid: 68c03b62db4a47a4b8de339924c73446, type: 2}
+  enemyName: E. histolytica
+  category: 1
+  enemyAttack: 19
+  enemyHp: 9

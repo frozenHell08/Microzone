@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: N. gonorrhoeae
+  m_Name: 2. E. hermannii
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: 019d25b06b779f646a0b5594244c912f, type: 2}
-  enemyName: N. gonorrhoeae
+  enemySource: {fileID: 11400000, guid: 5d70edc781f75ab43bae0b8ee3944d37, type: 2}
+  enemyName: E. hermannii
   category: 0
-  enemyAttack: 0
-  enemyHp: 0
+  enemyAttack: 7
+  enemyHp: 6

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: A. hydrophila
+  m_Name: 10. T. trichiura
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: 351169c7910a35c4b953ea3c3898bf36, type: 2}
-  enemyName: A. hydrophila
-  category: 0
-  enemyAttack: 7
-  enemyHp: 2
+  enemySource: {fileID: 11400000, guid: 695f928546f01734fb436a5de8f8db02, type: 2}
+  enemyName: T. trichiura
+  category: 1
+  enemyAttack: 23
+  enemyHp: 15

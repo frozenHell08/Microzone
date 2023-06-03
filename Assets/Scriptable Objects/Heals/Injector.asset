@@ -15,5 +15,6 @@ MonoBehaviour:
   ItemID: itm_injector
   ItemName: Injector
   ItemSprite: {fileID: 75727391, guid: 825da5c0a9b64c3459af82891a789afc, type: 3}
-  definition: inject yoom
-  price: 100
+  effect: 50
+  price: 80
+  defi: Restores health for 50 points.

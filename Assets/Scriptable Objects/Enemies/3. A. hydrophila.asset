@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: B. coli
+  m_Name: 3. A. hydrophila
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: 1bee4ed58e5753b43ba6ef0514621b50, type: 2}
-  enemyName: B. coli
-  category: 1
-  enemyAttack: 0
-  enemyHp: 0
+  enemySource: {fileID: 11400000, guid: 351169c7910a35c4b953ea3c3898bf36, type: 2}
+  enemyName: A. hydrophila
+  category: 0
+  enemyAttack: 9
+  enemyHp: 9

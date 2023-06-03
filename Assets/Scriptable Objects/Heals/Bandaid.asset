@@ -16,5 +16,5 @@ MonoBehaviour:
   ItemName: Bandaid
   ItemSprite: {fileID: -1593693496, guid: 825da5c0a9b64c3459af82891a789afc, type: 3}
   effect: 20
-  price: 90
-  defi: "Restores health for \b20 points."
+  price: 40
+  defi: Restores health for 20 points.

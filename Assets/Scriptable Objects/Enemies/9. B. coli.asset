@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: G. lamblia
+  m_Name: 9. B. coli
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: fcf65109244b7f84eafc9265501ea7d3, type: 2}
-  enemyName: G. intestinalis
+  enemySource: {fileID: 11400000, guid: 1bee4ed58e5753b43ba6ef0514621b50, type: 2}
+  enemyName: B. coli
   category: 1
-  enemyAttack: 0
-  enemyHp: 0
+  enemyAttack: 21
+  enemyHp: 12
