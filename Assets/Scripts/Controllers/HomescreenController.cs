@@ -67,7 +67,7 @@ public class HomescreenController : MonoBehaviour
 
         string y1 = $"<b>Gender</b> : \t{ch.gender}\n" +
                     $"<b>Level</b> : \t{ch.level}\n" +
-                    $"<b>Exp</b> : \t{ch.experience}\n" +
+                    $"<b>Exp</b> : \t{ch.experience}/{ch.barExperience}\n" +
                     $"<b>Health</b> : \t{ch.currentHealth} / {ch.maxHealth}\n" +
                     $"<b>Cells</b> : \t{ch.cells:n0}\n" +
                     $"<b>Genes</b> : \t{ch.genes:n0}\n" +
@@ -129,14 +129,8 @@ public class HomescreenController : MonoBehaviour
                 } else {
                     btn.interactable = true;
                 }
-
-                // Debug.Log($"amount : {amount.text}");
             }
         });
-
-        // -------------------- HEAL ITEMS --------------------
-
-
     }
 
     public void AcceptGift() {
@@ -149,10 +143,3 @@ public class HomescreenController : MonoBehaviour
         gendata_genes.text = $"{ch.genes:n0}";
     }
 }
-
-// [System.Serializable]
-// public class ItemInformation {
-//     public Image itmSprite;
-//     public TMP_Text itmName;
-//     public TMP_Text itmAmount;
-// }

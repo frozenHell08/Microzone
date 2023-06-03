@@ -10,7 +10,7 @@ public class CurrentCharacter : ScriptableObject
     public Sprite sprite;
     public long cells, genes;
     // public long ;
-    public int level, experience, currentHealth, maxHealth;
+    public int level, experience, barExperience, totalExp, currentHealth, maxHealth;
     public int res_bacteria;
     public int res_parasite;
     public int res_virus;
@@ -27,6 +27,8 @@ public class CurrentCharacter : ScriptableObject
         genes = 0;
         level = 0;
         experience = 0;
+        barExperience = 0;
+        totalExp = 0;
         totalStages = 1;
         res_bacteria = 0;
         res_parasite = 0;

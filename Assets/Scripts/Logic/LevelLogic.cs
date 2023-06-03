@@ -115,27 +115,32 @@ public class LevelLogic : MonoBehaviour
 
         rController.realmDB.Write(() => {
             profiledata.CellCount += cells;
-            profiledata.Experience += experience;
+            profiledata.TotalExperience += experience;
             profiledata.liquidMeds.Milaon_S += milaon;
             profiledata.liquidMeds.Cinaon_S += cinaon;
             profiledata.liquidMeds.Viraon_S += viraon;
         });
 
         ch.cells += cells;
-        ch.experience += experience;
+        ch.totalExp += experience;
         ch.solutionsCount.milaon += milaon;
         ch.solutionsCount.cinaon += cinaon;
         ch.solutionsCount.viraon += viraon;
 
-        int result = expCalculation(ch.experience, 100);
+        // ----------------------------------
 
-        if (ch.level < result) {
-            rController.realmDB.Write(() => {
-                profiledata.Level += 1;
-            });
+        ch.experience += experience;        
+
+        while (ch.experience >= ch.barExperience) {
+            ch.experience = ch.experience - ch.barExperience;
 
             ch.level += 1;
+            ch.barExperience += 100;
+
+            rController.LevelUp();
         }
+
+        // ----------------------------------
 
         SceneManager.LoadScene(map);
 
@@ -168,7 +173,7 @@ public class LevelLogic : MonoBehaviour
         foreach (TMP_Text txt in charStats.GetComponentsInChildren<TMP_Text>(true)) {
             if (txt.name.Contains("name")) txt.text = ch.characterName;
             if (txt.name.Contains("level")) txt.text = $"Lv. {ch.level.ToString()}";
-            if (txt.name.Contains("exp")) txt.text = $"Exp\t{ch.experience.ToString()}";
+            if (txt.name.Contains("exp")) txt.text = $"Exp\t{ch.experience.ToString()}/{ch.barExperience.ToString()}";
             if (txt.name.Contains("hp")) txt.text = $"HP\t{ch.currentHealth}/{ch.maxHealth}";
         }
     }
