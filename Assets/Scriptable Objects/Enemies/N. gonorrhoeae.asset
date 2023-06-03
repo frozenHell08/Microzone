@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: S aureus
+  m_Name: N. gonorrhoeae
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: 261078897bf8027418bbb8fb5e048570, type: 2}
-  enemyName: S. aureus
+  enemySource: {fileID: 11400000, guid: 019d25b06b779f646a0b5594244c912f, type: 2}
+  enemyName: N. gonorrhoeae
   category: 0
-  enemyAttack: 5
-  enemyHp: 1
+  enemyAttack: 0
+  enemyHp: 0

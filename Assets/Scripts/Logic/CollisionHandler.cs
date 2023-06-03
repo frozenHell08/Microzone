@@ -94,14 +94,10 @@ public class CollisionHandler : MonoBehaviour
 
     private void EnemyWeaponHit(Collision collision) { // weapon damage etc
 
-        // Enemy e = collision.gameObject.GetComponent<Enemy>();
+        EnemyHandler e = collision.gameObject.GetComponent<EnemyHandler>();
 
-        Debug.Log(collision.gameObject);
-        // Debug.Log(e);
+        e.TakeDamage(2);
 
-        Destroy(collision.gameObject);
-        Debug.Log("boop");
-        // _levelLogic.AddKill();
     }
 }
 

@@ -15,6 +15,17 @@ public class Enemy : ScriptableObject
     public Category category;
     public int enemyAttack;
     public int enemyHp;
+
+    void OnValidate() {
+        if (enemySource != null) {
+            string[] parts = enemySource.Species.Split(' ');
+
+            enemyName = $"{parts[0][0]}. {parts[1]}";
+        }
+        // string[] parts = enemySource.Species.Split(' ');
+
+        // enemyName = $"{parts[0][0]}. {parts[1]}";
+    }
 }
 
 #if UNITY_EDITOR
@@ -30,6 +41,7 @@ public class EnemyEditor : Editor {
         Header("Enemy Stats", true);
         EditorGUILayout.PropertyField(GetSeriaProperty("category"), new GUIContent("Category"));
         EditorGUILayout.Separator();
+        Property("enemyName");
         Property("enemyAttack");
         Property("enemyHp");
 
