@@ -206,4 +206,15 @@ public class RealmController : MonoBehaviour
             prof_model.Level = character.level;
         });
     }
+
+    public void UseSolution(string name, int value) {
+        prof_model = FindProfile(character.characterID);
+
+        PropertyInfo prop = Array.Find<PropertyInfo>(prof_model.liquidMeds.GetType().GetProperties(),
+                p => p.Name.Contains(name, StringComparison.OrdinalIgnoreCase));
+
+        realmDB.Write(() => {
+            prop.SetValue(prof_model.liquidMeds, value);
+        });
+    }
 }

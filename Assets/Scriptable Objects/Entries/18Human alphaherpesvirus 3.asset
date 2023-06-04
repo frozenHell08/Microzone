@@ -19,7 +19,7 @@ MonoBehaviour:
   Family: Herpesviridae
   Genus: 'Varicellovirus varicella-zoster virus '
   Species: Human alphaherpesvirus 3
-  entryImage: {fileID: 21300000, guid: 1d161e8d5a0fc95468500531d1a4be53, type: 3}
+  entryImage: {fileID: 21300000, guid: e19da6bd466c4eb48a256356bc04ec32, type: 3}
   Characteristics: Is a member of genus Varicellovirus in subfamuly Alphaherpesvirus
     of the family Herpesviridae.
   Symptoms:

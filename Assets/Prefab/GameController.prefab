@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8088322999091388997}
   - component: {fileID: 8088322999091388996}
+  - component: {fileID: 1508074561905738472}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -45,9 +46,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rController: {fileID: 0}
+  ch: {fileID: 0}
   _lvl: 1
   TotalEnemies: 3
-  panel: {fileID: 0}
+  completePanel: {fileID: 0}
+  failedPanel: {fileID: 0}
+  enemyTxtObj: {fileID: 0}
+  enemySource: {fileID: 0}
+  enemyStats: {fileID: 0}
+  charStats: {fileID: 0}
+  enemyCounter: {fileID: 0}
   cells: 500
+  experience: 0
   milaon: 5
+  cinaon: 0
+  viraon: 0
   map: 00_Level_Selection
+--- !u!114 &1508074561905738472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088322999091389003}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc485a9df7a72143a304e73e1f3c1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ch: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
+  solnMilaon: {fileID: 11400000, guid: f0ecfe01944d0c248a3fd157859b32c0, type: 2}
+  solnCinaon: {fileID: 11400000, guid: cc162c4b97c5b1847950480ae3d839a1, type: 2}
+  solnViraon: {fileID: 11400000, guid: 156d96597b1b4954b9d2f9d31fc816cd, type: 2}
+  solnMildha: {fileID: 11400000, guid: d7cd808c7330b8947bb6a664f0db0090, type: 2}
+  solnCinadha: {fileID: 11400000, guid: ea7c8e3025f997242911d44727678f33, type: 2}
+  solnVirdha: {fileID: 11400000, guid: 6306a1a9f6933594ab33af9ffab4e1c5, type: 2}
+  solnMiltri: {fileID: 11400000, guid: 35de9b1ab7090d84d8b2c58db79a626d, type: 2}
+  solnCinatri: {fileID: 11400000, guid: 029725694c2fa264b9d02c96c3c73dfb, type: 2}
+  solnVirtri: {fileID: 11400000, guid: 1d7a8a302a42ace47809c42fe6c26faf, type: 2}
+  cmilaon: {fileID: 0}
+  ccinaon: {fileID: 0}
+  cviraon: {fileID: 0}
+  cmildha: {fileID: 0}
+  ccinadha: {fileID: 0}
+  cvirdha: {fileID: 0}
+  cmiltri: {fileID: 0}
+  ccinatri: {fileID: 0}
+  cvirtri: {fileID: 0}

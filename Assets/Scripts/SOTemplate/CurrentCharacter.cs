@@ -17,6 +17,7 @@ public class CurrentCharacter : ScriptableObject
     public int totalStages;
     public CurrentHealing healCount;
     public CurrentSolution solutionsCount;
+    public Solution equippedSolution;
 
     public void Reset() {
         characterID = "";
@@ -33,6 +34,7 @@ public class CurrentCharacter : ScriptableObject
         res_bacteria = 0;
         res_parasite = 0;
         res_virus = 0;
+        equippedSolution = null;
 
         healCount.Reset();
         solutionsCount.Reset();

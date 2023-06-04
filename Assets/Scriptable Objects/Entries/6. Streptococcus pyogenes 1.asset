@@ -19,7 +19,7 @@ MonoBehaviour:
   Family: Streptococcaceae
   Genus: Streptococcus
   Species: 'Streptococcus pyogenes '
-  entryImage: {fileID: 21300000, guid: c2807ff20a78e104f9fe8cf2e562ba4a, type: 3}
+  entryImage: {fileID: 21300000, guid: 59d9c5542304f15499e9942be58f934a, type: 3}
   Characteristics: The Streptococcus pyogenes isolates had high resistance rates
     against macrolides and tetracycline. They mainly expressed the ermB gene type
     and cMLSB phenotype. Their common emm types are emm1.0 and emm12.0, which have

@@ -19,7 +19,7 @@ MonoBehaviour:
   Family: 'Staphylococcaceae '
   Genus: Staphylococcus
   Species: Staphylococcus aureus
-  entryImage: {fileID: 21300000, guid: 2aaf9c8143d2a184daea6b13acdf1459, type: 3}
+  entryImage: {fileID: 21300000, guid: 6711fa7a59130c740ba970f399744033, type: 3}
   Characteristics: Staphylococcus is a very significant organism because of its ability
     to cause a number of diseases and infections in human and animals. It causes
     localized supportive lesions and abscesses on skin, or deep-seated infections

@@ -19,7 +19,7 @@ MonoBehaviour:
   Family: 'Neisseriaceae '
   Genus: 'Neisseria '
   Species: 'Neisseria gonorrhoeae '
-  entryImage: {fileID: 21300000, guid: 18208d0815e37e44eaae493ea22e23e5, type: 3}
+  entryImage: {fileID: 21300000, guid: dd7e4a2822c8b454383a65e61dd41699, type: 3}
   Characteristics: Neisseria gonorrhoeae belongs to the genus Neisseria within the
     family Neisseriaceae . It is a Gram-negative, non-spore forming, non-motile,
     encapsulated, and non acid-fast bacteria, which appear in kidney bean shape under
