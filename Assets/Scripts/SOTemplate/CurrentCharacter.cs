@@ -17,6 +17,7 @@ public class CurrentCharacter : ScriptableObject
     public int totalStages;
     public CurrentHealing healCount;
     public CurrentSolution solutionsCount;
+    public Solution equippedSolution;
 
     public void Reset() {
         characterID = "";
