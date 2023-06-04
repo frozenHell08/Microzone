@@ -993,6 +993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarSprite: {fileID: 240865765}
+  reduceSpeed: 2
 --- !u!1 &222361204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379636768126763742, guid: b0370fe51525fae41b3b178db0fad7a0, type: 3}
       propertyPath: cells
-      value: 550
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379636768126763742, guid: b0370fe51525fae41b3b178db0fad7a0, type: 3}
+      propertyPath: milaon
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6379636768126763742, guid: b0370fe51525fae41b3b178db0fad7a0, type: 3}
       propertyPath: enemyName
@@ -1251,7 +1256,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b4571f9acb4750448842a1db39a4586b, type: 2}
     - target: {fileID: 6379636768126763742, guid: b0370fe51525fae41b3b178db0fad7a0, type: 3}
       propertyPath: experience
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6379636768126763742, guid: b0370fe51525fae41b3b178db0fad7a0, type: 3}
       propertyPath: enemySource
@@ -2232,6 +2237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarSprite: {fileID: 1536810557}
+  reduceSpeed: 2
 --- !u!1001 &506160024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3333,15 +3339,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752739153}
-  m_LocalRotation: {x: 0.32061297, y: 0, z: 0, w: 0.94721025}
-  m_LocalPosition: {x: 67.4, y: 19.82, z: -31.58}
+  m_LocalRotation: {x: 0.38179636, y: 0, z: 0, w: 0.92424655}
+  m_LocalPosition: {x: 67.4, y: 20.91, z: -29.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1813498609}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 37.4, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.89, y: 0, z: 0}
 --- !u!224 &758533237 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8367241511233335151, guid: b2bc13c2e0e63884bac2945d912a1b61, type: 3}
@@ -4921,6 +4927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarSprite: {fileID: 1636824887}
+  reduceSpeed: 2
 --- !u!1001 &1100746351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5159,8 +5166,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179345782}
-  m_LocalRotation: {x: 0.320613, y: 0, z: 0, w: 0.9472103}
-  m_LocalPosition: {x: 67.4, y: 19.82, z: -31.58}
+  m_LocalRotation: {x: 0.38179636, y: 0, z: 0, w: 0.92424655}
+  m_LocalPosition: {x: 67.4, y: 20.91, z: -29.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5434,6 +5441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarSprite: {fileID: 1922875182}
+  reduceSpeed: 2
 --- !u!1001 &1304241096
 PrefabInstance:
   m_ObjectHideFlags: 0

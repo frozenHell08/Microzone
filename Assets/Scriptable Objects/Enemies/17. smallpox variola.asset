@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a7d5045b250c14c81071f93520526e, type: 3}
-  m_Name: 10. T. trichiura
+  m_Name: 17. smallpox variola
   m_EditorClassIdentifier: 
-  enemySource: {fileID: 11400000, guid: 695f928546f01734fb436a5de8f8db02, type: 2}
-  enemyName: T. trichiura
-  category: 1
-  enemyAttack: 23
-  enemyHp: 15
+  enemySource: {fileID: 11400000, guid: 6ab7320e88595ff4ea69d4bd32796844, type: 2}
+  enemyName: Variola virus
+  category: 2
+  enemyAttack: 37
+  enemyHp: 21

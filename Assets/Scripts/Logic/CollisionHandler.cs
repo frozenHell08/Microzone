@@ -96,7 +96,7 @@ public class CollisionHandler : MonoBehaviour
 
         EnemyHandler e = collision.gameObject.GetComponent<EnemyHandler>();
 
-        e.TakeDamage(2);
+        e.TakeDamage(3);
 
     }
 }

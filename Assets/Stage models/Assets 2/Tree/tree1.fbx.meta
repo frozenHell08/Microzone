@@ -3,7 +3,22 @@ guid: 7bd5fc250023727448bb41c7ff5f0b64
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leaf
+    second: {fileID: 2100000, guid: 5e9a2555e0795484aabda2791194b35e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunks
+    second: {fileID: 2100000, guid: 67d2f045fb6bc08458379482c1fc718a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vase
+    second: {fileID: 2100000, guid: e5be808a7ea327040992c9c5ced04764, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
