@@ -34,6 +34,7 @@ public class CurrentCharacter : ScriptableObject
         res_bacteria = 0;
         res_parasite = 0;
         res_virus = 0;
+        equippedSolution = null;
 
         healCount.Reset();
         solutionsCount.Reset();

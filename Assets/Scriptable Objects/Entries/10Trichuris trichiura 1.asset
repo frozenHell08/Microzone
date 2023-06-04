@@ -19,7 +19,7 @@ MonoBehaviour:
   Family: Trichuridae
   Genus: Trichuris
   Species: Trichuris trichiura
-  entryImage: {fileID: 21300000, guid: bf173833fdd7721428a04b422a52b094, type: 3}
+  entryImage: {fileID: 21300000, guid: 0910a0d945f767048b122f464779f2af, type: 3}
   Characteristics: The Trichuris trichiura infects people either ingest eggs after
     coming into contact with contaminated soil or eat items contaminated with soil
     that contains whipworm eggs.

@@ -3568,6 +3568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cinatri
       objectReference: {fileID: 0}
+    - target: {fileID: 8900025704185035174, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9113711861108090973, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9476,6 +9480,10 @@ PrefabInstance:
       propertyPath: ccinatri
       value: 
       objectReference: {fileID: 757223593}
+    - target: {fileID: 1508074561905738472, guid: db11f73f897c345408da696f789e417a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8088322999091388996, guid: db11f73f897c345408da696f789e417a, type: 3}
       propertyPath: ch
       value: 

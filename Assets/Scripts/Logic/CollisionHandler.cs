@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -96,8 +97,29 @@ public class CollisionHandler : MonoBehaviour
 
         EnemyHandler e = collision.gameObject.GetComponent<EnemyHandler>();
 
-        e.TakeDamage(3);
+        if (ch.equippedSolution == null) {
+            e.TakeDamage(2);
+            return;
+        }
 
+        FieldInfo field = Array.Find<FieldInfo>(ch.solutionsCount.GetType().GetFields(),
+            f => f.Name.Equals(ch.equippedSolution.solutionName, StringComparison.OrdinalIgnoreCase));
+
+        Debug.Log(ch.equippedSolution.solutionName);
+        Debug.Log(field);
+
+        int solnamount = (int) field.GetValue(ch.solutionsCount);
+        Debug.Log(solnamount);
+
+        if (solnamount > 0) {
+            int soldmg = ch.equippedSolution.attackPoints;
+            field.SetValue(ch.solutionsCount, (solnamount - 1));
+            //save changes to realm
+            rController.UseSolution(ch.equippedSolution.solutionName, solnamount - 1);
+            e.TakeDamage(soldmg);
+        } else {
+            e.TakeDamage(2);
+        }
     }
 }
 

@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: ccinatri
       value: 
       objectReference: {fileID: 7751329351125180369}
+    - target: {fileID: 1508074561905738472, guid: db11f73f897c345408da696f789e417a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8088322999091388996, guid: db11f73f897c345408da696f789e417a, type: 3}
       propertyPath: ch
       value: 
