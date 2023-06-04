@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5772855171690975582, guid: 6dfe7f4e863089b47ab9b4d461acb253, type: 3}
+      propertyPath: ch
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dfe7f4e863089b47ab9b4d461acb253, type: 3}
 --- !u!4 &110367397225419181 stripped
@@ -126,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5589496540161950400}
     m_Modifications:
+    - target: {fileID: 562156387229015051, guid: 23f7ea173e1f6a54daa5900a9b9949fb, type: 3}
+      propertyPath: ch
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
     - target: {fileID: 2708855832963861024, guid: 23f7ea173e1f6a54daa5900a9b9949fb, type: 3}
       propertyPath: m_Name
       value: FemalePlayer
@@ -136,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2708855832963861025, guid: 23f7ea173e1f6a54daa5900a9b9949fb, type: 3}
       propertyPath: speedLimiter
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2708855832963861029, guid: 23f7ea173e1f6a54daa5900a9b9949fb, type: 3}
       propertyPath: m_Size.y

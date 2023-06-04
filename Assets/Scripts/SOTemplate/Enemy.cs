@@ -15,6 +15,34 @@ public class Enemy : ScriptableObject
     public Category category;
     public int enemyAttack;
     public int enemyHp;
+
+    void OnValidate() {
+        if (enemySource != null) {
+            string[] parts = enemySource.Species.Split(' ');
+
+            // enemyName = $"{parts[0][0]}. {parts[1]}";
+
+            switch (category) {
+                case Category.Virus :
+                    if (parts.Length == 2) {
+                        enemyName = enemySource.Species;
+                    } else if (parts.Length == 3) {
+                        enemyName = $"{parts[0][0]}. {parts[1]} {parts[2]}";    
+                    }
+                    
+                    break;
+                default :
+                    enemyName = $"{parts[0][0]}. {parts[1]}";
+                    break;
+            }
+
+            // if (Category.Virus) {
+                
+            // } else {
+            //     Debug.Log("something other");
+            // }
+        }
+    }
 }
 
 #if UNITY_EDITOR
@@ -30,6 +58,7 @@ public class EnemyEditor : Editor {
         Header("Enemy Stats", true);
         EditorGUILayout.PropertyField(GetSeriaProperty("category"), new GUIContent("Category"));
         EditorGUILayout.Separator();
+        Property("enemyName");
         Property("enemyAttack");
         Property("enemyHp");
 

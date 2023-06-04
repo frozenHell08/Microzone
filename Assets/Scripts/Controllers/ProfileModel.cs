@@ -128,6 +128,12 @@ namespace ProfileCreation {
         [MapTo("exp")]
         public int Experience { get; set; } = 0;
 
+        [MapTo("maxExp")]
+        public int CeilingExperience { get; set; } = 100;
+
+        [MapTo("totalExp")]
+        public int TotalExperience { get; set; } = 0;        
+
         [MapTo("cells")]
         public long CellCount { get; set; } = 0;
 
@@ -165,6 +171,8 @@ namespace ProfileCreation {
             firstLogin = this.firstLogin;
             Level = this.Level;
             Experience = this.Experience;
+            CeilingExperience = this.CeilingExperience;
+            TotalExperience = this.TotalExperience;
             CellCount = this.CellCount;
             GeneCount = this.GeneCount;
 

@@ -19,6 +19,8 @@ public class RealmController : MonoBehaviour
     private ProfileModel prof_model;
     private RealmConfiguration config;
 
+    Func<int, int, int> expCalculation = (ceilExp, experience) => ceilExp - experience;
+
     void OnEnable() {
         string exeRootFolder = Directory.GetCurrentDirectory();
         Directory.CreateDirectory(exeRootFolder + "/data");
@@ -80,6 +82,8 @@ public class RealmController : MonoBehaviour
         character.currentHealth = prof_model.CurrentHealth;
         character.maxHealth = prof_model.MaxHealth;
         character.experience = prof_model.Experience;
+        character.barExperience = prof_model.CeilingExperience;
+        character.totalExp = prof_model.TotalExperience;
 
         // -------------------- STAGES --------------------
 
@@ -189,6 +193,17 @@ public class RealmController : MonoBehaviour
 
         realmDB.Write(() => {
             prop.SetValue(prof_model.HealItems, value);
+        });
+    }
+
+    public void LevelUp() {
+        prof_model = FindProfile(character.characterID);
+
+        realmDB.Write(() => {
+            prof_model.Experience = character.experience;
+            prof_model.CeilingExperience = character.barExperience;
+            prof_model.TotalExperience = character.totalExp;
+            prof_model.Level = character.level;
         });
     }
 }

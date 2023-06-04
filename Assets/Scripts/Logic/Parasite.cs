@@ -6,6 +6,7 @@ public class Parasite : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float duplicationInterval = 5f;
+    public int maxDuplicates = 3;
 
     private float timeSinceLastDuplication;
 
@@ -35,7 +36,7 @@ public class Parasite : MonoBehaviour
         float duplicateRadius = 5f; // Adjust the radius of the duplication circle as needed
         float duplicateAngle = 0f; // Starting angle for the duplicates
 
-        int maxDuplicates = 4; // Maximum number of duplicates around the original
+        // int maxDuplicates = 3; // Maximum number of duplicates around the original
         float angleIncrement = 360f / maxDuplicates; // Angle increment between duplicates
 
         for (int i = 0; i < maxDuplicates; i++)
@@ -46,17 +47,18 @@ public class Parasite : MonoBehaviour
 
             Collider[] colliders = Physics.OverlapSphere(duplicatePosition, 0.5f); // Adjust the sphere radius as needed
 
-            if (colliders.Length == 0)
-            {
+            if ((colliders.Length == 0) || (colliders.Length == 1 && colliders[0].name.Contains("Land"))){
+                Debug.Log("inside col length if");
                 GameObject newEnemy = Instantiate(enemyPrefab, duplicatePosition, transform.rotation);
-
-                // Disable duplication for the cloned enemies
                 newEnemy.GetComponent<Parasite>().canDuplicate = false;
-                Debug.Log("duplicated");
-                // Perform any additional setup or modifications on the new enemy, if needed
             }
+
+            // if (canDuplicate) {
+            //     if (colliders.Length == 0 || (colliders.Length == 1 && colliders[0].name.Contains("Land"))) {
+            //         GameObject newEnemy = Instantiate(enemyPrefab, duplicatePosition, transform.rotation);
+            //         newEnemy.GetComponent<Parasite>().canDuplicate = false;
+            //     } 
+            // }
         }
     }
-
-
 }

@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Enemy enemyObj;
+    [SerializeField] private TMP_Text enemyName;
+
+    private int currentHealth;
+
     void Start()
     {
-        
+        currentHealth = enemyObj.enemyHp;
+        healthBar.UpdateHealthBar(enemyObj.enemyHp, currentHealth);
+        enemyName.text = enemyObj.enemyName;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public int GetCurrentHealth() {
+        return currentHealth;
+    }
+
+    public void TakeDamage(int damage) {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0) {
+            Destroy(gameObject);
+        } else {
+            healthBar.UpdateHealthBar(enemyObj.enemyHp, currentHealth);
+        }
     }
 }
