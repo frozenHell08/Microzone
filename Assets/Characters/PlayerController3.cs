@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Male Control */
 public class PlayerController3 : MonoBehaviour
 {
 
@@ -14,10 +15,13 @@ public class PlayerController3 : MonoBehaviour
     private float attackCounter = 1f;
     private bool isAttacking;
 
+    private LevelLogic _levelLogic;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         myAnim = GetComponent<Animator>();
+        _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
     }
     void Update()
     {
@@ -43,15 +47,11 @@ public class PlayerController3 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            if (_levelLogic.GetStageStatus()) return;
+            
             attackCounter = attackTime;
             myAnim.SetBool("IsAttacking", true);
             isAttacking = true;
         }
-        // if (Input.GetKeyDown(KeyCode.Mouse0))
-        // {
-        //     attackCounter = attackTime;
-        //     myAnim.SetBool("IsAttacking", true);
-        //     isAttacking = true;
-        // }
     }
 }

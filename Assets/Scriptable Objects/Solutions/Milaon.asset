@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b9fdb777e059443a446ef7a10e4d3b, type: 3}
   m_Name: Milaon
   m_EditorClassIdentifier: 
-  _category: 2
+  _category: 0
   solutionID: itm_milaon
   solutionName: Milaon
   solutionSprite: {fileID: 333666178, guid: f027cd02eb149f74daa053b367bc9af4, type: 3}
-  price: 500
-  attackPoints: 500
-  description: Damage against Virus +500.
+  price: 30
+  attackPoints: 3
+  description: Damage against Bacteria +3.

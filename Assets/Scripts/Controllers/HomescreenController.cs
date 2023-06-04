@@ -67,7 +67,7 @@ public class HomescreenController : MonoBehaviour
 
         string y1 = $"<b>Gender</b> : \t{ch.gender}\n" +
                     $"<b>Level</b> : \t{ch.level}\n" +
-                    $"<b>Exp</b> : \t{ch.experience}\n" +
+                    $"<b>Exp</b> : \t{ch.experience}/{ch.barExperience}\n" +
                     $"<b>Health</b> : \t{ch.currentHealth} / {ch.maxHealth}\n" +
                     $"<b>Cells</b> : \t{ch.cells:n0}\n" +
                     $"<b>Genes</b> : \t{ch.genes:n0}\n" +
@@ -116,6 +116,20 @@ public class HomescreenController : MonoBehaviour
                     img.sprite = (itm.name.Contains("heal")) ? hh.ItemSprite : ss.solutionSprite;
                 }
             }
+
+            foreach (Button btn in itm.GetComponentsInChildren<Button>(true)) {
+                Debug.Log(btn.name);
+
+                TMP_Text amount = btn.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(txt => txt.name.Equals("amt"));
+
+                int itemamt = int.Parse(amount.text);
+
+                if (itemamt == 0) {
+                    btn.interactable = false;
+                } else {
+                    btn.interactable = true;
+                }
+            }
         });
     }
 
@@ -129,10 +143,3 @@ public class HomescreenController : MonoBehaviour
         gendata_genes.text = $"{ch.genes:n0}";
     }
 }
-
-// [System.Serializable]
-// public class ItemInformation {
-//     public Image itmSprite;
-//     public TMP_Text itmName;
-//     public TMP_Text itmAmount;
-// }

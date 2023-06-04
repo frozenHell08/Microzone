@@ -30,7 +30,7 @@ public class QuizManager : MonoBehaviour
 
     int totalQuestions = 0;
     private int score;
-    private double scoreEquiv = 0;
+    // private double scoreEquiv = 0;
     private List<QuestionAndAnswers> tempStorage;
 
 

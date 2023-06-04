@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Male Movement */
 public class Movement3 : MonoBehaviour
 {
     Rigidbody rb;
 
     // Player
-    float speedLimiter = 50f;
+    [SerializeField] private float speedLimiter;
     float inputHorizontal;
     float inputVertical;
 
@@ -32,43 +33,30 @@ public class Movement3 : MonoBehaviour
 
     void Update()
     {
+        if (_levelLogic.GetStageStatus()) return;
+        
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
     }
-    void FixedUpdate()
-    {
-        if (inputHorizontal != 0 || inputVertical != 0)
-        {
-            if (inputHorizontal != 0 && inputVertical != 0)
-            {
-                inputHorizontal *= speedLimiter;
-                inputVertical *= speedLimiter;
-            }
-            rb.velocity = new Vector3(inputHorizontal, 0, inputVertical);
 
-            if (inputHorizontal > 0)
-            {
+    void FixedUpdate() {
+        Vector3 movementDirection = new Vector3(inputHorizontal, 0, inputVertical).normalized;
+        Vector3 movementVelocity = movementDirection * speedLimiter;
+
+        rb.velocity = movementVelocity;
+
+        //animation state
+        if (movementDirection != Vector3.zero) {
+            if (movementDirection.x > 0) {
                 ChangeAnimationState(Mwalk_right);
-            }
-
-            else if (inputHorizontal < 0)
-            {
+            } else if (movementDirection.x < 0) {
                 ChangeAnimationState(Mwalk_left);
-            }
-
-            else if (inputVertical > 0)
-            {
+            } else if (movementDirection.z > 0) {
                 ChangeAnimationState(Mwalk_up);
-            }
-
-            else if (inputVertical < 0)
-            {
+            } else if (movementDirection.z < 0) {
                 ChangeAnimationState(Mwalk_down);
             }
-        }
-        else
-        {
-            rb.velocity = new Vector3(0f, 0f);
+        } else {
             ChangeAnimationState(idle);
         }
     }
@@ -84,15 +72,5 @@ public class Movement3 : MonoBehaviour
 
         // Update current state
         currentState = newState;
-    }
-
-    void OnCollisionEnter (Collision col) {
-        if (col.gameObject.tag == "Enemy") {
-            Destroy(col.gameObject);
-            Debug.Log("boop");
-            _levelLogic.AddKill();
-        } else if (col.gameObject.tag == "Player") {
-            Debug.Log("MINUS");
-        }
     }
 }

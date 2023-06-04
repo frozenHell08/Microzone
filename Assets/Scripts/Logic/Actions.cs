@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Actions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnCollisionEnter(Collision col) {
+        Debug.Log($"col gameobject : {col.gameObject}");
+        Debug.Log($"col tag : {col.gameObject.tag}");
+        Debug.Log($"gameobject tag : {gameObject.tag}");
+        Debug.Log($"gameobkect : {gameObject}");
     }
 }

@@ -3,7 +3,12 @@ guid: dad6f6057d406144b914021b72676fef
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dengue
+    second: {fileID: 2100000, guid: 62b41433fb9399647b8f4dbffbb408dd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

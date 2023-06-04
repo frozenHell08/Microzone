@@ -18,15 +18,15 @@ MonoBehaviour:
   Order: Diplomonadida
   Family: Hexamitidae
   Genus: Giardia
-  Species: Giardia lamblia
+  Species: Giardia intestinalis
   entryImage: {fileID: 21300000, guid: f20f15d93b9f8f74084649f40d4bd543, type: 3}
-  Characteristics: G. lamblia is pear shaped and has one or two transverse, claw-shaped
-    median bodies; G. agilis is long and slender (100) and has a teardrop-shaped
+  Characteristics: G. intestinalis is pear shaped and has one or two transverse,
+    claw-shaped median bodies; G. agilis is long and slender (100) and has a teardrop-shaped
     median body; and the G. muris trophozoite is shorter and rounder and has a small,
     rounded median body. G. lamblia is found in humans and a variety of other mammals,
     G. muris is found in rodents, and G. agilis is found in amphibians.
   Symptoms:
-  - Foul-smelling, greasy poop that can float
+  - Foul-smelling, greasy stool that can float
   - Stomach cramps or pain
   trivia_1: 'The discoverer of Giardia lamblia, Antony van Leeuwenhoek, found it
     in his own stool in the year 1681 '

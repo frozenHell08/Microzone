@@ -18,7 +18,7 @@ MonoBehaviour:
   Order: Aeromonadales
   Family: Aeromonadaceae
   Genus: Aeromonas
-  Species: Aeromonas hydropila
+  Species: Aeromonas hydrophila
   entryImage: {fileID: 21300000, guid: abd4b1e3f5a90c146affdc05fb947583, type: 3}
   Characteristics: "A. hydrophila are Gram-negative, rod-shaped facultative anaerobes, 
     ranging in size from 0.3-1.0 \xB5m wide by 1.0-3.5 \xB5m long.  They are motile
