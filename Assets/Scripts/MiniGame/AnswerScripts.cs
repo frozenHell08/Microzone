@@ -6,6 +6,7 @@ public class AnswerScripts : MonoBehaviour
 {
     public bool isCorrect = false;
     public QuizManager quizManager;
+    public QuizManagerImage quizManagerImage;
 
     public void Answer()
     {
@@ -18,6 +19,20 @@ public class AnswerScripts : MonoBehaviour
         {
             Debug.Log("Wrong Answer");
             quizManager.wrong();
+        }
+    }
+
+    public void AnswerImage()
+    {
+        if (isCorrect)
+        {
+            Debug.Log("Correct Answer");
+            quizManagerImage.correct();
+        }
+        else
+        {
+            Debug.Log("Wrong Answer");
+            quizManagerImage.wrong();
         }
     }
 }

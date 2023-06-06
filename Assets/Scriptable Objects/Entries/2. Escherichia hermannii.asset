@@ -19,7 +19,7 @@ MonoBehaviour:
   Family: Enterobacteriaceae
   Genus: Escherichia
   Species: Escherichia hermannii
-  entryImage: {fileID: 21300000, guid: 875f744c26a2f1743a3ca2d7b9f55cf0, type: 3}
+  entryImage: {fileID: 21300000, guid: 43b36c649d37504408d12aefc90ad599, type: 3}
   Characteristics: 'Escherichia  hermannii strains are gram-negative, oxidase-negative,
     fermentative, motile rods. In addition to yellow pigment and positive KCN and
     cellobiose tests, the biochemical reactions characteristic of 32 strains of E. '

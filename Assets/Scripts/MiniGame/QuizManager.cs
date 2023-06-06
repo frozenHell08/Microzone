@@ -9,19 +9,22 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
-    [SerializeField] private RealmController rController; //xxx
+    [SerializeField] private RealmController rController; 
     [SerializeField] private CurrentCharacter ch;
-    private ProfileModel profiledata; //xxx
-    // Minigame mg;
+    private ProfileModel profiledata; 
+
     public List<QuestionAndAnswers> QnA;
+    private List<QuestionAndAnswers> tempStorage;
     public GameObject[] options;
     public int currentQuestion;
-
     public GameObject Quizpanel;
     public GameObject GOPanel;
     public GameObject MGHome;
     public GameObject MGQuestion;
     public GameObject MG;
+    public GameObject confirmPanel;
+    public GameObject correctSprite;
+    public GameObject wrongSprite;
 
     public TMP_Text QuestionTxt;
     // public Image QuestionImage;
@@ -30,38 +33,39 @@ public class QuizManager : MonoBehaviour
 
     int totalQuestions = 0;
     private int score;
-    // private double scoreEquiv = 0;
-    private List<QuestionAndAnswers> tempStorage;
-
 
     private void OnEnable()
     {
         tempStorage = new List<QuestionAndAnswers>(QnA);
         totalQuestions = QnA.Count;
-        GOPanel.SetActive(false);
-        generateQuestion();
+        MGQuestion.SetActive(false);
 
         profiledata = rController.FindProfile(ch.characterID);
-
-        // totalQuestions = QnA.Count;
-        // GOPanel.SetActive(false);
-        // generateQuestion();
+    }
+    public void play()
+    {
+        generateQuestion();
+        MGQuestion.SetActive(true);
+        Quizpanel.SetActive(true);
     }
 
-    public void retry() {
+    public void retry() 
+    {
         QnA.Clear();
         QnA.AddRange(tempStorage);
         tempStorage.Clear();
         score = 0;
         OnEnable();
-        Quizpanel.SetActive(true);
+        GOPanel.SetActive(false);
+        MGHome.SetActive(true);    
     }
 
     public void GameOver()
     {   
         Quizpanel.SetActive(false);
         GOPanel.SetActive(true);
-        ScoreTxt.text = score + "/" + totalQuestions;
+        //ScoreTxt.text = score + "/" + totalQuestions; //change totalQuestion
+        ScoreTxt.text = score + "/5";
 
         GeneRewardTxt.text = score.ToString();
 
@@ -79,13 +83,23 @@ public class QuizManager : MonoBehaviour
         // when answer is right
         score += 1;
         QnA.RemoveAt(currentQuestion);
-        generateQuestion();
+        correctSprite.SetActive(true);
+        confirmPanel.SetActive(true);
     }
 
     public void wrong()
     {
         //when answer is wrong
         QnA.RemoveAt(currentQuestion);
+        wrongSprite.SetActive(true);
+        confirmPanel.SetActive(true);
+    }
+
+    public void next()
+    {
+        confirmPanel.SetActive(false);
+        correctSprite.SetActive(false);
+        wrongSprite.SetActive(false);
         generateQuestion();
     }
 
@@ -105,7 +119,7 @@ public class QuizManager : MonoBehaviour
 
     void generateQuestion()
     {
-        if (QnA.Count > 0)
+        if (QnA.Count >= 16) //change total questions
         {
             currentQuestion = Random.Range(0, QnA.Count);
             // QuestionImage.sprite = QnA[currentQuestion].Question; // for image
