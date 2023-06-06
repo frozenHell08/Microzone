@@ -2,13 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class QuestionAndAnswers
+public class ImageAndAnswers
 {
     // public Sprite Question;
-    public string Question;
+    public Sprite image;
     public string[] Answers;
     public int CorrectAnswer;
 }
-
-
-
