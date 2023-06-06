@@ -24,9 +24,12 @@ public class Compendium : MonoBehaviour
         childrenlist = contentPanel.transform;
 
         SetData(childrenlist);
+        Refresh(childrenlist);
 
-        for (int l = 1; l <= ch.totalStages; l++) {
-            Transform child = childrenlist.GetChild(l-1);
+        Debug.Log($"stages : {ch.totalStages}");
+
+        for (int l = 0; l < ch.totalStages; l++) {
+            Transform child = childrenlist.GetChild(l);
             
             GameObject childobject = child.gameObject;
             childobject.SetActive(true);
@@ -106,6 +109,12 @@ public class Compendium : MonoBehaviour
         return count;
     }
 
+    private void Refresh(Transform panels) {
+        foreach (Transform panelItem in panels) {
+            GameObject panel = panelItem.gameObject;
+            panel.SetActive(false);
+        }
+    }
 }
 
 #if UNITY_EDITOR
