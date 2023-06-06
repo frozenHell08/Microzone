@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2959262703115503617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2959262703115503623}
+  - component: {fileID: 2959262703115503622}
+  m_Layer: 0
+  m_Name: QuizManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2959262703115503623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959262703115503617}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 957.87134, y: 461.93542, z: 347.84875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2959262703115503622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959262703115503617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec30af1213119ef40afd1e9d4b300dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rController: {fileID: 0}
+  ch: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
+  QnA:
+  - Question: It is a very significant organism because of its ability to cause a
+      number of diseases and infections in human and animals.
+    Answers:
+    - Staphylococcus
+    - Escherichia hermannii
+    - Hydrophila
+    - Vibrio cholerae
+    CorrectAnswer: 1
+  - Question: "A Gram-negative, rod-shaped facultative anaerobes, ranging in size
+      from 0.3-1.0 \xB5m wide by 1.0-3.5 \xB5m long"
+    Answers:
+    - hydrophila
+    - 'Staphylococcus '
+    - Escherichia hermannii
+    - Vibrio cholerae
+    CorrectAnswer: 1
+  - Question: These bacteria strains are gram-negative, oxidase-negative, fermentative,
+      motile rods.
+    Answers:
+    - Staphylococcus Aureus
+    - Streptococcus Pyogenes
+    - Escherichia Hermanni
+    - Vibrio Cholerae
+    CorrectAnswer: 3
+  - Question: It belongs to the family Taeniidae, class Cestoidea, and order Cyclophyllidea.
+    Answers:
+    - Variola virus
+    - Vibrio Cholerae
+    - Streptococcus Pyogenes
+    - Tapeworm Taenia
+    CorrectAnswer: 4
+  - Question: A virus that spreads infection via mosquitoes.
+    Answers:
+    - Coronavirus
+    - Small Pox
+    - Lassa Virus
+    - Dengue virus
+    CorrectAnswer: 4
+  - Question: Transmigration of Entamoeba Histolytica in humans remains for how many
+      years?
+    Answers:
+    - 10-20 years
+    - 20-30 years
+    - 30-40 years
+    - 40-50 years
+    CorrectAnswer: 3
+  - Question: A disease that can be spread to people by a virus infected mosquito?
+    Answers:
+    - Tuberculosis
+    - Dengue
+    - 'Cholera '
+    - Salmonella
+    CorrectAnswer: 2
+  - Question: An acute viral disease that is transmitted by the common African rat
+      and is animal-borne, or zoonotic.
+    Answers:
+    - Cholera
+    - Smallpox
+    - Chicken pox
+    - Lassa fever
+    CorrectAnswer: 4
+  - Question: What virus have huge double-stranded DNA pathogen with a brick-like
+      form?
+    Answers:
+    - Variola virus
+    - Lassa mammarenavirus
+    - Coronavirus
+    - Rubivirus rubella
+    CorrectAnswer: 1
+  - Question: What virus that causes smallpox?
+    Answers:
+    - Coronavirus
+    - Variola virus
+    - Rubivirus rubella
+    - Lassa mammarenavirus
+    CorrectAnswer: 2
+  - Question: 'It can spread to humans through the consumption of raw or undercooked
+      pork or beef. '
+    Answers:
+    - Hookworms
+    - Ascaris
+    - Whipworms
+    - Tapeworms
+    CorrectAnswer: 4
+  - Question: 'It produces chicken pox (also known as varicella), which is clinically
+      distinguished by a broad vesicular eruption of the skin and mucous membranes,
+      after primary infection, commonly in children. '
+    Answers:
+    - Human herpesvirus 3
+    - Taenia saginata
+    - Trichuris trichiura
+    - Schistosoma mansoni
+    CorrectAnswer: 1
+  - Question: It is a Gram-negative, non-spore forming, non-motile, encapsulated,
+      and non acid-fast bacteria, which appear in kidney bean shape under the microscope.
+    Answers:
+    - Human herpesvirus 3
+    - Taenia saginata
+    - Neisseria gonorrhoeae
+    - Trichuris trichiura
+    CorrectAnswer: 3
+  - Question: 'It is the largest protozoan and the only ciliated parasite that infects
+      humans. '
+    Answers:
+    - 'Schistosoma mansoni  '
+    - Taenia saginata
+    - Trichuris trichiura
+    - Balantidium coli
+    CorrectAnswer: 4
+  - Question: The roundworm Trichuris trichiura, also called _______?
+    Answers:
+    - Cat whipworm
+    - Human whipworm
+    - Pig whipworm
+    - Mouse whipworm
+    CorrectAnswer: 2
+  - Question: It is commonly recognized by its "smiley" or "clown face" shape under
+      a microscope.
+    Answers:
+    - Giardia intestinalis
+    - Trichuris trichiura
+    - Taenia saginata
+    - Neisseria gonorrhoeae
+    CorrectAnswer: 1
+  - Question: Antony van Leeuwenhoek discovered this in his own stool in the year
+      1681.
+    Answers:
+    - Taenia saginata
+    - Trichuris trichiura
+    - Giardia intestinalis
+    - Neisseria gonorrhoeae
+    CorrectAnswer: 3
+  - Question: A virus that is also called zoster.
+    Answers:
+    - Taenia saginata
+    - Trichuris trichiura
+    - Schistosoma mansoni
+    - human herpesvirus 3
+    CorrectAnswer: 4
+  - Question: It is a pseudopod-forming nonflagellate protozoan parasite.
+    Answers:
+    - Neisseria gonorrhoeae
+    - Trichuris trichiura
+    - Entamoeba histolytica
+    - human herpesvirus 3
+    CorrectAnswer: 3
+  - Question: People who live in areas with shortages of safe drinking water or inadequate
+      sanitation are vulnerable to what bacterial disease?
+    Answers:
+    - Dengue
+    - Cholera
+    - Tuberculosis
+    - Salmonella
+    CorrectAnswer: 2
+  options:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentQuestion: 0
+  Quizpanel: {fileID: 0}
+  GOPanel: {fileID: 0}
+  MGHome: {fileID: 0}
+  MGQuestion: {fileID: 0}
+  MG: {fileID: 0}
+  confirmPanel: {fileID: 0}
+  correctSprite: {fileID: 0}
+  wrongSprite: {fileID: 0}
+  QuestionTxt: {fileID: 0}
+  ScoreTxt: {fileID: 0}
+  GeneRewardTxt: {fileID: 0}
