@@ -1,6 +1,7 @@
 using System.IO;
 using System.Reflection;
 using System.Linq;
+using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -165,8 +166,7 @@ public class RealmController : MonoBehaviour
     public void OpenNextLevel(string nextstage) {
         prof_model = FindProfile(character.characterID);
 
-        PropertyInfo nextstagename = Array.Find<PropertyInfo>(prof_model.Stages.GetType().GetProperties(),
-                    p => p.Name.Equals(nextstage));
+        PropertyInfo nextstagename = prof_model.Stages.GetType().GetProperties().FirstOrDefault(p => p.Name.Equals(nextstage));
 
         if (!(bool) nextstagename.GetValue(prof_model.Stages)) {
             realmDB.Write(() => {
@@ -217,4 +217,55 @@ public class RealmController : MonoBehaviour
             prop.SetValue(prof_model.liquidMeds, value);
         });
     }
+
+    // ------------------------------ SCORES ------------------------------ // 
+
+    public void SaveExamScore(string category, int score, int totalItems, float rating) {
+        prof_model = FindProfile(character.characterID);
+
+        DateTime now = DateTime.Now;
+        int year = now.Year;
+        int month = now.Month;
+        int day = now.Day;
+
+        string monthName = DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(month);
+
+        string onlyDate = $"{monthName}.{day:00}.{year}";
+
+        realmDB.Write(() => {
+            ScoreList newScore = new ScoreList {
+                date = onlyDate,
+                category = category,
+                score = score,
+                totalScore = totalItems,
+                rating = rating
+            };
+
+            prof_model.Scores.Add(newScore);
+        });
+    }
+
+    public float GetRating(string category) {
+        prof_model = FindProfile(character.characterID);
+
+        float highestRating = prof_model.Scores
+            .Where(score => score.category.Equals(category, StringComparison.OrdinalIgnoreCase))
+            .Select(score => score.rating)
+            .DefaultIfEmpty(0)
+            .Max();
+
+        return highestRating;
+    }
+
+    public List<ScoreList> GetTopScores(string category) {
+        prof_model = FindProfile(character.characterID);
+
+        var topScores = prof_model.Scores
+            .Where(score => score.category.Equals(category, StringComparison.OrdinalIgnoreCase) )
+            .OrderByDescending(score => score.rating)
+            .Take(10)
+            .ToList();
+
+        return topScores;
+    } 
 }

@@ -11,6 +11,7 @@ public class CurrentCharacter : ScriptableObject
     public long cells, genes;
     // public long ;
     public int level, experience, barExperience, totalExp, currentHealth, maxHealth;
+    // public int highestLevel;
     public int res_bacteria;
     public int res_parasite;
     public int res_virus;
@@ -27,6 +28,7 @@ public class CurrentCharacter : ScriptableObject
         cells = 0;
         genes = 0;
         level = 0;
+        // highestLevel = 0;
         experience = 0;
         barExperience = 0;
         totalExp = 0;

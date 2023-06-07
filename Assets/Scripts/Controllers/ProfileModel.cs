@@ -168,7 +168,7 @@ namespace ProfileCreation {
         public StageList Stages { get; set; }
 
         [MapTo("scoreList")]
-        public ScoreList Scores { get; set; }
+        public IList<ScoreList> Scores { get; }
 
         public ProfileModel() {}
 
@@ -177,7 +177,6 @@ namespace ProfileCreation {
             Resistances r = new Resistances();
             Solution soln = new Solution();
             StageList sl = new StageList();
-            ScoreList scorelist = new ScoreList();
 
             Username_id = id;
             Username = name;
@@ -197,7 +196,7 @@ namespace ProfileCreation {
             ImmuneSystem = r;
             liquidMeds = soln;
             Stages = sl;
-            Scores = scorelist;
+            Scores = new List<ScoreList>();;
         }
     }
 }
