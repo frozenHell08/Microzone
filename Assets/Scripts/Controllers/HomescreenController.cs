@@ -15,6 +15,7 @@ public class HomescreenController : MonoBehaviour
     [SerializeField] private CurrentSolution cSol;
     [SerializeField] private GameObject characterPanel;
     [SerializeField] private GameObject giftPanel;
+    [SerializeField] private GameObject tutorialPanel;
     [SerializeField] private TMP_Text gendata_cells;
     [SerializeField] private TMP_Text gendata_genes;
     [SerializeField] private long cells;
@@ -27,6 +28,7 @@ public class HomescreenController : MonoBehaviour
     [SerializeField] private TMP_Text iRes;
     [SerializeField] private TMP_Text iHeals;
     [SerializeField] private TMP_Text iSolutions;
+    [SerializeField] private Scrollbar scrollbar;
     [SerializeField] private List<GameObject> itmPanels;
     [SerializeField] private List<HealItem> healItems;
     [SerializeField] private List<Solution> solnItems;
@@ -135,6 +137,8 @@ public class HomescreenController : MonoBehaviour
 
     public void AcceptGift() {
         giftPanel.SetActive(false);
+        tutorialPanel.SetActive(true);
+        scrollbar.value = 1f;
         Refresh();
     }
 

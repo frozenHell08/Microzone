@@ -53,6 +53,7 @@ public class ExamManager : MonoBehaviour
     public void startExam() {
         Debug.Log("started?");
         generateQuestion();
+        MGHome.SetActive(false);
         MGQuestion.SetActive(true);
         Quizpanel.SetActive(true);
     }
@@ -165,9 +166,6 @@ public class ExamManager : MonoBehaviour
 #if UNITY_EDITOR
 [ CustomEditor (typeof(ExamManager)) ]
 public class ExamManagerEditor : Editor {
-
-    bool showQuestions = false;
-
     public override void OnInspectorGUI()
     {
         serializedObject.Update();

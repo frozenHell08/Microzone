@@ -24,8 +24,8 @@ MonoBehaviour:
     after the patient has come into contact with the virus. Approximately 80% of
     Lassa fever virus infections have minor symptoms and go undetected.
   Symptoms:
-  - Lassa fever typically manifests gradually over time. Malaise, overall weakness,
-    and fever are the first symptoms. A
+  - 'Lassa fever typically manifests gradually over time. Malaise, overall weakness,
+    and fever are the first symptoms. '
   - A headache, sore throat, chest discomfort, muscle pain, nausea, vomiting, diarrhea,
     coughing, and stomach pain may develop a few days later.
   trivia_1: 'Lassa fever is an acute viral disease that is transmitted by the common
@@ -33,11 +33,7 @@ MonoBehaviour:
   trivia_2: There are areas in West Africa where it is endemic, including Sierra
     Leone, Liberia, Guinea, and Nigeria. Due to the animal vector's widespread distribution
     in the region, neighboring nations are also at risk.
-  trivia_3: The rubella virus causes the mild febrile rash sickness known as rubella.
-    Droplets are used to spread it from person to person (the virus is present in
-    throat secretions). It primarily, though not exclusively, affects youngsters,
-    and when pregnant women are infected, it can lead to fetal deformity. The only
-    source of infection is humans.
+  trivia_3: 
   directContact: 1
   dropletSpread: 1
   airborneTransmission: 0

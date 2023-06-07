@@ -1626,21 +1626,160 @@ MonoBehaviour:
   rController: {fileID: 4505816939705581672}
   ch: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
   QnA:
-  - Question: These bacteria strains are gram-negative, oxidase-negative, fermentative,
-      motile rods.
-    Answers:
-    - Staphylococcus Aureus
-    - Streptococcus Pyogenes
-    - Escherichia Hermanni
-    - Vibrio Cholerae
-    CorrectAnswer: 3
   - Question: A virus that spreads infection via mosquitoes.
     Answers:
-    - Small Pox
-    - Aeromonas Hydrophila
-    - S Aureus
+    - Human polyomavirus 2
+    - Variola virus
+    - Human alphaherpesvirus 3
     - Dengue virus
     CorrectAnswer: 4
+  - Question: It is an RNA virus.
+    Answers:
+    - Human polyomavirus 2
+    - Variola virus
+    - Rubivirus rubellae
+    - Dengue virus
+    CorrectAnswer: 3
+  - Question: A low-grade fever, a sore throat, and a rash that starts on the face
+      and spreads to the rest of the body are some of the symptoms.
+    Answers:
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    - Variola virus
+    - Dengue virus
+    CorrectAnswer: 1
+  - Question: Although not entirely, it primarily affects children, and when pregnant
+      women contract it, it can result in fetal malformation. Humans are the only
+      source of infection.
+    Answers:
+    - Human polyomavirus 2
+    - Rubivirus rubellae
+    - Variola virus
+    - Dengue virus
+    CorrectAnswer: 2
+  - Question: 'Droplets are used to spread it from person to person (the virus is
+      present in throat secretions). '
+    Answers:
+    - Human polyomavirus 2
+    - Variola virus
+    - Rubivirus rubellae
+    - Dengue virus
+    CorrectAnswer: 3
+  - Question: 'Signs and symptoms normally appear one to three weeks after the patient
+      has come into contact with the virus. '
+    Answers:
+    - Lassa mammarenavirus
+    - Variola virus
+    - Rubivirus rubellae
+    - Dengue virus
+    CorrectAnswer: 1
+  - Question: The fever caused by this virus is an acute viral disease that is transmitted
+      by the common African rat and is animal-borne, or zoonotic.
+    Answers:
+    - Variola virus
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    - Dengue virus
+    CorrectAnswer: 2
+  - Question: The three most well-known of this virus are BK virus, JC virus, and
+      SV40 virus.
+    Answers:
+    - Variola virus
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    CorrectAnswer: 4
+  - Question: This is a DNA virus.
+    Answers:
+    - Variola virus
+    - Human polyomavirus 2
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    CorrectAnswer: 2
+  - Question: After primary infection, the viruses remain dormant in immunocompetent
+      hosts.
+    Answers:
+    - Variola virus
+    - Lassa mammarenavirus
+    - Human polyomavirus 2
+    - Rubivirus rubellae
+    CorrectAnswer: 3
+  - Question: With few exceptions, infections brought on by these viruses develop
+      when the immune system is weakened, particularly when T cell insufficiency
+      is present.
+    Answers:
+    - Variola virus
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    CorrectAnswer: 4
+  - Question: Commonly known as smallpox.
+    Answers:
+    - Variola virus
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    CorrectAnswer: 1
+  - Question: It is a huge double-stranded DNA pathogen with a brick-like form.
+    Answers:
+    - Lassa mammarenavirus
+    - Variola virus
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    CorrectAnswer: 2
+  - Question: It is serologically reactive with other members of the poxvirus family,
+      such as ectromelia, cowpox, monkeypox, vaccinia, and camelpox.
+    Answers:
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    - Variola virus
+    - Human polyomavirus 2
+    CorrectAnswer: 3
+  - Question: It was a serious infectious illness before it was eradicated.
+    Answers:
+    - Lassa mammarenavirus
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    - Variola virus
+    CorrectAnswer: 4
+  - Question: It is a member of genus Varicellovirus.
+    Answers:
+    - Human alphaherpesvirus 3
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    - Variola virus
+    CorrectAnswer: 1
+  - Question: Also called varicella-zoster virus.
+    Answers:
+    - Rubivirus rubellae
+    - Human alphaherpesvirus 3
+    - Human polyomavirus 2
+    - Variola virus
+    CorrectAnswer: 2
+  - Question: It causes chicken pox (also known as varicella), which is clinically
+      distinguished by a broad vesicular eruption of the skin and mucous membranes,
+      after primary infection, commonly in children.
+    Answers:
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    - Human alphaherpesvirus 3
+    - Variola virus
+    CorrectAnswer: 3
+  - Question: The mucosa of the upper respiratory tract is the normal site of this
+      virus infection.
+    Answers:
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    - Variola virus
+    - Human alphaherpesvirus 3
+    CorrectAnswer: 4
+  - Question: Commonly known as German Measles.
+    Answers:
+    - Rubivirus rubellae
+    - Human polyomavirus 2
+    - Variola virus
+    - Human alphaherpesvirus 3
+    CorrectAnswer: 1
   options:
   - {fileID: 832156462}
   - {fileID: 1917933501}
@@ -2787,18 +2926,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2052527693}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 231767775}
         m_TargetAssemblyTypeName: ExamManager, Assembly-CSharp
         m_MethodName: startExam
@@ -2963,18 +3090,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1464809397}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 769381669}
         m_TargetAssemblyTypeName: ExamManager, Assembly-CSharp
         m_MethodName: startExam
@@ -5875,20 +5990,161 @@ MonoBehaviour:
   rController: {fileID: 4505816939705581672}
   ch: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
   QnA:
-  - Question: These bacteria strains are gram-negative, oxidase-negative, fermentative,
-      motile rods.
+  - Question: The discoverer of this parasite, Antony van Leeuwenhoek, found it in
+      his own stool in the year 1681.
     Answers:
-    - Staphylococcus Aureus
-    - Streptococcus Pyogenes
-    - Escherichia Hermanni
-    - Vibrio Cholerae
+    - Giardia intestinalis
+    - Taenia saginata
+    - Trichuris trichiura
+    - Schistosoma mansoni
+    CorrectAnswer: 1
+  - Question: This parasite is pear shaped and has one or two transverse, claw-shaped
+      median bodies.
+    Answers:
+    - Taenia saginata
+    - Trichuris trichiura
+    - Giardia intestinalis
+    - Schistosoma mansoni
     CorrectAnswer: 3
-  - Question: A virus that spreads infection via mosquitoes.
+  - Question: It is commonly recognized by its "smiley" or "clown face" shape under
+      a microscope.
     Answers:
-    - Small Pox
-    - Aeromonas Hydrophila
-    - S Aureus
-    - Dengue virus
+    - Taenia saginata
+    - Giardia intestinalis
+    - Trichuris trichiura
+    - Schistosoma mansoni
+    CorrectAnswer: 2
+  - Question: This parasite is a pathogenic parasite and causes amoebic dysentery
+      or Amebiasis.
+    Answers:
+    - Taenia saginata
+    - Giardia intestinalis
+    - 'Entamoeba histolytica '
+    - Schistosoma mansoni
+    CorrectAnswer: 3
+  - Question: This parasite is a pathogenic parasite and causes amoebic dysentery
+      or Amebiasis.
+    Answers:
+    - Taenia saginata
+    - Giardia intestinalis
+    - Schistosoma mansoni
+    - 'Entamoeba histolytica '
+    CorrectAnswer: 4
+  - Question: Is a protozoan parasite that can invade the intestinal mucosa and may
+      spread to other organs like the liver.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Taenia saginata
+    - Giardia intestinalis
+    - Schistosoma mansoni
+    CorrectAnswer: 1
+  - Question: It is a pseudopod-forming nonflagellate protozoan parasite.
+    Answers:
+    - Taenia saginata
+    - 'Entamoeba histolytica '
+    - Giardia intestinalis
+    - Schistosoma mansoni
+    CorrectAnswer: 2
+  - Question: This is the only known ciliated parasite that is infectious to humans.
+    Answers:
+    - Balantidium coli
+    - 'Entamoeba histolytica '
+    - Giardia intestinalis
+    - Schistosoma mansoni
+    CorrectAnswer: 1
+  - Question: It has two developmental stages called the trophozoite stage (reproductive
+      stage) and the cyst stage (infectious stage).
+    Answers:
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Giardia intestinalis
+    - Schistosoma mansoni
+    CorrectAnswer: 2
+  - Question: ' The cysts of this parasite are found in the feces of infected individuals.'
+    Answers:
+    - 'Entamoeba histolytica '
+    - Giardia intestinalis
+    - Schistosoma mansoni
+    - Balantidium coli
+    CorrectAnswer: 4
+  - Question: 'This parasite infects individuals through two main routes: either
+      by ingesting eggs after being exposed with, or by consuming items that are
+      contaminated with soil containing whipworm eggs.'
+    Answers:
+    - 'Entamoeba histolytica '
+    - Trichuris trichiura
+    - Schistosoma mansoni
+    - Balantidium coli
+    CorrectAnswer: 2
+  - Question: The reason it is called the whipworm is that it resembles a whip and
+      has big handles on the back end.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Schistosoma mansoni
+    - Trichuris trichiura
+    - Balantidium coli
+    CorrectAnswer: 3
+  - Question: It has a thick posterior anus and a tiny anterior esophagus.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Schistosoma mansoni
+    - Balantidium coli
+    - Trichuris trichiura
+    CorrectAnswer: 4
+  - Question: Mild epigastric discomfort, nausea, flatulence, diarrhea, or hunger
+      pangs are typical signs of this parasite.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Taenia saginata
+    - Balantidium coli
+    - Trichuris trichiura
+    CorrectAnswer: 2
+  - Question: These parasites can spread to humans through the consumption of raw
+      or undercooked pork.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Taenia saginata
+    - Schistosoma mansoni
+    CorrectAnswer: 3
+  - Question: This can also result in appetite loss, weight loss, and other digestive
+      issues.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Schistosoma mansoni
+    - Taenia saginata
+    CorrectAnswer: 4
+  - Question: Bilharzia is a condition brought on by parasitic worms.
+    Answers:
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Schistosoma mansoni
+    - Taenia saginata
+    CorrectAnswer: 3
+  - Question: 'Symptoms are brought on by the body''s response to the eggs, not by
+      the worms themselves. '
+    Answers:
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Taenia saginata
+    - Schistosoma mansoni
+    CorrectAnswer: 4
+  - Question: Adult worms can lay eggs that don't leave the body and can get stuck
+      in the colon or bladder, where they can cause inflammation or scarring.
+    Answers:
+    - Schistosoma mansoni
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Taenia saginata
+    CorrectAnswer: 1
+  - Question: The active passage of proglottids via the anus and in the feces is
+      the most obvious symptom of this parasite presence.
+    Answers:
+    - Schistosoma mansoni
+    - 'Entamoeba histolytica '
+    - Balantidium coli
+    - Taenia saginata
     CorrectAnswer: 4
   options:
   - {fileID: 347504263}
@@ -20078,18 +20334,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7351728753219208642}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1952733545}
         m_TargetAssemblyTypeName: ExamManager, Assembly-CSharp
         m_MethodName: startExam

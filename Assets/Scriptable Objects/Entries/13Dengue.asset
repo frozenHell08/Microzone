@@ -39,6 +39,6 @@ MonoBehaviour:
   dropletSpread: 0
   airborneTransmission: 0
   vehicles: 0
-  vectors: 0
+  vectors: 1
   listOfVectors:
-  - 
+  - Mosquito

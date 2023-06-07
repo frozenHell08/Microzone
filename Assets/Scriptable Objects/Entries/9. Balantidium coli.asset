@@ -32,7 +32,7 @@ MonoBehaviour:
   - abdominal pain
   - vomiting
   trivia_1: "Balantidium coli is the largest protozoan and the only ciliated parasite
-    that infects \r\nhumans. "
+    that infects \rhumans. "
   trivia_2: Balantidium cyst are found in the feces of infected individuals.
   trivia_3: 
   directContact: 1
