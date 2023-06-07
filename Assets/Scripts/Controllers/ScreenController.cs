@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using ProfileCreation;
+using TMPro;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class ScreenController : MonoBehaviour
 {
-    [Header("Controls")]
     [SerializeField] private RealmController rController;
     [SerializeField] private CurrentCharacter character;
     [SerializeField] private Static isReturning;
@@ -22,8 +27,10 @@ public class ScreenController : MonoBehaviour
     [SerializeField] private GameObject shop;
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject logout;
+    [SerializeField] private GameObject messagePanel;
     [SerializeField] private Button newGame;
     [SerializeField] private Button loadGame;
+    
     private List<ProfileModel> loaded_profiles;
 
     void Awake() {
@@ -137,7 +144,80 @@ public class ScreenController : MonoBehaviour
         loadCharacter.SetActive(false);
     }
 
+    public void ConfirmQuit(Warning msg) {
+        TMP_Text message = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(txt => txt.name.Equals("confirmMessage"));
+
+        message.text = msg.message;
+        messagePanel.SetActive(true);
+    }
+
     public void QuitGame() {
         Application.Quit();
     }
 }
+
+#if UNITY_EDITOR
+[ CustomEditor ( typeof(ScreenController) ) ]
+public class ScreenControllerEditor : Editor {
+
+    bool showScreens, showGameInterface, showButtons = false;
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        Header("Source");
+        Property("rController");
+        Property("character");
+        Property("isReturning");
+        Property("messagePanel");
+
+        EditorGUILayout.Space();
+        showScreens = EditorGUILayout.BeginFoldoutHeaderGroup(showScreens, "Intro Screens");
+        
+        if (showScreens) {
+            Property("welcomeScreen");
+            Property("characterCreate");
+            Property("loadCharacter");
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+
+        EditorGUILayout.Space();
+        showGameInterface = EditorGUILayout.BeginFoldoutHeaderGroup(showGameInterface, "In-game Screens");
+
+        if (showGameInterface) {
+            Property("homeScreen");
+            Property("statusInventory");
+            Property("compendium");
+            Property("minigame");
+            Property("immuneSystem");
+            Property("shop");
+            Property("settings");
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+
+        EditorGUILayout.Space();
+        showButtons = EditorGUILayout.BeginFoldoutHeaderGroup(showButtons, "Title Buttons");
+
+        if (showButtons) {
+            Property("newGame");
+            Property("loadGame");
+        }
+
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    private SerializedProperty GetSeriaProperty(string name) {
+        return serializedObject.FindProperty(name);
+    }
+
+    private void Property(string name) {
+        EditorGUILayout.PropertyField(serializedObject.FindProperty(name));
+    }
+
+    private void Header(string label) {
+        EditorGUILayout.Separator();
+        EditorGUILayout.LabelField(label, EditorStyles.boldLabel);
+    }
+}
+#endif

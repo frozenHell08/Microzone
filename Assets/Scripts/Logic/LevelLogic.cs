@@ -64,51 +64,55 @@ public class LevelLogic : MonoBehaviour
         isDoneStage = true;
         yield return new WaitForSeconds(messageDelay);
         completePanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     private IEnumerator ShowFailMessageWithDelay() {
         isDoneStage = true;
         yield return new WaitForSeconds(messageDelay);
         failedPanel.SetActive(true);
+        Time.timeScale = 0f;
     } 
 
     public void LevelFinish() {
         string x = "stage" + _lvl;
 
-        if (x.Equals("stage1")) {
-            rController.OpenNextLevel("stage2");
-        } else if (x == "stage2") {
-            rController.OpenNextLevel("stage3");
-        } else if (x == "stage3") {
-            rController.OpenNextLevel("stage4");
-        } else if (x == "stage4") {
-            rController.OpenNextLevel("stage5");
-        } else if (x == "stage5") {
-            rController.OpenNextLevel("stage6");
-        } else if (x == "stage6") {
-            rController.OpenNextLevel("stage7");
-        } else if (x == "stage7") {
-            rController.OpenNextLevel("stage8");
-        } else if (x == "stage8") {
-            rController.OpenNextLevel("stage9");
-        } else if (x == "stage9") {
-            rController.OpenNextLevel("stage10");
-        } else if (x == "stage10") {
-            rController.OpenNextLevel("stage11");
-        } else if (x == "stage11") {
-            rController.OpenNextLevel("stage12");
-        } else if (x == "stage12") {
-            rController.OpenNextLevel("stage13");
-        } else if (x == "stage13") {
-            rController.OpenNextLevel("stage14");
-        } else if (x == "stage14") {
-            rController.OpenNextLevel("stage15");
-        } else if (x == "stage15") {
-            rController.OpenNextLevel("stage16");
-        } else if (x == "stage16") {
-            rController.OpenNextLevel("stage17");
-        } else if (x == "stage17") {
-            rController.OpenNextLevel("stage18");
+        if (ch.totalStages == _lvl) {
+            if (x.Equals("stage1")) {
+                rController.OpenNextLevel("stage2");
+            } else if (x == "stage2") {
+                rController.OpenNextLevel("stage3");
+            } else if (x == "stage3") {
+                rController.OpenNextLevel("stage4");
+            } else if (x == "stage4") {
+                rController.OpenNextLevel("stage5");
+            } else if (x == "stage5") {
+                rController.OpenNextLevel("stage6");
+            } else if (x == "stage6") {
+                rController.OpenNextLevel("stage7");
+            } else if (x == "stage7") {
+                rController.OpenNextLevel("stage8");
+            } else if (x == "stage8") {
+                rController.OpenNextLevel("stage9");
+            } else if (x == "stage9") {
+                rController.OpenNextLevel("stage10");
+            } else if (x == "stage10") {
+                rController.OpenNextLevel("stage11");
+            } else if (x == "stage11") {
+                rController.OpenNextLevel("stage12");
+            } else if (x == "stage12") {
+                rController.OpenNextLevel("stage13");
+            } else if (x == "stage13") {
+                rController.OpenNextLevel("stage14");
+            } else if (x == "stage14") {
+                rController.OpenNextLevel("stage15");
+            } else if (x == "stage15") {
+                rController.OpenNextLevel("stage16");
+            } else if (x == "stage16") {
+                rController.OpenNextLevel("stage17");
+            } else if (x == "stage17") {
+                rController.OpenNextLevel("stage18");
+            }
         }
 
         // ----------------------------------

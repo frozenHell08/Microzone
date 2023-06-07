@@ -5,6 +5,7 @@ using Realms.Schema;
 using Realms.Weaving;
 
 namespace ProfileCreation {
+    #region
     public class Heals : EmbeddedObject {
         [MapTo("bandaid")]
         public int Bandaid { get; set; } = 0;
@@ -108,6 +109,14 @@ namespace ProfileCreation {
         public bool stage18 { get; set;} = false;
     }
 
+    public class ScoreList : EmbeddedObject {
+        public string date { get; set; }
+        public string category { get; set; }
+        public int score { get; set; }
+        public int totalScore { get; set; }
+        public float rating { get; set; }
+    }
+    #endregion
     public class ProfileModel : RealmObject {
         [PrimaryKey]
         [MapTo("_id")]
@@ -157,6 +166,10 @@ namespace ProfileCreation {
 
         [MapTo("stages")]
         public StageList Stages { get; set; }
+
+        [MapTo("scoreList")]
+        public IList<ScoreList> Scores { get; }
+
         public ProfileModel() {}
 
         public ProfileModel(string id, string name, string gender) {
@@ -183,6 +196,7 @@ namespace ProfileCreation {
             ImmuneSystem = r;
             liquidMeds = soln;
             Stages = sl;
+            Scores = new List<ScoreList>();;
         }
     }
 }
