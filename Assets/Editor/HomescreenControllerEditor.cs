@@ -26,8 +26,10 @@ public class HomescreenControllerEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("cSol"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("characterPanel"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("giftPanel"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("tutorialPanel"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("gendata_cells"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("gendata_genes"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("scrollbar"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itmPanels"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("healItems"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("solnItems"));

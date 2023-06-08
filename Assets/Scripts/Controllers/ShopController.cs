@@ -14,7 +14,7 @@ public class ShopController : MonoBehaviour
     [SerializeField] private CurrentCharacter ch;
     [SerializeField] private Warning warn;
     [SerializeField] private GameObject warningPanel;
-    [SerializeField] private int solutionSRP = 10;
+    [SerializeField] private int solutionSRP = 5;
     [SerializeField] private TMP_Text cells;
     [SerializeField] private GameObject[] tabContent;
     private int previous, current;

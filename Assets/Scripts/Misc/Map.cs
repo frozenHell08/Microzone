@@ -15,6 +15,7 @@ public class Map : MonoBehaviour
     [SerializeField] private CurrentCharacter ch;
     [SerializeField] private GameObject mapPanel;
     [SerializeField] private GameObject messagePanel;
+    [SerializeField] private GameObject textParent;
     [SerializeField] private Warning warningMsg;
     [SerializeField] private Warning warningBactExam;
     [SerializeField] private Warning warningParaExam;
@@ -132,6 +133,12 @@ public class Map : MonoBehaviour
 
     public void StartExam(GameObject exam) {
         exam.SetActive(true);
+        textParent.SetActive(false);
+    }
+
+    public void ExitExam(GameObject exam) {
+        exam.SetActive(false);
+        textParent.SetActive(true);
     }
 
     private bool GetVerdict(string microbeExam) {
@@ -171,6 +178,7 @@ public class MapEditor : Editor {
         Property("ch");
         Property("mapPanel");
         Property("stagePrefix");
+        Property("textParent");
         
         Header("Sprites");
         Property("locked");

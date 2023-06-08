@@ -28,8 +28,11 @@ public class ScreenController : MonoBehaviour
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject logout;
     [SerializeField] private GameObject messagePanel;
+    [SerializeField] private GameObject tutorialPanel;
+    [SerializeField] private GameObject logoutPanel;
     [SerializeField] private Button newGame;
     [SerializeField] private Button loadGame;
+    [SerializeField] private Scrollbar scrollbar;
     
     private List<ProfileModel> loaded_profiles;
 
@@ -154,6 +157,26 @@ public class ScreenController : MonoBehaviour
     public void QuitGame() {
         Application.Quit();
     }
+
+    public void OpenTutorial() {
+        tutorialPanel.SetActive(true);
+        scrollbar.value = 1f;
+    }
+
+    public void ExitTutorial() {
+        tutorialPanel.SetActive(false);
+    }
+
+    public void AttemptLogout(Warning msg) {
+        TMP_Text message = logoutPanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(txt => txt.name.Equals("confirmMessage"));
+
+        message.text = msg.message;
+        logoutPanel.SetActive(true);
+    }
+
+    public void CancelLogout() {
+        logoutPanel.SetActive(false);
+    }
 }
 
 #if UNITY_EDITOR
@@ -171,6 +194,8 @@ public class ScreenControllerEditor : Editor {
         Property("character");
         Property("isReturning");
         Property("messagePanel");
+        Property("logoutPanel");
+        Property("scrollbar");
 
         EditorGUILayout.Space();
         showScreens = EditorGUILayout.BeginFoldoutHeaderGroup(showScreens, "Intro Screens");
@@ -193,6 +218,7 @@ public class ScreenControllerEditor : Editor {
             Property("immuneSystem");
             Property("shop");
             Property("settings");
+            Property("tutorialPanel");
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 

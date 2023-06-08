@@ -15,6 +15,9 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] private RealmController rController;
     [SerializeField] private CurrentCharacter ch;
     [SerializeField] private TMP_Text healthText;
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private GameObject damageTextPrefab;
+    [SerializeField] private Transform gameCanvas;
 
     private LevelLogic _levelLogic;
     public Category category;
@@ -28,6 +31,7 @@ public class CollisionHandler : MonoBehaviour
         _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
         enemy = _levelLogic.GetEnemySource();
         enemyAttack = enemy.enemyAttack;
+        healthBar.UpdateHealthBar(ch.maxHealth, ch.currentHealth);
 
         switch (category) {
             case Category.Bacteria :
@@ -55,13 +59,6 @@ public class CollisionHandler : MonoBehaviour
             Debug.Log("enemy hit");
 
             foreach (ContactPoint contact in col.contacts) {
-
-                // Debug.Log($"normal : {contact.normal}");
-                // Debug.Log($"othercollider : {contact.otherCollider}");
-                // Debug.Log($"point : {contact.point}");
-                // Debug.Log($"separation : {contact.separation}");
-                // Debug.Log($"this collider : {contact.thisCollider}");
-
                 Collider thisCollider = contact.thisCollider;
 
                 if (thisCollider.CompareTag("Player")) {
@@ -74,11 +71,7 @@ public class CollisionHandler : MonoBehaviour
                     break;
                 }
             }  
-
         }
-
-        // Debug.Log($"{}");
-        // Debug.Log($"{}");
     }
 
     private void EnemyPlayerHit() {
@@ -91,6 +84,20 @@ public class CollisionHandler : MonoBehaviour
         rController.UpdateHealthInRealm();
 
         healthText.text = $"HP\t{ch.currentHealth}/{ch.maxHealth}";
+        healthBar.UpdateHealthBar(ch.maxHealth, ch.currentHealth);
+
+        Vector3 characterPosition = this.gameObject.transform.position;
+
+        RectTransform canvasRectTransform = gameCanvas.GetComponent<RectTransform>();
+        Vector2 screenPosition;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, Camera.main.WorldToScreenPoint(characterPosition), Camera.main, out screenPosition);
+
+        Vector3 spawnPosition = canvasRectTransform.TransformPoint(screenPosition);
+
+        TMP_Text tmpText = Instantiate(damageTextPrefab, spawnPosition, Quaternion.identity, gameCanvas.transform)
+            .GetComponent<TMP_Text>();
+
+        tmpText.text = $"-{calculatedAttack}";
     }
 
     private void EnemyWeaponHit(Collision collision) { // weapon damage etc
@@ -134,9 +141,12 @@ public class CollisionHandlerEditor : Editor {
         Header("Source");
         Property("rController");
         Property("ch");
+        Property("gameCanvas");
+        Property("healthBar");
         
         Header("Screen texts");
         Property("healthText");
+        Property("damageTextPrefab");
 
         serializedObject.ApplyModifiedProperties();
     }

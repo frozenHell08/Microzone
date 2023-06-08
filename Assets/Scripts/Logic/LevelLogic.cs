@@ -23,6 +23,7 @@ public class LevelLogic : MonoBehaviour
     [SerializeField] private Entry enemySource;
     [SerializeField] private Enemy enemyStats;
     [SerializeField] private GameObject charStats;
+    [SerializeField] private GameObject tutorialPanel;
     [SerializeField] private TMP_Text enemyCounter;
     
     [SerializeField] private int cells;
@@ -43,6 +44,10 @@ public class LevelLogic : MonoBehaviour
         profiledata = rController.FindProfile(ch.characterID);
         LoadStageData();
         setFinishMessage(completePanel);
+
+        if ((ch.level == 0) && (ch.totalExp == 0)) {
+            ShowTutorialPanel();
+        }
     }
 
     void Update() {
@@ -205,6 +210,16 @@ public class LevelLogic : MonoBehaviour
     public bool GetStageStatus() {
         return isDoneStage;
     }
+
+    public void ShowTutorialPanel() {
+        tutorialPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void ExitTutorialPanel() {
+        tutorialPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
 }
 
 #if UNITY_EDITOR
@@ -223,6 +238,7 @@ public class LevelLogicEditor : Editor {
         Property("enemySource");
         Property("enemyStats");
         Property("map");
+        Property("tutorialPanel");
 
         Header("Variables", true);
         Property("_lvl");

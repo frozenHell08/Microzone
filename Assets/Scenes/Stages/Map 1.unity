@@ -3084,6 +3084,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 640118143287968101, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640118143287968101, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 666154460141443335, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_Name
       value: viraon
@@ -3148,6 +3156,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3004511897623058955, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004511897623058955, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 800237832}
+    - target: {fileID: 3004511897623058955, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowTutorialPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004511897623058955, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLogic, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3075829517773284741, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_SizeDelta.y
       value: 164.0226
@@ -3170,6 +3194,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3368609636768762239, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427836197288627241, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427836197288627241, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427836197288627241, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3551404063739387292, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
@@ -3328,6 +3364,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3834149515121763403, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00048828125
+      objectReference: {fileID: 0}
     - target: {fileID: 3937456352326370705, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_Name
       value: cinadha
@@ -3395,6 +3435,22 @@ PrefabInstance:
     - target: {fileID: 4514804367005146288, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529641130484227421, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529641130484227421, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 800237832}
+    - target: {fileID: 4529641130484227421, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitTutorialPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529641130484227421, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLogic, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5051060578305166267, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
       propertyPath: m_Name
@@ -4585,6 +4641,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: b24dbd9612ba7e84ab73ed7ccd8a2945, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72145a12942e3b54e86f43eb0c3021dd, type: 3}
+--- !u!224 &951377732 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7744732561936027412, guid: 6dfe7f4e863089b47ab9b4d461acb253, type: 3}
+  m_PrefabInstance: {fileID: 976952305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &976952305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4668,6 +4729,10 @@ PrefabInstance:
       propertyPath: ch
       value: 
       objectReference: {fileID: 11400000, guid: 7d4634c8c1c126f47b25935cc9e8c23c, type: 2}
+    - target: {fileID: 5772855171690975582, guid: 6dfe7f4e863089b47ab9b4d461acb253, type: 3}
+      propertyPath: gameCanvas
+      value: 
+      objectReference: {fileID: 951377732}
     - target: {fileID: 5772855171690975582, guid: 6dfe7f4e863089b47ab9b4d461acb253, type: 3}
       propertyPath: healthText
       value: 
@@ -8247,6 +8312,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822339826}
   m_CullTransparentMesh: 1
+--- !u!1 &1843846244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1424214512706395475, guid: 64bef611c38eb5245b0694ae0150cbb3, type: 3}
+  m_PrefabInstance: {fileID: 757223589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1871093346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9544,6 +9614,10 @@ PrefabInstance:
       propertyPath: completePanel
       value: 
       objectReference: {fileID: 49269755}
+    - target: {fileID: 8088322999091388996, guid: db11f73f897c345408da696f789e417a, type: 3}
+      propertyPath: tutorialPanel
+      value: 
+      objectReference: {fileID: 1843846244}
     - target: {fileID: 8088322999091388997, guid: db11f73f897c345408da696f789e417a, type: 3}
       propertyPath: m_RootOrder
       value: 9
