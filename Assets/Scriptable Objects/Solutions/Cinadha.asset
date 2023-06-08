@@ -16,6 +16,8 @@ MonoBehaviour:
   solutionID: itm_cinadha
   solutionName: Cinadha
   solutionSprite: {fileID: 566065055, guid: f027cd02eb149f74daa053b367bc9af4, type: 3}
-  price: 110
+  price: 200
   attackPoints: 10
-  description: Damage against Parasite +10.
+  description: 'x5 bottles of solution.
+
+    Damage against Parasite +10.'

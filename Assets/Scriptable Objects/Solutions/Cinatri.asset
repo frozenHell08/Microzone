@@ -16,6 +16,8 @@ MonoBehaviour:
   solutionID: itm_cinatri
   solutionName: Cinatri
   solutionSprite: {fileID: -283868305, guid: f027cd02eb149f74daa053b367bc9af4, type: 3}
-  price: 190
+  price: 360
   attackPoints: 25
-  description: Damage against Parasite +25.
+  description: 'x5 bottles of solution.
+
+    Damage against Parasite +25.'

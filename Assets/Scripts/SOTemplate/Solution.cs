@@ -31,7 +31,7 @@ public class Solution : ScriptableObject
                 catName = Enum.GetName(typeof(Category), Category.Virus);
                 break;
         }
-        description = $"Damage against {catName} +{attackPoints}.";
+        description = $"x5 bottles of solution.\nDamage against {catName} +{attackPoints}.";
     }
 }
 

@@ -16,6 +16,8 @@ MonoBehaviour:
   solutionID: itm_miltri
   solutionName: Miltri
   solutionSprite: {fileID: -693039529, guid: f027cd02eb149f74daa053b367bc9af4, type: 3}
-  price: 180
+  price: 340
   attackPoints: 25
-  description: Damage against Bacteria +25.
+  description: 'x5 bottles of solution.
+
+    Damage against Bacteria +25.'
