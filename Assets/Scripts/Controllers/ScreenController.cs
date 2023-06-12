@@ -125,6 +125,7 @@ public class ScreenController : MonoBehaviour
         welcomeScreen.SetActive(true);
         isReturning.boolValue = false;
         character.Reset();
+        logoutPanel.SetActive(false);
     }
 
     public void NewCharacter() {

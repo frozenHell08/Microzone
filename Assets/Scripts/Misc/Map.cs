@@ -19,6 +19,7 @@ public class Map : MonoBehaviour
     [SerializeField] private Warning warningMsg;
     [SerializeField] private Warning warningBactExam;
     [SerializeField] private Warning warningParaExam;
+    [SerializeField] private Warning warningStartExam;
     [SerializeField] private string stagePrefix;
     [SerializeField] private Sprite locked, unlocked;
     [SerializeField] private GameObject examBactIcon;
@@ -66,69 +67,34 @@ public class Map : MonoBehaviour
         string[] parts = stage.Split(' ');
         string stageNumber = parts.Last();
         int number = Int32.Parse(stageNumber);
-        bool examVerdict;
-        // 1-6 exam, 7-12 exam, 13-18 exam
-        switch (number) {
-            case 7 :
-                Debug.Log("Accessing stage 7");
-                examVerdict = GetVerdict("Bacteria");
-
-                if (examVerdict) {
-                    SceneManager.LoadScene(stage);
-                } else {
-                    TMP_Text text = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("message"));
-
-                    text.text = warningBactExam.message;
-                    messagePanel.SetActive(true);
-                    return;
-                }
-                break;
-            case 13 :
-                // GetRating("parasite");
-                break;
-        }
 
         if (number == 7) {
-            examVerdict = GetVerdict("Bacteria");
-
-            if (examVerdict) {
-                SceneManager.LoadScene(stage);
-            } else {
-                TMP_Text text = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("message"));
-
-                text.text = warningBactExam.message;
-                messagePanel.SetActive(true);
-                return;
-            }
+            CheckExam("Bacteria", warningBactExam, stage);
+            return;
+        } else if (number == 13) {
+            CheckExam("Parasite", warningParaExam, stage);
+            return;
         }
 
-        if (number == 13) {
-            examVerdict = GetVerdict("Parasite");
-
-            if (examVerdict) {
-                SceneManager.LoadScene(stage);
-            } else {
-                TMP_Text text = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("message"));
-
-                text.text = warningBactExam.message;
-                messagePanel.SetActive(true);
-                return;
-            }
-        }
-
-        if (ch.currentHealth <= 1) {
-            TMP_Text text = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("message"));
-
-            if (text == null) {
-                Debug.Log("missing text field assignment");
-            } else {
-                text.text = warningMsg.message;
-            }
-
-            messagePanel.SetActive(true);
+        if (ch.currentHealth <= 5) {
+            SetMessage(warningMsg);
         } else {
             SceneManager.LoadScene(stage);
         }
+    }
+
+    private void SetMessage(Warning msgSource) {
+        TMP_Text text = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("message"));
+
+        text.text = msgSource.message;
+        messagePanel.SetActive(true);
+    }
+
+    public void StartAssessment(GameObject panel) {
+        TMP_Text text = panel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("confirmMessage"));
+
+        text.text = warningStartExam.message;
+        panel.SetActive(true);
     }
 
     public void StartExam(GameObject exam) {
@@ -164,6 +130,19 @@ public class Map : MonoBehaviour
         Button btn = obj.GetComponent<Button>();
         btn.interactable = value;
     }
+
+    private void CheckExam(string category, Warning warningMessage, string stage) {
+        bool examVerdict = GetVerdict(category);
+
+        if (examVerdict) {
+            SceneManager.LoadScene(stage);
+        } else {
+            TMP_Text text = messagePanel.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(x => x.name.Equals("message"));
+
+            text.text = warningMessage.message;
+            messagePanel.SetActive(true);
+        }
+    }
 }
 
 #if UNITY_EDITOR
@@ -193,6 +172,7 @@ public class MapEditor : Editor {
         Property("warningMsg");
         Property("warningBactExam");
         Property("warningParaExam");
+        Property("warningStartExam");
         Property("messagePanel");
 
         serializedObject.ApplyModifiedProperties();

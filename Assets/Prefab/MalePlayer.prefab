@@ -237,9 +237,9 @@ GameObject:
   - component: {fileID: 2517597187699647279}
   - component: {fileID: 2517597187699647277}
   - component: {fileID: 2517597187699647266}
-  - component: {fileID: 2517597187699647272}
-  - component: {fileID: 2517597187699647273}
   - component: {fileID: 5772855171690975582}
+  - component: {fileID: 4151315112682497210}
+  - component: {fileID: 6162119556760119869}
   m_Layer: 0
   m_Name: MalePlayer
   m_TagString: Untagged
@@ -356,32 +356,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2517597187699647272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2517597187699647267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7359f59301d079e4aad1feaced415ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedLimiter: 10
---- !u!114 &2517597187699647273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2517597187699647267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4898bac6e3ec82f448a265e6e427d323, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!114 &5772855171690975582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +375,32 @@ MonoBehaviour:
   damageTextPrefab: {fileID: 4131888869724357073, guid: e66bd5ebefb6c3b49b76ec6dc5b45758, type: 3}
   gameCanvas: {fileID: 7744732561936027412}
   category: 0
+--- !u!114 &4151315112682497210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517597187699647267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf8589a427f4a4498ee1dd8bb99b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedLimiter: 10
+  movementAnimation: {fileID: 11400000, guid: 9ccb255b76b8fcf47980e43a7cd602e6, type: 2}
+--- !u!114 &6162119556760119869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517597187699647267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17872e32d8edf9649b1d65da5b49b62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2787276296895933929
 GameObject:
   m_ObjectHideFlags: 0

@@ -67,7 +67,7 @@ public class Settings : MonoBehaviour
         musicVol.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
     }
 
-    public void ApplyGraphics() {
+    public void ApplyGraphics(GameObject panel) {
         if (vsyncTog.isOn) {
             QualitySettings.vSyncCount = 1;
         } else {
@@ -76,6 +76,8 @@ public class Settings : MonoBehaviour
 
         Resolution selected = resolutions[resDropdown.value];
         Screen.SetResolution(selected.width, selected.height, fullScreenTog.isOn);
+
+        panel.SetActive(false);
     }
 
     public void SetMasterVolume() {

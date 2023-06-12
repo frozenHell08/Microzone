@@ -142,10 +142,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2708855832963861025, guid: 23f7ea173e1f6a54daa5900a9b9949fb, type: 3}
-      propertyPath: speedLimiter
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2708855832963861029, guid: 23f7ea173e1f6a54daa5900a9b9949fb, type: 3}
       propertyPath: m_Size.y
       value: 0.3

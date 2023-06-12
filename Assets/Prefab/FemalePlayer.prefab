@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2708855832963861050}
   - component: {fileID: 2708855832963861029}
   - component: {fileID: 2708855832963861028}
-  - component: {fileID: 2708855832963861031}
-  - component: {fileID: 2708855832963861025}
   - component: {fileID: 562156387229015051}
+  - component: {fileID: 8932606374860854928}
+  - component: {fileID: 8362293301027712386}
   m_Layer: 0
   m_Name: FemalePlayer
   m_TagString: Untagged
@@ -131,32 +131,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2708855832963861031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708855832963861024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c250a7ab6b4c44f9f02e5321a83bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
---- !u!114 &2708855832963861025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708855832963861024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 433602986484a034e9182ffe9f49c181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedLimiter: 10
 --- !u!114 &562156387229015051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +150,32 @@ MonoBehaviour:
   damageTextPrefab: {fileID: 4131888869724357073, guid: e66bd5ebefb6c3b49b76ec6dc5b45758, type: 3}
   gameCanvas: {fileID: 3691480732889479846}
   category: 0
+--- !u!114 &8932606374860854928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708855832963861024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf8589a427f4a4498ee1dd8bb99b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedLimiter: 10
+  movementAnimation: {fileID: 11400000, guid: 7deab778c0863af45ab4f8ce40b1f387, type: 2}
+--- !u!114 &8362293301027712386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708855832963861024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17872e32d8edf9649b1d65da5b49b62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3105287342688472230
 GameObject:
   m_ObjectHideFlags: 0

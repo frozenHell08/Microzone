@@ -20,8 +20,6 @@ public class Enemy : ScriptableObject
         if (enemySource != null) {
             string[] parts = enemySource.Species.Split(' ');
 
-            // enemyName = $"{parts[0][0]}. {parts[1]}";
-
             switch (category) {
                 case Category.Virus :
                     if (parts.Length == 2) {
@@ -35,12 +33,6 @@ public class Enemy : ScriptableObject
                     enemyName = $"{parts[0][0]}. {parts[1]}";
                     break;
             }
-
-            // if (Category.Virus) {
-                
-            // } else {
-            //     Debug.Log("something other");
-            // }
         }
     }
 }
