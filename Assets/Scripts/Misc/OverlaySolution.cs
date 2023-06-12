@@ -23,9 +23,6 @@ public class OverlaySolution : MonoBehaviour
         solSprite.preserveAspect = true;
         solSprite.sprite = sol.solutionSprite;
 
-        Debug.Log(solSprite);
-        Debug.Log(solSprite.name);
-
         Color newColor = solSprite.color;
         newColor.a = 0.5f;
 
