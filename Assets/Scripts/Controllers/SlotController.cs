@@ -37,6 +37,7 @@ public class SlotController : MonoBehaviour
         character.cells = save.Cells;
         character.genes = save.Genes;
         character.level = save.Level;
+        character.equippedSolution = null;
 
         gameObject.SetActive(false);
         homeScreen.SetActive(true);

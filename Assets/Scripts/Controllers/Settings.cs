@@ -21,20 +21,13 @@ public class Settings : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
 
-    public Toggle fullScreenTog, vsyncTog;
+    public Toggle fullScreenTog;
     public TMP_Dropdown resDropdown;
-
 
     Resolution[] resolutions;
 
     void Start() {
         fullScreenTog.isOn = Screen.fullScreen;
-
-        if (QualitySettings.vSyncCount == 0) {
-            vsyncTog.isOn = false;
-        } else {
-            vsyncTog.isOn = true;
-        }
 
         // --------------------------
         resolutions = Screen.resolutions;
@@ -68,12 +61,6 @@ public class Settings : MonoBehaviour
     }
 
     public void ApplyGraphics(GameObject panel) {
-        if (vsyncTog.isOn) {
-            QualitySettings.vSyncCount = 1;
-        } else {
-            QualitySettings.vSyncCount = 0;
-        }
-
         Resolution selected = resolutions[resDropdown.value];
         Screen.SetResolution(selected.width, selected.height, fullScreenTog.isOn);
 

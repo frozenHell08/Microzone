@@ -33,6 +33,8 @@ public class Map : MonoBehaviour
         
         int c = 0;
 
+        ch.equippedSolution = null;
+
         foreach (Image img in mapPanel.GetComponentsInChildren<Image>(true)) {
             if (img.name.StartsWith(stagePrefix, oic)) {
                 img.preserveAspect = true;
@@ -68,17 +70,16 @@ public class Map : MonoBehaviour
         string stageNumber = parts.Last();
         int number = Int32.Parse(stageNumber);
 
-        if (number == 7) {
-            CheckExam("Bacteria", warningBactExam, stage);
-            return;
-        } else if (number == 13) {
-            CheckExam("Parasite", warningParaExam, stage);
-            return;
-        }
-
         if (ch.currentHealth <= 5) {
             SetMessage(warningMsg);
         } else {
+            if (number == 7) {
+                CheckExam("Bacteria", warningBactExam, stage);
+                return;
+            } else if (number == 13) {
+                CheckExam("Parasite", warningParaExam, stage);
+                return;
+            }
             SceneManager.LoadScene(stage);
         }
     }

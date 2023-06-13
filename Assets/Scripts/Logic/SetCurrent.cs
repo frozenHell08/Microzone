@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,80 +43,37 @@ public class SetCurrent : MonoBehaviour
         listOfTxt.Add(cmiltri);
         listOfTxt.Add(ccinatri);
         listOfTxt.Add(cvirtri);
-
-
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { //key 1. milaon
-            Reset();
-            soltxtobj = cmilaon.gameObject;
-            soltxtobj.SetActive(true);
-            ch.equippedSolution = solnMilaon;
-        }
+        Dictionary<KeyCode, (Solution, GameObject)> keyMappings = new Dictionary<KeyCode, (Solution, GameObject)>() {
+            { KeyCode.Alpha1, (solnMilaon, cmilaon.gameObject) },
+            { KeyCode.Alpha2, (solnMildha, cmildha.gameObject) },
+            { KeyCode.Alpha3, (solnMiltri, cmiltri.gameObject) },
+            { KeyCode.Alpha4, (solnCinaon, ccinaon.gameObject) },
+            { KeyCode.Alpha5, (solnCinadha, ccinadha.gameObject) },
+            { KeyCode.Alpha6, (solnCinatri, ccinatri.gameObject) },
+            { KeyCode.Alpha7, (solnViraon, cviraon.gameObject) },
+            { KeyCode.Alpha8, (solnVirdha, cvirdha.gameObject) },
+            { KeyCode.Alpha9, (solnVirtri, cvirtri.gameObject) },
+        };
 
-        if (Input.GetKeyDown(KeyCode.Alpha4)) { //key 4. cinaon
-            Reset();
-            soltxtobj = ccinaon.gameObject;
-            soltxtobj.SetActive(true);
-            ch.equippedSolution = solnCinaon;
-        }
+        foreach (var kvp in keyMappings) {
+            if (Input.GetKeyDown(kvp.Key)) {
+                FieldInfo solField = ch.solutionsCount.GetType().GetFields().FirstOrDefault(f => f.Name.Equals(kvp.Value.Item1.solutionName, StringComparison.OrdinalIgnoreCase));
 
-        if (Input.GetKeyDown(KeyCode.Alpha7)) { //key 7. viraon
-            Reset();
-            soltxtobj = cviraon.gameObject;
-            soltxtobj.SetActive(true);
+                int itemCount = (int) solField.GetValue(ch.solutionsCount);
 
-            ch.equippedSolution = solnViraon;
-        }
+                if (itemCount == 0) return;
 
-        if (Input.GetKeyDown(KeyCode.Alpha2)) { //key 2. mildha
-            Reset();
-            soltxtobj = cmildha.gameObject;
-            soltxtobj.SetActive(true);
+                Reset();
+                soltxtobj = kvp.Value.Item2;
+                soltxtobj.SetActive(true);
 
-            ch.equippedSolution = solnMildha;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha5)) { //key 5. cinadha
-            Reset();
-            soltxtobj = ccinadha.gameObject;
-            soltxtobj.SetActive(true);
-
-            ch.equippedSolution = solnCinadha;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha8)) { //key 8. virdha
-            Reset();
-            soltxtobj = cvirdha.gameObject;
-            soltxtobj.SetActive(true);
-
-            ch.equippedSolution = solnVirdha;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3)) { //key 3. miltri
-            Reset();
-            soltxtobj = cmiltri.gameObject;
-            soltxtobj.SetActive(true);
-
-            ch.equippedSolution = solnMiltri;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha6)) { //key 6. cinatri
-            Reset();
-            soltxtobj = ccinatri.gameObject;
-            soltxtobj.SetActive(true);
-
-            ch.equippedSolution = solnCinatri;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha9)) { //key 9. virtri
-            Reset();
-            soltxtobj = cvirtri.gameObject;
-            soltxtobj.SetActive(true);
-
-            ch.equippedSolution = solnVirtri;
+                ch.equippedSolution = kvp.Value.Item1;
+                break;
+            }
         }
     }
 
@@ -124,11 +83,4 @@ public class SetCurrent : MonoBehaviour
             txtobj.SetActive(false);
         }
     }
-
-    // private void SetDefault() {
-    //     FieldInfo field = Array.Find<FieldInfo>(ch.solutionsCount.GetType().GetFields(),
-    //         f => (int) f.GetValue(ch.solutionsCount) > 0);
-    //         // (int) f.GetValue(soln) > 0);
-    //         // f => f.Name.Equals(ch.equippedSolution.solutionName, StringComparison.OrdinalIgnoreCase));
-    // }
 }

@@ -87,6 +87,7 @@ public class CreateController : MonoBehaviour
         character.genes = profile.GeneCount;
         character.level = profile.Level;
         character.gender = profile.CharGender;
+        character.equippedSolution = null;
     }
 
     private void Refresh() {

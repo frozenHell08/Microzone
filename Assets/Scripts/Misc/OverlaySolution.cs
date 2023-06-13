@@ -16,6 +16,7 @@ public class OverlaySolution : MonoBehaviour
     private FieldInfo field;
     private int solNumber;
     private TMP_Text number;
+    private GameObject currObj;
 
     void OnEnable() {
         solSprite = gameObject.GetComponent<Image>();
@@ -25,10 +26,9 @@ public class OverlaySolution : MonoBehaviour
 
         Color newColor = solSprite.color;
         newColor.a = 0.5f;
-
-        field = Array.Find<FieldInfo>(ch.solutionsCount.GetType().GetFields(),
-                        f => f.Name.Equals(sol.solutionName, StringComparison.OrdinalIgnoreCase));
         
+        field = ch.solutionsCount.GetType().GetFields().FirstOrDefault(f => f.Name.Equals(sol.solutionName, StringComparison.OrdinalIgnoreCase));
+
         number = gameObject.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(num => num.gameObject.name.Equals("number"));
         TMP_Text name = gameObject.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(name => name.gameObject.name.Equals("name"));
         solNumber = (int) field.GetValue(ch.solutionsCount);
@@ -39,11 +39,21 @@ public class OverlaySolution : MonoBehaviour
         if (solNumber == 0) {
             solSprite.color = newColor;
         }
+
+        TMP_Text currentTxt = gameObject.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(name => name.gameObject.name.Equals("current"));
+        currObj = currentTxt.gameObject;
     }
 
     void Update() {
-        if (solNumber == 0) return;
-        solNumber = (int) field.GetValue(ch.solutionsCount);
-        number.text = solNumber.ToString();
+        if (currObj.activeSelf) {
+            if (solNumber == 0) {
+                currObj.SetActive(false);
+                ch.equippedSolution = null;
+                return;
+            }
+
+            solNumber = (int) field.GetValue(ch.solutionsCount);
+            number.text = solNumber.ToString();
+        }
     }
 }

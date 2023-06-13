@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,6 +32,7 @@ public class CollisionHandler : MonoBehaviour
         _levelLogic = GameObject.Find("GameController").GetComponent<LevelLogic>();
         enemy = _levelLogic.GetEnemySource();
         enemyAttack = enemy.enemyAttack;
+        category = enemy.category;
         healthBar.UpdateHealthBar(ch.maxHealth, ch.currentHealth);
 
         switch (category) {
@@ -101,7 +103,6 @@ public class CollisionHandler : MonoBehaviour
     }
 
     private void EnemyWeaponHit(Collision collision) { // weapon damage etc
-
         EnemyHandler e = collision.gameObject.GetComponent<EnemyHandler>();
 
         if (ch.equippedSolution == null) {
@@ -109,21 +110,23 @@ public class CollisionHandler : MonoBehaviour
             return;
         }
 
-        FieldInfo field = Array.Find<FieldInfo>(ch.solutionsCount.GetType().GetFields(),
-            f => f.Name.Equals(ch.equippedSolution.solutionName, StringComparison.OrdinalIgnoreCase));
-
-        Debug.Log(ch.equippedSolution.solutionName);
-        Debug.Log(field);
+        FieldInfo field = ch.solutionsCount.GetType().GetFields().FirstOrDefault(f => f.Name.Equals(ch.equippedSolution.solutionName, StringComparison.OrdinalIgnoreCase));
 
         int solnamount = (int) field.GetValue(ch.solutionsCount);
-        Debug.Log(solnamount);
+
+        int soldmg = 0;
+
+        if (ch.equippedSolution._category.Equals(category)) {
+            soldmg = ch.equippedSolution.attackPoints;
+        }
 
         if (solnamount > 0) {
-            int soldmg = ch.equippedSolution.attackPoints;
             field.SetValue(ch.solutionsCount, (solnamount - 1));
             //save changes to realm
             rController.UseSolution(ch.equippedSolution.solutionName, solnamount - 1);
             e.TakeDamage(soldmg);
+
+            if (soldmg == 0) e.DuplicateEnemy();
         } else {
             e.TakeDamage(2);
         }

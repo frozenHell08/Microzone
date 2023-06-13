@@ -120,7 +120,7 @@ public class HomescreenController : MonoBehaviour
             }
 
             foreach (Button btn in itm.GetComponentsInChildren<Button>(true)) {
-                Debug.Log(btn.name);
+                // Debug.Log(btn.name);
 
                 TMP_Text amount = btn.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(txt => txt.name.Equals("amt"));
 

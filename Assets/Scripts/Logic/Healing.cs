@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,8 +32,7 @@ public class Healing : MonoBehaviour
 
         hsctrl = GameObject.Find("HomeScreen").GetComponent<HomescreenController>();
 
-        FieldInfo healField = Array.Find<FieldInfo>(ch.healCount.GetType().GetFields(), 
-                f => f.Name.Equals(splitName, StringComparison.OrdinalIgnoreCase));
+        FieldInfo healField = ch.healCount.GetType().GetFields().FirstOrDefault(f => f.Name.Equals(splitName, StringComparison.OrdinalIgnoreCase));
 
         int itemCount = (int) healField.GetValue(ch.healCount);
 

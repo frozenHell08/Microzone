@@ -31,4 +31,21 @@ public class EnemyHandler : MonoBehaviour
             healthBar.UpdateHealthBar(enemyObj.enemyHp, currentHealth);
         }
     }
+
+    public void DuplicateEnemy() {
+        float duplicateRadius = 5f;
+        float duplicateAngle = 0f;
+        float angleIncrement = 360f / 1;
+
+        float angle = duplicateAngle + angleIncrement;
+
+        Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), 0f, Mathf.Sin(angle * Mathf.Deg2Rad)) * duplicateRadius;
+        Vector3 duplicatePosition = transform.position + offset;
+
+        GameObject enemyPrefab = this.gameObject;
+
+        Collider[] colliders = Physics.OverlapSphere(duplicatePosition, 0.5f);
+
+        GameObject newEnemy = Instantiate(enemyPrefab, duplicatePosition, transform.rotation);
+    }
 }

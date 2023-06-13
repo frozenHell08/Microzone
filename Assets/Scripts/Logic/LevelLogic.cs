@@ -182,7 +182,7 @@ public class LevelLogic : MonoBehaviour
         foreach (TMP_Text txt in charStats.GetComponentsInChildren<TMP_Text>(true)) {
             if (txt.name.Contains("name")) txt.text = ch.characterName;
             if (txt.name.Contains("level")) txt.text = $"Lv. {ch.level.ToString()}";
-            if (txt.name.Contains("exp")) txt.text = $"Exp\t{ch.experience.ToString()}/{ch.barExperience.ToString()}";
+            if (txt.name.Contains("exp")) txt.text = $"Exp\t{ch.experience:n0}/{ch.barExperience:n0}";
             if (txt.name.Contains("hp")) txt.text = $"HP\t{ch.currentHealth}/{ch.maxHealth}";
         }
     }
